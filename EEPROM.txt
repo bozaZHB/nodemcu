@@ -1,0 +1,19 @@
+EEPROM
+#include <EEPROM.h>
+int t;
+
+void setup(){
+	Serial.begin(9600);
+}
+
+void loop(){
+	delay(5000);
+	t=EEPROM.read(0);//sa koje lokacije
+	t++;
+	EEPROM.write(0, t); //sa koje lokacije i sta
+	Serial.println(t);
+}
+
+pocetna vrednsot je 255 u eepromu.
+u epromu mogu samo da se upisu samo 8 bita = baty
+255+1=0

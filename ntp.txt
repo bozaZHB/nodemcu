@@ -1,0 +1,67 @@
+#include <ESP8266WiFi.h>
+#include <time.h>
+
+const char* ssid = "e665e4";
+const char* password = "262751838";
+
+int timezone = 1 * 3600;
+int dst = 0;
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.begin(ssid,password);
+
+  while( WiFi.status() != WL_CONNECTED ){
+      delay(500);
+      Serial.print(".");        
+  }
+
+  configTime(timezone, dst, "pool.ntp.org","time.nist.gov");
+  while(!time(nullptr)){
+     Serial.print("*");
+     delay(1000);
+  } 
+}
+
+void loop() {
+  
+  time_t now = time(nullptr);
+  struct tm* p_tm = localtime(&now);
+  String datum =  String(p_tm->tm_mday)+":"+String(p_tm->tm_mon + 1)+":"+String(p_tm->tm_year + 1900);
+  String vreme =  String(p_tm->tm_hour)+":"+String(p_tm->tm_min)+":"+String(p_tm->tm_sec);
+  Serial.println(datum);
+  Serial.println(vreme);
+  
+  delay(1000);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+  //time_t now = time(nullptr);
+  //struct tm* p_tm = localtime(&now);
+  //String vreme =  String(p_tm->tm_hour)+":"+String(p_tm->tm_min);
+
+
+
+
+  int p =(char)payload[0]-'0';
+  vreme = ((char*)payload);
+  String str(topic);
+  if (str =="bozaSub/tv/timer"){
+    if (vreme=="off") timer = 0;
+    else if(vreme =="on") timer = 1;
+    Serial.println(timer);
+  }
+  else if (str="bozaSub/tv/vreme"){
+    vreme = ((char*)payload);
+    Serial.println(vreme);
+  }
