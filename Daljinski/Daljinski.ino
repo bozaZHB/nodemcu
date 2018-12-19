@@ -36,6 +36,8 @@ int dst = 0;
 
 bool vrstaTajmera = false; //false je samo Tv, true je alarm
 
+bool flagFastChoosing = false;
+
 void setup_wifi() {
   delay(100);
   WiFi.begin(ssid, password);
@@ -379,8 +381,107 @@ void loop() {
     }
     else if(msg.substring(0,10)=="1886438714" || msg.substring(0,10)=="1625282599")
         client.publish("bozaSub/sijalica/sve", "1",false);
-    irrecv.resume();
+    else if(msg.substring(0,10)=="1625241799"){
+        flagFastChoosing = false;
     }
+    else if(msg.substring(0,10)=="1625232109"){
+        flagFastChoosing = true;
+    }
+    
+     if (flagFastChoosing){
+      //1
+      if(msg.substring(0,10)=="1625278519"){
+          //sk1
+          delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+      //2
+      else if(msg.substring(0,10)=="1625229559"){
+          //sk2
+          delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DF08F7, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+      //3
+      else if(msg.substring(0,10)=="1625262199"){
+          //sk3
+          delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DF8877, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+      //4
+      else if(msg.substring(0,10)=="1625288719"){
+          //hbo1
+          delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DF926D, 32);delay(150);
+          irsendD3.sendNEC(0x60DF926D, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+      //5
+      else if(msg.substring(0,10)=="1625239759"){
+          //hbo2
+          delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DF926D, 32);delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+      //6
+      else if(msg.substring(0,10)=="1625272399"){
+          //hbo3
+          delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DF926D, 32);delay(150);
+          irsendD3.sendNEC(0x60DF08F7, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+      //7
+      else if(msg.substring(0,10)=="1625280559"){
+          //sci
+          delay(150);
+          irsendD3.sendNEC(0x60DF08F7, 32);delay(150);
+          irsendD3.sendNEC(0x60DF926D, 32);delay(150);
+          irsendD3.sendNEC(0x60DF926D, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+      //8
+      else if(msg.substring(0,10)=="1625231599"){
+          //wild
+          delay(150);
+          irsendD3.sendNEC(0x60DF08F7, 32);delay(150);
+          irsendD3.sendNEC(0x60DF926D, 32);delay(150);
+          irsendD3.sendNEC(0x60DFB04F, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+      //9
+      else if(msg.substring(0,10)=="1625264239"){
+          //classic
+          delay(150);
+          irsendD3.sendNEC(0x60DFD02F, 32);delay(150);
+          irsendD3.sendNEC(0x60DF10EF, 32);delay(150);
+          irsendD3.sendNEC(0x60DFF00F, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+      //0
+      else if(msg.substring(0,10)=="1625264749"){
+          //hd
+          delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DFC837, 32);delay(150);
+          irsendD3.sendNEC(0x60DF926D, 32);delay(150);
+          irsendD3.sendNEC(0x60DF3AC5, 32);
+      }
+    }
+    irrecv.resume();
+   }
 
 
   //timer
