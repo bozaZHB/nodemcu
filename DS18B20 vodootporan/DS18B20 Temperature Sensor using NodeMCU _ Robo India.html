@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://roboindia.com/tutorials/ds18b20_temp_sensor_nodemcu -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        	<link rel="shortcut icon" href="https://roboindia.com/images/robo_india2.ico">
+			<meta name="description" content="This tutorial of robo india explains, how to use dsb18b20 temperature sensor with nodemcu.">
+			<meta name="keywords" content="ds18b20, ds18b20 sensor, ds18b20 temperature sensor, one wire sensor, one wire temperature sensor, ds18b20 with arduino, temperature sensor arduino, ds18b20 temperature sensor with arduino, one wire digital thermometer, ds18b20 digital sensor, ds18b20 and arduino, ds18b20 with nodemcu, nodemcu, one wire sensor with nodemcu">
+			<title>DS18B20 Temperature Sensor using NodeMCU | Robo India</title>
+    <link rel="stylesheet" href="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/foundation.css">
+     <link href="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/font-awesome.min.css" rel="stylesheet">
+    <script src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/modernizr.js.download"></script>
+  <meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large"><meta class="foundation-mq-medium"><meta class="foundation-mq-small"><style></style><meta class="foundation-mq-topbar"></head>
+  <body>
+     <div class="row full-width">
+      <div class="show-for-large-up">
+      <div class="large-4 small-12 medium-12 columns">
+       <img src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/robo_india_logo1.jpg" style="height:100px;">
+      </div>
+      </div>
+          <div class="show-for-medium-down">
+      <div class="small-12 medium-12 columns" style="text-align:center;">
+       <img src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/robo_india_logo1.jpg" style="height:100px;">
+      </div>
+      </div>  
+      <div class="large-8 small-12 medium-12 columns">
+       		<div style="width:100%; text-align:center;"><img src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/tutorial-portal-robo-india.jpg"></div>
+      </div>
+    </div>       
+<script type="text/javascript">
+function search_url(){
+window.location = "search&q=" + document.getElementById('search_content').value;
+}
+
+</script>
+
+ <div class="row full-width">
+ 	<div class="small-12 medium-12 large-12 columns">
+    <nav class="top-bar" data-topbar="">
+   
+    <section class="top-bar-section">
+ 	<ul class="left show-for-large-up">
+      <li class="name"><h1><a href="https://roboindia.com/tutorials/ds18b20_temp_sensor_nodemcu#">Robo India</a></h1></li>
+      <li class="active" style="min-width:80px; text-align:center;"><a href="https://roboindia.com/tutorials/home">Home</a></li>
+      <li class="divider"></li>
+      <li style="min-width:80px; text-align:center;"><a href="https://roboindia.com/tutorials/home">Tutorial</a></li>
+      <li class="divider"></li>
+      <li style="min-width:80px; text-align:center;"><a href="https://roboindia.com/store/">RoboShop</a></li>
+      <li class="divider"></li>
+      <li style="min-width:80px; text-align:center;"><a href="https://roboindia.com/store/index.php?route=information/contact">Contact</a></li>
+      <li class="divider"></li>      
+    </ul>
+    
+    <ul class="left hide-for-large-up">
+        <li class="name"><h1><a href="https://roboindia.com/tutorials/ds18b20_temp_sensor_nodemcu#">Categories</a></h1></li>
+      	<li class="active" style="min-width:80px; text-align:left;"><a href="https://roboindia.com/tutorials/home">Home</a></li>
+    
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/android-app-development-mit-app-inventor">Android On MIT App Inventor (4)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/arduino">Arduino (99)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/arduino-builders-kit">Arduino Builders Kit (17)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/arduino-nano">Arduino Nano (5)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/arduino-nano-starter-kit-all-tutorials">Arduino Nano Starter Kit (5)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/arduino-multipurpose-kit">Arduino UNO Multipurpose Kit (0)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/assembly-guides">Assembly Guides (16)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/basics-of-electronics-kit">Basics of Electronics (13)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/bluetooth-tutorials">Bluetooth (11)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/blynk">Blynk (9)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/diy-kit">DIY Kit (52)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/esp-01-wifi-module">ESP-01 (ESP8266) (3)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/esp32-nodemcu">ESP32 - Wifi, Bluetooth Board (2)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/ESP-8266-builders-kit">ESP8266 Builders Kit (11)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/ESP-8266-wifi-module">ESP8266 Wifi Module (16)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/finger-print-sensor-category">Finger Print Sensor (2)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/internet-of-things-IOT">Internet of Things (IOT) (10)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/motors-drivers">Motors &amp; Drivers (17)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/nodemcu-arduino">NodeMCU on Arduino IDE (28)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/nodemcu-starter-kit-basic">NodeMCU Starter Kit - Basic (14)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/nodemcu-starter-kit-neo">NodeMCU Starter Kit - Neo (18)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/nodemcu-starter-kit-professional">NodeMCU Starter Kit - Professional (22)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/raspberry-pi">Raspberry Pi (12)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/sensor-tutorials">Sensors (37)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/arduino-robotic-kit">The Arduino Robotic Kit (7)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/usbasp-programmer">USBASP Programmer (2)</a></li> 
+        <li class="divider"></li>
+
+        <li style="min-width:80px; text-align:left;"><a class="categories" href="https://roboindia.com/tutorials/zigbee-x-bee">Zigbee (X BEE) (1)</a></li> 
+        <li class="divider"></li>
+         
+		</ul>
+    
+    <ul class="right">
+   	 <li class="has-form">
+  		<div class="row collapse">
+        <form action="https://roboindia.com/tutorials/search" method="get">
+    		<div class="large-8 small-9 medium-9 columns">
+      			<input type="text" name="q" id="search_content" style="height:30px; font-size:10pt;" placeholder="Find Stuff">
+    		</div>
+    	<div class="large-4 small-3 medium-3 columns">
+      			<a href="https://roboindia.com/tutorials/ds18b20_temp_sensor_nodemcu#" style="height:30px;" class="alert button expand" onclick="search_url();">Search</a>
+    	</div>
+        </form>
+  
+     </div></li>
+    </ul>
+    </section></nav>
+    </div>   
+ </div>
+<div class="row full-width">     
+    	<div style="height:20pt;"></div>  
+</div> 
+<div class="row row full-width">
+ 	<div class="small-12 medium-12 large-2 columns">
+    
+    <h4 class="show-for-large-up">Categories</h4>
+ 		<ul class="side-nav show-for-large-up">
+        <li class="divider"></li>
+    
+        <li><a class="categories" href="https://roboindia.com/tutorials/android-app-development-mit-app-inventor">Android On MIT App Inventor (4)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/arduino">Arduino (99)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/arduino-builders-kit">Arduino Builders Kit (17)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/arduino-nano">Arduino Nano (5)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/arduino-nano-starter-kit-all-tutorials">Arduino Nano Starter Kit (5)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/arduino-multipurpose-kit">Arduino UNO Multipurpose Kit (0)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/assembly-guides">Assembly Guides (16)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/basics-of-electronics-kit">Basics of Electronics (13)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/bluetooth-tutorials">Bluetooth (11)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/blynk">Blynk (9)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/diy-kit">DIY Kit (52)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/esp-01-wifi-module">ESP-01 (ESP8266) (3)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/esp32-nodemcu">ESP32 - Wifi, Bluetooth Board (2)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/ESP-8266-builders-kit">ESP8266 Builders Kit (11)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/ESP-8266-wifi-module">ESP8266 Wifi Module (16)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/finger-print-sensor-category">Finger Print Sensor (2)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/internet-of-things-IOT">Internet of Things (IOT) (10)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/motors-drivers">Motors &amp; Drivers (17)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/nodemcu-arduino">NodeMCU on Arduino IDE (28)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/nodemcu-starter-kit-basic">NodeMCU Starter Kit - Basic (14)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/nodemcu-starter-kit-neo">NodeMCU Starter Kit - Neo (18)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/nodemcu-starter-kit-professional">NodeMCU Starter Kit - Professional (22)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/raspberry-pi">Raspberry Pi (12)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/sensor-tutorials">Sensors (37)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/arduino-robotic-kit">The Arduino Robotic Kit (7)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/usbasp-programmer">USBASP Programmer (2)</a></li> <li class="divider"></li>
+
+        <li><a class="categories" href="https://roboindia.com/tutorials/zigbee-x-bee">Zigbee (X BEE) (1)</a></li> <li class="divider"></li>
+         
+		</ul>
+   
+    </div>
+        <div class="small-12 medium-12 large-8 columns">
+    	 
+    		
+<div class="row" id="detailed_tutorial">
+	<div class="large-12 small-12 medium-12 columns">
+    	<h4>Tutorial</h4>
+    </div>
+</div>
+<div class="row">
+ 	<div style="height:3pt; background:#333; margin-top:10pt; margin-bottom:10pt; width:auto;"></div>
+</div>
+<div class="row">
+	<div class="large-12 small-12 medium-12 columns">
+		<h2><strong>DS18B20 Temperature Sensor using NodeMCU</strong> </h2>
+	</div>
+</div>
+<div class="row">
+	<div class="large-12 small-12 medium-12 columns">
+       <div style="width:80px; height:80px; float:left; margin-right:10pt;">
+		<img src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/nodemcu-ds18b20-icon.jpg"> 
+        </div>
+ 		<h3><em>This tutorial of Robo India explains, how to use DS18B20 Temperature Sensor with NodeMCU. </em></h3>  
+    </div> 
+</div> 
+<div class="row">
+ 	<div style="height:3pt; background:#333; margin-top:10pt; margin-bottom:10pt; width:auto;"></div>
+</div>
+<div class="row">
+	<div class="large-12 small-12 medium-12 columns">
+		<strong>Detailed Tutorial</strong>
+    </div>
+</div>
+<div class="row">
+ 	<div style="height:1pt; background:#333; margin-top:10pt; margin-bottom:10pt; width:auto;"></div>
+</div>
+<div class="row">
+	<div class="large-12 small-12 medium-12 columns"> 
+		<p><span style="color: #993300;"><strong>1. Introduction:</strong></span></p>
+<p>This module is used to measure temperature. DS18B20 are one wire bus protocol, which requires only one data line for communication with NodeMCU.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/dsb18b20.png" alt="dsb18b20" width="60%" height="NaN"></p>
+<p><span style="color: #993300;"><strong>1.1 Features:</strong></span></p>
+<p>1. Measures temperature from -55 degree C to 125 Degree C.</p>
+<p>2. 0.5°C Accuracy from -10°C to +85°C</p>
+<p>3. Programmable Resolution from 9 Bits to 12 Bits</p>
+<p>4. No external components required.</p>
+<p>5. Unique one wire interface which requires only one port for communication.</p>
+<p><span style="color: #993300;"><strong>2. Hardware required</strong></span></p>
+<table style="border-collapse: collapse; font-size: 12px;" border="1px solid black;" width="100%">
+<tbody>
+<tr>
+<td style="text-align: center; width: 10%;"><strong>S.No.</strong></td>
+<td style="text-align: center;"><strong>Item</strong></td>
+<td style="text-align: center; width: 10%;"><strong>Quantity</strong></td>
+</tr>
+<tr>
+<td>1.</td>
+<td><a href="https://roboindia.com/store/nodemcu-amica-cp2102?search=nodemcu">NodeMCU</a></td>
+<td>&nbsp;1</td>
+</tr>
+<tr>
+<td>2.</td>
+<td><a href="https://roboindia.com/store/small-bread-board-self-adhesive-robo-india?search=breadboard">Breadboard</a></td>
+<td>&nbsp;1</td>
+</tr>
+<tr>
+<td>3.</td>
+<td><a href="https://roboindia.com/store/ds18b20-temperature-sensor-probe" target="_blank">DS18B20 Temperature Sensor</a></td>
+<td>&nbsp;1</td>
+</tr>
+<tr>
+<td>4.</td>
+<td><a href="https://roboindia.com/store/resistor-pack-500-pcs-20-types?search=resistor">Resistor 4.7K</a></td>
+<td>&nbsp;1</td>
+</tr>
+<tr>
+<td>5.</td>
+<td><a href="https://roboindia.com/store/jumper-wire-male-to-male?search=male%20to%20male%20jumper">Male to male Jumper</a></td>
+<td>&nbsp;3</td>
+</tr>
+</tbody>
+</table>
+<p><span style="color: #993300;"><strong>3. Circuit Diagram</strong></span></p>
+<p><span style="color: #000000;">Make the following connections with Arduino-</span></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/ds_nodemcu.png" alt="ds_nodemcu" width="80%" height="NaN"></p>
+<p><span style="color: #993300;"><strong>4. Library File</strong></span></p>
+<p><span style="color: #000000;">Following library will be required to run this sketch. Download the zip file extract the same and copy this to your Arduino library folder. </span></p>
+<p><span style="color: #000000;">This library file should be placed at the install folder of Arduino. I have a 64 bit Win7 OS and my Arduino library folder address is located at</span></p>
+<p><span style="color: #000000;"><span style="color: #003300;"><em>C:\Program Files (x86)\Arduino\libraries</em>&nbsp;</span> </span></p>
+<p><span style="color: #993300;"><span style="color: #000000;"><a href="https://roboindia.com/tutorials/admin/source32145898/shruti/dsb18b20_sensor/OneWire.zip" target="_blank">You may download OneWire library file from here.</a></span></span></p>
+<p><span style="color: #993300;"><span style="color: #000000;"><a href="https://roboindia.com/tutorials/admin/source32145898/shruti/dsb18b20_sensor/DallasTemperature.zip" target="_blank">You may download DallasTemperature library file from here.</a></span></span></p>
+<p><span style="color: #993300;"><strong>5. Programming</strong></span></p>
+<p><a href="https://roboindia.com/tutorials/admin/source32145898/shruti/dsb18b20_sensor/ds18b20_nodemcu.zip" target="_blank"><em>You may download this Arduino Sketch from here.</em></a></p>
+<div style="width: 100%; height: 300px; background-color: #e6f7ff; overflow-y: auto; max-height: 150px; border: solid 1px #CCCCCC;">
+<pre><span style="color: #5e6d03;">#include</span> <span style="color: #434f54;">&lt;</span><span style="color: #d35400;">DallasTemperature</span><span style="color: #434f54;">.</span><span style="color: #000000;">h</span><span style="color: #434f54;">&gt;</span>
+<span style="color: #5e6d03;">#include</span> <span style="color: #434f54;">&lt;</span><span style="color: #d35400;">OneWire</span><span style="color: #434f54;">.</span><span style="color: #000000;">h</span><span style="color: #434f54;">&gt;</span>
+
+<span style="color: #5e6d03;">#define</span> <span style="color: #000000;">ONE_WIRE_BUS</span> <span style="color: #000000;">4</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #434f54;">//D1 pin of nodemcu</span>
+
+<span style="color: #d35400;">OneWire</span> <span style="color: #000000;">oneWire</span><span style="color: #000000;">(</span><span style="color: #000000;">ONE_WIRE_BUS</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
+ 
+<span style="color: #d35400;">DallasTemperature</span> <span style="color: #000000;">sensors</span><span style="color: #000000;">(</span><span style="color: #434f54;">&amp;</span><span style="color: #000000;">oneWire</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #434f54;">// Pass the oneWire reference to Dallas Temperature.</span>
+
+<span style="color: #00979c;">void</span> <span style="color: #5e6d03;">setup</span><span style="color: #000000;">(</span><span style="color: #00979c;">void</span><span style="color: #000000;">)</span>
+<span style="color: #000000;">{</span>
+ &nbsp;<strong><span style="color: #d35400;">Serial</span></strong><span style="color: #434f54;">.</span><span style="color: #d35400;">begin</span><span style="color: #000000;">(</span><span style="color: #000000;">9600</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span> 
+ &nbsp;<span style="color: #000000;">sensors</span><span style="color: #434f54;">.</span><span style="color: #d35400;">begin</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
+<span style="color: #000000;">}</span>
+
+<span style="color: #00979c;">void</span> <span style="color: #5e6d03;">loop</span><span style="color: #000000;">(</span><span style="color: #00979c;">void</span><span style="color: #000000;">)</span>
+<span style="color: #000000;">{</span> 
+ &nbsp;<span style="color: #000000;">sensors</span><span style="color: #434f54;">.</span><span style="color: #d35400;">requestTemperatures</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #434f54;">// Send the command to get temperatures &nbsp;</span>
+ &nbsp;<strong><span style="color: #d35400;">Serial</span></strong><span style="color: #434f54;">.</span><span style="color: #d35400;">println</span><span style="color: #000000;">(</span><span style="color: #005c5f;">"Temperature is: "</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
+ &nbsp;<strong><span style="color: #d35400;">Serial</span></strong><span style="color: #434f54;">.</span><span style="color: #d35400;">println</span><span style="color: #000000;">(</span><span style="color: #000000;">sensors</span><span style="color: #434f54;">.</span><span style="color: #d35400;">getTempCByIndex</span><span style="color: #000000;">(</span><span style="color: #000000;">0</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span> &nbsp;&nbsp;<span style="color: #434f54;">// Why "byIndex"? You can have more than one IC on the same bus. 0 refers to the first IC on the wire</span>
+ &nbsp;<span style="color: #d35400;">delay</span><span style="color: #000000;">(</span><span style="color: #000000;">500</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
+<span style="color: #000000;">}</span>
+
+</pre>
+</div>
+<p><strong><span style="color: #993300;">6. Output</span></strong></p>
+<p><span style="color: #000000;">After Uploading the code, open the serial monitor.&nbsp; <br></span></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/ds18b20_nodemcu_output.PNG" alt="ds18b20_nodemcu_output" width="60%" height="NaN"></p>
+<p>If you have any query please write us at <span style="color: #ff6600;"><strong><a>support@roboindia.com</a></strong></span></p>
+<p><span style="color: #ff6600;"><strong>Thanks and Regards</strong></span><br><span style="color: #ff6600;"><strong>Content Development Team </strong></span><br><span style="color: #ff6600;"><strong>Robo India</strong></span><br><span style="color: #ff6600;"><strong><em><a href="https://roboindia.com/" target="_blank">https://roboindia.com</a></em></strong></span></p>	</div>
+</div>
+	
+<div class="row">
+ 	<div style="height:1pt; background:#333; margin-top:10pt; margin-bottom:10pt; width:auto;"></div>
+</div>
+
+
+
+    	 
+    </div>
+  
+<div class="small-12 medium-12 large-2 columns">
+    	 
+    		<a href="http://roboindia.com/store/obstalce-avoiding-robot-rb" style="text-decoration:none" target="_blank"><img src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/banner8.jpg" border="0"></a>
+    	 
+    </div>  
+ </div>
+
+       
+<div class="row full-width">     
+   <div class="large-12 small-12 medium-12 column">
+  		 
+   			<div class="small-12 medium-12 large-12 columns">
+    	<div style="width:100%; background:#FFF; min-height:5em; padding-bottom:7em; text-align:center; font-size:25px;">
+        
+ 
+
+<p style=" padding-top:150px; font-size:24px; color:#999;">Robo India Tutorial portal</p>
+<p style=" padding-top:0px; font-size:20px; color:#999;">Illustrated tutorials and guides.</p>
+<p style=" padding-top:0px; font-size:16px; padding-bottom:20px; color:#999;">Feel free to contact us</p>
+
+        		<div style="font-size:0.5em;">
+									<ul class="icons">
+										<li><a href="https://www.youtube.com/channel/UCe2faLi_cgQB4CM90-YIP-A" class="fa fa-youtube solo" target="_blank"> </a></li>
+										<li><a href="https://www.facebook.com/RoboIndia1/" class="fa fa-facebook solo" target="_blank"> </a></li>
+										<li><a href="https://plus.google.com/+ROBOINDIAAjmer/posts" class="fa fa-google-plus solo" target="_blank"> </a></li>
+										<li><a href="http://www.slideshare.net/robo-india/" class="fa fa-slideshare solo" target="_blank"> </a></li>
+										
+										<li><a href="https://www.linkedin.com/company/robo-india/" class="fa fa-linkedin solo" target="_blank"> </a></li>
+									</ul>
+              <p style="font-size:.8em; color:#999;"> © Robo India | http://roboindia.com</p>
+               </div>
+        </div>
+      
+   </div>  
+</div> 
+
+    
+    <script src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/jquery.js.download"></script>
+    <script src="./DS18B20 Temperature Sensor using NodeMCU _ Robo India_files/foundation.min.js.download"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  
+
+</div></body></html>

@@ -1,0 +1,31 @@
+#include <IRremoteESP8266.h>
+
+int RECV_PIN = D7; //an IR detector/demodulatord is connected to GPIO pin D7
+
+
+IRrecv irrecv(RECV_PIN);
+decode_results results;//za recv
+
+
+setup
+// Start the receiver
+irrecv.enableIRIn(); 
+
+
+loop
+//za resiver
+    if (irrecv.decode(&results)){
+       String msg="";
+       msg= msg+ results.value;
+       if(msg.substring(0,10)=="1886389754")client.publish("bozaSub/sijalica/sve", "0",false);
+       else if(msg.substring(0,10)=="1886422394"){
+        client.publish("bozaSub/sijalica/jedan", "0",false);
+        client.publish("bozaSub/sijalica/dva", "1",false);
+       }
+       else if(msg.substring(0,10)=="1886406074"){
+        client.publish("bozaSub/sijalica/jedan", "1",false);
+        client.publish("bozaSub/sijalica/dva", "0",false);
+       }
+       else if(msg.substring(0,10)=="1886438714")client.publish("bozaSub/sijalica/sve", "1",false);
+       irrecv.resume();
+    }
