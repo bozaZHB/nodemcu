@@ -22,7 +22,8 @@ PubSubClient client(espClient);
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 
-double Setpoint, Input, Output;
+ double Setpoint;
+double Input, Output;
 
 double Kp=45, Ki=0.05, Kd=0;
 PID myPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
@@ -47,7 +48,7 @@ void callback(char* topic, byte* payload, unsigned int length)
   String strTopic(topic);
   String setValueAndroid = String((char)payload[0])+String((char)payload[1]);
   Serial.println(strTopic);
-  if (strTopic =="zhb/set"){
+  if (strTopic =="zhb/set/vrednost"){
     Serial.println(setValueAndroid);
     Setpoint = setValueAndroid.toInt();
   }
@@ -62,7 +63,7 @@ void reconnect() {
     if (client.connect(clientId.c_str(),user,passw))
     {
       Serial.println("connected");
-      client.subscribe("zhb/set");
+      client.subscribe("zhb/set/vrednost");
     } else {
       Serial.print("failed, rc="); Serial.print(client.state());
       delay(2000);
@@ -96,6 +97,7 @@ void loop(){
   sensors.requestTemperatures();
   Input = sensors.getTempCByIndex(0);
   client.publish("zhb/temperature", String(Input).c_str(), false);
+  client.publish("zhb/set", String(Setpoint).c_str(), false);
   Serial.print("Temperature: ");
   Serial.println(Input);
   myPID.Compute();
