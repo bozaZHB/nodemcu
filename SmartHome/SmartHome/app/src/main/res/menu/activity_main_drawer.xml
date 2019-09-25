@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_002_house_1"
+            android:title="@string/app_home" />
+        <item
+            android:id="@+id/dvoriste"
+            android:icon="@drawable/ic_018_grass"
+            android:title="@string/app_dvoriste" />
+        <item
+            android:id="@+id/kapija"
+            android:icon="@drawable/ic_gate"
+            android:title="@string/app_kapija" />
+        <item
+            android:id="@+id/fontana"
+            android:icon="@drawable/ic_012_fountain_3"
+            android:title="@string/app_fontana" />
+        <item
+            android:id="@+id/grejanje"
+            android:icon="@drawable/ic_006_heating_black_tool"
+            android:title="@string/app_grejanje" />
+        <item
+            android:id="@+id/klimaH"
+            android:icon="@drawable/ic_007_air_conditioner_2"
+            android:title="@string/app_klima_hodnik" />
+        <item
+            android:id="@+id/klimaK"
+            android:icon="@drawable/ic_010_air_conditioner_1"
+            android:title="@string/app_klima_kuhinja" />
+        <item
+            android:id="@+id/kucica"
+            android:icon="@drawable/ic_019_home"
+            android:title="@string/app_kucica" />
+        <item
+            android:id="@+id/ruter"
+            android:icon="@drawable/router"
+            android:title="@string/ruter" />
+    </group>
+
+
+</menu>

@@ -1,0 +1,24 @@
+    public void c11(View v) {sendCommand("1");} 16187647 F700FF	nec
+    public void c12(View v) {sendCommand("2");} 16220287 F7807F
+    public void c13(View v) {sendCommand("3");}16203967 F740BF
+    public void c14(View v) {sendCommand("4");}16236607 F7C03F
+    public void c21(View v) {sendCommand("5");}16195807 F720DF
+    public void c22(View v) {sendCommand("6");}16228447 F7A05F
+    public void c23(View v) {sendCommand("7");}16212127 F7609F
+    public void c24(View v) {sendCommand("8");}16244767 F7E01F
+    public void c31(View v) {sendCommand("9");}16191727 F710EF
+    public void c32(View v) {sendCommand("q");}16224367 F7906F
+    public void c33(View v) {sendCommand("w");}16208047 F750AF
+    public void c34(View v) {sendCommand("e");} F7D02F
+    public void c41(View v) {sendCommand("r");} F730CF
+    public void c42(View v) {sendCommand("t");} 0xF7B04F
+    public void c43(View v) {sendCommand("y");} 0xF7708F
+    public void c44(View v) {sendCommand("u");} 0xF7F00F
+    public void c51(View v) {sendCommand("i");} 0xF708F7
+    public void c52(View v) {sendCommand("o");} 0xF78877
+    public void c53(View v) {sendCommand("p");} 0xF748B7
+    public void c54(View v) {sendCommand("a");} 0xF7C837
+    public void c61(View v) {sendCommand("s");} 0xF728D7
+    public void c62(View v) {sendCommand("d");} 0xF7A857
+    public void c63(View v) {sendCommand("f");} 0xF76897
+    public void c64(View v) {sendCommand("g");} 0xF7E817

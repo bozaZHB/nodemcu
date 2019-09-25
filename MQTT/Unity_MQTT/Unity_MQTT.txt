@@ -1,0 +1,34 @@
+folder MQTT se kopira u Assets
+...............................................................................................................................................
+using uPLibrary.Networking.M2Mqtt;
+using uPLibrary.Networking.M2Mqtt.Messages;
+using System;
+using System.Text;
+public class CoinSystem : MonoBehaviour {
+
+    public static MqttClient client;
+    public static string tekst="loading...";
+    void Start()
+    {
+        client = new MqttClient("iot.eclipse.org");	//broker
+        client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
+        string clientId = Guid.NewGuid().ToString();
+        client.Connect(clientId);
+        client.Subscribe(new string[] { "Pi/2" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });	//tema na koju se suskrajbuje
+    }
+
+    void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+    {
+        tekst = Encoding.UTF8.GetString(e.Message).ToString();	//dobijeni tekst
+    }
+
+    public void OnGUI()
+    {
+        GUI.Label(new Rect(10, 10, 90, 40), "Score : " + tekst);	//prikazivanje poslate poruke
+    }
+}
+
+................................................................................................................................................
+
+using uPLibrary.Networking.M2Mqtt.Messages;
+CoinSystem.client.Publish("tema", Encoding.UTF8.GetBytes("podatak koji se salje"), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);

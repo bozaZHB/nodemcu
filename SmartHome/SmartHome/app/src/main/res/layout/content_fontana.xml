@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/svetlozelena"    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="5dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/daljinski_za_fontanu"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textColor="@color/plavaSlova"
+            android:textSize="25dp"
+            android:fontFamily="sans-serif-condensed"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/but11"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_bela"
+                android:onClick="c11"
+
+                android:text="@string/smanji"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/but12"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_bela"
+                android:onClick="c12"
+                android:text="@string/pojacaj"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/but13"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_crna"
+                android:onClick="c13"
+                android:text="@string/off"
+                android:padding="0dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/but14"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:background="@drawable/btn_fontana_crvena"
+                android:onClick="c14"
+                android:text="@string/ukljuci"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/but21"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_12"
+                android:onClick="c21"
+                android:text="@string/R"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/but22"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_22"
+                android:onClick="c22"
+                android:text="@string/G"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/but23"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_32"
+                android:onClick="c23"
+                android:text="@string/B"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/but24"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_bela"
+                android:onClick="c24"
+                android:text="@string/W"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/but31"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_13"
+                android:onClick="c31" />
+
+            <Button
+                android:id="@+id/but32"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_23"
+                android:onClick="c32" />
+
+            <Button
+                android:id="@+id/but33"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_33"
+                android:onClick="c33" />
+
+            <Button
+                android:id="@+id/but34"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="0dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_siva"
+                android:onClick="c34"
+                android:text="@string/flash" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/but41"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_14"
+                android:onClick="c41" />
+
+            <Button
+                android:id="@+id/but42"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_24"
+                android:onClick="c42" />
+
+            <Button
+                android:id="@+id/but43"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_34"
+                android:onClick="c43" />
+
+            <Button
+                android:id="@+id/but44"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:background="@drawable/btn_fontana_siva"
+                android:onClick="c44"
+                android:text="@string/strobe" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/but51"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_15"
+                android:onClick="c51" />
+
+            <Button
+                android:id="@+id/but52"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_25"
+                android:onClick="c52" />
+
+            <Button
+                android:id="@+id/but53"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_35"
+                android:onClick="c53" />
+
+            <Button
+                android:id="@+id/but54"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:background="@drawable/btn_fontana_siva"
+                android:onClick="c54"
+                android:text="@string/fade" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/but61"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_16"
+                android:onClick="c61" />
+
+            <Button
+                android:id="@+id/but62"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_26"
+                android:onClick="c62" />
+
+            <Button
+                android:id="@+id/but63"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_fontana_36"
+                android:onClick="c63" />
+
+            <Button
+                android:id="@+id/but64"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:background="@drawable/btn_fontana_siva"
+                android:onClick="c64"
+                android:text="@string/smooth" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,4 @@
+sudo raspi-config
+sudo service apache2 start
+sudo service apache2 stop
+sudo nano /var/www/index.html (za internet index teks, ip adresa raspberry-a)

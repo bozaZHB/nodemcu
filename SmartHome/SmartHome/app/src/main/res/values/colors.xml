@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0b8421</color>
+    <color name="colorPrimaryDark">#0b6004</color>
+    <color name="crvena">#d60113</color>
+    <color name="colorShop">#0e5e01</color>
+    <color name="colorShop2">#071f53</color>
+    <color name="colorNavText">#ffffff</color>
+    <color name="colorSettings">#40000000</color>
+    <color name="colorClick">#abcdef</color>
+    <color name="crna">#000000</color>
+    <color name="plavaSlova">#00047e</color>
+    <color name="svetlozelena">#86e48b</color>
+
+</resources>

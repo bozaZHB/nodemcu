@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_height="match_parent"
+    android:background="@color/svetlozelena">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageSwitcher
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/imageSwither"
+            />
+        <TextSwitcher
+            android:id="@+id/textSwither"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:layout_marginTop="40dp"
+            android:outAnimation="@android:anim/slide_out_right"
+            ></TextSwitcher>
+        <TextSwitcher
+            android:id="@+id/textSwither2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold"
+            ></TextSwitcher>
+        <TextSwitcher
+            android:id="@+id/textSwither3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="10dp"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right"
+            ></TextSwitcher>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/colorShop">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/txtObavestenje"
+            android:text="provera..."
+            android:textColor="@color/colorNavText"/>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <ImageButton
+                android:id="@+id/imageButtonLakuNoc"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/btn_circle_on"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                android:onClick="SK1"
+                android:src="@drawable/lakunoc" />
+
+
+            <TextView
+                android:id="@+id/txtFontanaOsvetljenje"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/plavaSlova"
+                android:textSize="@dimen/velicina_slova_dvoriste"
+                android:text="@string/lakuNoc" />
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <ImageButton
+                android:id="@+id/imageButtonFontanaPrskalica"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/btn_circle_on"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/park"
+                android:onClick="manageBlinkEffect"/>
+            <TextView
+                android:id="@+id/txtFontanaPrskalica"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/plavaSlova"
+                android:textSize="@dimen/velicina_slova_dvoriste"
+                android:text="@string/fontana_prskalica" />
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <ImageButton
+                android:id="@+id/imageButtonOsvetljenjeFontane"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/btn_circle_sivo"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/light_bulb"/>
+
+            <TextView
+                android:id="@+id/txtVrataUlazna"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/plavaSlova"
+                android:textSize="@dimen/velicina_slova_dvoriste"
+                android:text="@string/fontanaOsvetljenje" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

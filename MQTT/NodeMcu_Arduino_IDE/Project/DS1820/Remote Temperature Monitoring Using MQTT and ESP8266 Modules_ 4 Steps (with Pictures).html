@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://www.instructables.com/id/Remote-Temperature-Monitoring-Using-MQTT-and-ESP82/ -->
+<html lang="en" class="is-desktop fluid  show-ads"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# ibles-production: http://ogp.me/ns/fb/ibles-production#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Remote Temperature Monitoring Using MQTT and ESP8266 Modules: 4 Steps (with Pictures)</title><meta property="fb:app_id" content="140028286058792"><meta property="og:site_name" content="Instructables.com"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="If you want to monitor some remote temperatures this Instructable will show you can do this by using some ESP8266 modules, MQTT (with a broker), LCD screen (for..."><meta property="og:type" content="article"><meta property="og:url" content="http://www.instructables.com/id/Remote-Temperature-Monitoring-Using-MQTT-and-ESP82/"><meta property="og:image" content="https://cdn.instructables.com/F2K/FSUF/IN4W29QN/F2KFSUFIN4W29QN.RECT2100.jpg"><meta property="og:image:width" content="1296"><meta property="og:image:height" content="1080"><meta property="og:title" content="Remote Temperature Monitoring Using MQTT and ESP8266 Modules"><meta property="og:description" content="If you want to monitor some remote temperatures this Instructable will show you can do this by using some ESP8266 modules, MQTT (with a broker), LCD screen (for..."><meta property="category" content="technology"><meta property="channel" content="arduino"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@instructables"><meta name="twitter:title" content="Remote Temperature Monitoring Using MQTT and ESP8266 Modules"><meta name="twitter:image" content="https://cdn.instructables.com/F2K/FSUF/IN4W29QN/F2KFSUFIN4W29QN.MEDIUM.jpg"><link rel="dns-prefetch" href="http://ap.lijit.com/"><link rel="dns-prefetch" href="http://js-sec.indexww.com/"><link rel="amphtml" href="http://www.instructables.com/id/Remote-Temperature-Monitoring-Using-MQTT-and-ESP82/?amp_page=true"><link rel="canonical" href="http://www.instructables.com/id/Remote-Temperature-Monitoring-Using-MQTT-and-ESP82/"><link rel="shortcut icon" type="image/x-icon" href="http://www.instructables.com/intl_static/img/siteassets/favicon.ico"><link rel="dns-prefetch" href="http://cdn.instructables.com/"><link rel="dns-prefetch" href="http://www.googletagservices.com/"><link rel="dns-prefetch" href="http://cdn.mxpnl.com/"><link rel="dns-prefetch" href="http://platform.twitter.com/"><link rel="dns-prefetch" href="http://platform.tumblr.com/"><link rel="stylesheet" href="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/global-desktop-c1c4bf18.css" type="text/css"><link rel="stylesheet" href="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/promo_styles.min2.css"><link rel="stylesheet" href="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/ible-53177b01.css" type="text/css"><script type="text/javascript" async="" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pinit_main.js.download"></script><script async="" type="text/javascript" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/share.js.download"></script><script async="" type="text/javascript" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/widgets.js.download"></script><script id="facebook-jssdk" async="" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/all.js.download"></script><script type="text/javascript" async="" src="http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script async="" src="http://b.scorecardresearch.com/beacon.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/8d05eb7d3ecd.js.download"></script><style></style><script type="application/ld+json">{"description":"If you want to monitor some remote temperatures this Instructable will show you can do this by using some ESP8266 modules, MQTT (with a broker), LCD screen (for l...","image":{"url":"https://cdn.instructables.com/F2K/FSUF/IN4W29QN/F2KFSUFIN4W29QN.LARGE.jpg","width":1024,"@type":"ImageObject","height":853.0},"datePublished":"2016-04-18","contributor":{"@type":"Person","name":"padeath"},"publisher":{"url":"http://www.instructables.com","logo":{"url":"http://www.instructables.com/intl_static/img/logo-228x60.png","width":228,"@type":"ImageObject","height":60},"@type":"Organization","name":"Instructables"},"name":"Remote Temperature Monitoring Using MQTT and ESP8266 Modules","author":{"url":"http://www.instructables.com","logo":{"url":"http://www.instructables.com/intl_static/img/logo-228x60.png","width":228,"@type":"ImageObject","height":60},"@type":"Organization","name":"Instructables"},"headline":"Remote Temperature Monitoring Using MQTT and ESP8266 Modules","@type":"Article","mainEntityOfPage":{"@id":"http://www.instructables.com/id/Remote-Temperature-Monitoring-Using-MQTT-and-ESP82/","@type":"WebPage"},"@context":"https://schema.org","dateModified":"2017-09-29"}</script><script type="application/ld+json">{"@context":"http://schema.org","itemListElement":[{"position":1,"@type":"ListItem","item":{"@id":"http://www.instructables.com/technology/","name":"technology","@type":"WebPage"}},{"position":2,"@type":"ListItem","item":{"@id":"http://www.instructables.com/technology/arduino/","name":"arduino","@type":"WebPage"}},{"position":3,"@type":"ListItem","item":{"@id":"http://www.instructables.com/id/Remote-Temperature-Monitoring-Using-MQTT-and-ESP82/","name":"Remote Temperature Monitoring Using MQTT and ESP8266 Modules","@type":"WebPage"}}],"@type":"BreadcrumbList"}</script><script type="text/javascript" src="http://ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid=13390459&amp;uid=instructables"></script><script type="text/javascript" src="http://js-sec.indexww.com/ht/ls-instructables.js"></script><script type="text/javascript" src="http://c.amazon-adsystem.com/aax2/apstag.js"></script><script type="text/javascript" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/gpt.js.download"></script><script type="text/javascript" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/ible-desktop-out-d843f9ef.js.download"></script><script>
+if (document.cookie.indexOf('hideAds') === -1) {
+    var adScriptsLoaded = new Deferred(),
+        refreshingSlot;
+    
+    head.load([
+        "//ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid=13390459&uid=instructables",
+        "//js-sec.indexww.com/ht/ls-instructables.js",
+        "//c.amazon-adsystem.com/aax2/apstag.js",
+        "//www.googletagservices.com/tag/js/gpt.js"
+    ], function() {
+        googletag.cmd.push(function() {
+            var slots = [];
+            slots.push(googletag.defineSlot("/1022072/technology_leaderboard", [[728, 90], [970, 250], [970, 90]], "gpt-ad-leaderboard").addService(googletag.pubads()));            
+            slots.push(googletag.defineSlot("/1022072/technology_med_rectangle", [[300, 250], [300, 600], [160, 600],[300, 601]], "gpt-ad-med-rectangle")
+                    .addService(googletag.pubads()));
+            refreshingSlot = googletag.defineSlot("/1022072/brand_technology_med_rectangle", [[300, 250], [300, 600], [160, 600],[300, 601]], "gpt-ad-sidebar-brand")
+                    .addService(googletag.pubads());
+            slots.push(refreshingSlot);
+            slots.push(googletag.defineSlot("/1022072/technology_inline_med_rectangle", [[300, 250]], "gpt-ad-inline-med-1")
+                    .addService(googletag.pubads()));
+            slots.push(googletag.defineSlot("/1022072/rightside_inline_med_rectangle", [[300, 250]], "gpt-ad-inline-med-2")
+                    .addService(googletag.pubads()));
+        
+            googletag.pubads().setTargeting("kvrefd", "instructables.com");
+            googletag.pubads().setTargeting("content", "Step by St");
+            googletag.pubads().setTargeting("id", "BJIMMFFN3P");
+            googletag.pubads().setTargeting("category", "technology");
+            googletag.pubads().setTargeting("channel", "arduino");
+            googletag.pubads().setTargeting("author", "MSLINNKIM5");
+            googletag.pubads().setTargeting("featured", "true");
+            googletag.pubads().setTargeting("status", "PUBLISHED");
+            googletag.pubads().setTargeting("step", "intro");
+            googletag.pubads().setTargeting("adtest", "");
+
+            
+            
+            
+                googletag.pubads().setTargeting("keyword", ["esp8266","temperatur","sensor","arduino"]);
+            
+        
+            googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+                Ibles.purgeBadCookies();
+            });             
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
+        });
+        
+        apstag.init({
+            pubID: '3058',
+            adServer: 'googletag',
+            bidTimeout: 2e3
+        });
+
+        apstag.fetchBids({
+            slots: [{
+                slotID: "gpt-ad-leaderboard",
+                slotName: "/1022072/technology_leaderboard",
+                sizes: [[728, 90], [970, 250], [970, 90]]
+            },
+            {
+                slotID: "gpt-ad-med-rectangle",
+                slotName: "/1022072/technology_med_rectangle",
+                sizes: [[300, 250], [300, 600], [160, 600],[300, 601]]
+            },
+            {
+                slotID: "gpt-ad-sidebar-brand",
+                slotName: "/1022072/brand_technology_med_rectangle",
+                sizes: [[300, 250], [300, 600], [160, 600],[300, 601]]
+            },
+            {
+                slotID: "gpt-ad-inline-med-1",
+                slotName: "/1022072/technology_inline_med_rectangle",
+                sizes: [[300, 250]]
+            },
+            {
+                slotID: "gpt-ad-inline-med-2",
+                slotName: "/1022072/rightside_inline_med_rectangle",
+                sizes: [[300, 250]]
+            }]
+        }, function(bids) {            
+            googletag.cmd.push(function() {
+                apstag.setDisplayBids();
+            });            
+            adScriptsLoaded.resolve();
+        });
+        
+        setInterval(function(){
+            apstag.fetchBids({
+                slots: [            {
+                    slotID: "gpt-ad-sidebar-brand",
+                    slotName: "/1022072/brand_technology_med_rectangle",
+                    sizes: [[300, 250], [300, 600], [160, 600],[300, 601]]
+                }]
+            }, function(bids){
+                apstag.setDisplayBids();
+                googletag.pubads().setTargeting("ybot", yieldbot.getPageCriteria()).refresh([refreshingSlot]);
+            });
+        }, 30000);
+    });
+}
+</script><style type="text/css"> .PIN_1517481587075_embed_grid { 
+  width: 100%;
+  max-width: 257px;
+  min-width: 140px;
+  display: inline-block;
+  box-shadow: inset 0 0 1px #000;
+  border-radius: 5px;
+  overflow: hidden;
+  font: 12px "Helvetica Neue", Helvetica, arial, sans-serif;
+  color: rgb(54, 54, 54);
+  box-sizing: border-box;
+  background: #fff;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+ .PIN_1517481587075_embed_grid * { 
+  display: block;
+  position: relative;
+  font: inherit;
+  cursor: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_hd { 
+  height: 55px;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_hd .PIN_1517481587075_img { 
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  background: transparent url () 0 0 no-repeat;
+  background-size: cover;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_hd .PIN_1517481587075_pinner { 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75%;
+  position: absolute;
+  top: 20px;
+  left: 56px;
+  font-size: 14px;
+  font-weight: bold;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_bd { 
+  padding: 0 10px;
+  -moz-scrollbars: none;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_bd .PIN_1517481587075_ct { 
+  width: 100%;
+  height: auto;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  display: inline-block;
+  width: 100%;
+  padding: 1px;
+  vertical-align: top;
+  min-width: 60px;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col .PIN_1517481587075_img { 
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  background: transparent url() 0 0 no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 1px #000;
+  border-radius: 2px;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_ft { 
+  padding: 11px;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_ft .PIN_1517481587075_button { 
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: inset 0 0 1px #888;
+  background-color: #efefef;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 33px;
+  width: 100%;
+  min-width: 70px;
+  padding: 0 3px;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_ft .PIN_1517481587075_button .PIN_1517481587075_label { 
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_ft .PIN_1517481587075_button .PIN_1517481587075_label.PIN_1517481587075_top { 
+  top: 0;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_ft .PIN_1517481587075_button .PIN_1517481587075_label.PIN_1517481587075_bottom { 
+  bottom: 0;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_ft .PIN_1517481587075_button .PIN_1517481587075_label .PIN_1517481587075_string { 
+  white-space: pre;
+  color: #746d6a;
+  font-size: 13px;
+  font-weight: bold;
+  vertical-align: top;
+  display: inline-block;
+  height: 33px;
+  line-height: 33px;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_ft .PIN_1517481587075_button .PIN_1517481587075_label .PIN_1517481587075_logo { 
+  display: inline-block;
+  vertical-align: bottom;
+  height: 32px;
+  width: 80px;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTJweCIgd2lkdGg9IjUwcHgiIHZpZXdCb3g9IjAgMCA1MCAxMiI+PGc+PHBhdGggZD0iTTE5LjY5LDkuMjggTDE5LjY5LDQuMjggTDIxLjI3LDQuMjggTDIxLjI3LDkuMjggTDE5LjY5LDkuMjggWiBNNS45NywwLjAwIEM5LjI3LDAuMDAgMTEuOTUsMi42OSAxMS45NSw2LjAwIEMxMS45NSw5LjMxIDkuMjcsMTIuMDAgNS45NywxMi4wMCBDNS4zOCwxMi4wMCA0LjgwLDExLjkxIDQuMjYsMTEuNzUgQzQuMjYsMTEuNzUgNC4yNiwxMS43NSA0LjI2LDExLjc1IEM0LjI1LDExLjc1IDQuMjQsMTEuNzQgNC4yMywxMS43NCBMNC4yMSwxMS43MyBDNC4yMSwxMS43MyA0LjIxLDExLjczIDQuMjEsMTEuNzMgQzQuNDUsMTEuMzMgNC44MSwxMC42OCA0Ljk1LDEwLjE2IEM1LjAyLDkuODggNS4zMiw4LjczIDUuMzIsOC43MyBDNS41Miw5LjExIDYuMDgsOS40MiA2LjY5LDkuNDIgQzguNDksOS40MiA5Ljc5LDcuNzYgOS43OSw1LjY5IEM5Ljc5LDMuNzEgOC4xOCwyLjIzIDYuMTEsMi4yMyBDMy41MywyLjIzIDIuMTYsMy45NiAyLjE2LDUuODYgQzIuMTYsNi43NCAyLjYzLDcuODMgMy4zNyw4LjE4IEMzLjQ5LDguMjMgMy41NSw4LjIxIDMuNTcsOC4xMCBDMy41OSw4LjAyIDMuNjksNy42MSAzLjc0LDcuNDIgQzMuNzUsNy4zNiAzLjc1LDcuMzEgMy43MCw3LjI1IEMzLjQ1LDYuOTUgMy4yNSw2LjM5IDMuMjUsNS44OCBDMy4yNSw0LjU1IDQuMjUsMy4yNyA1Ljk1LDMuMjcgQzcuNDIsMy4yNyA4LjQ1LDQuMjggOC40NSw1LjcxIEM4LjQ1LDcuMzQgNy42Myw4LjQ2IDYuNTcsOC40NiBDNS45OCw4LjQ2IDUuNTQsNy45OCA1LjY4LDcuMzggQzUuODUsNi42NyA2LjE4LDUuOTAgNi4xOCw1LjM4IEM2LjE4LDQuOTIgNS45Myw0LjU0IDUuNDIsNC41NCBDNC44Miw0LjU0IDQuMzQsNS4xNiA0LjM0LDUuOTkgQzQuMzQsNi41MiA0LjUyLDYuODggNC41Miw2Ljg4IEM0LjUyLDYuODggMy45Myw5LjQwIDMuODIsOS44NyBDMy43MCwxMC4zOCAzLjc1LDExLjExIDMuODAsMTEuNTkgTDMuODAsMTEuNTkgQzMuNzksMTEuNTkgMy43OCwxMS41OCAzLjc4LDExLjU4IEMzLjc3LDExLjU4IDMuNzYsMTEuNTggMy43NiwxMS41NyBDMy43NiwxMS41NyAzLjc2LDExLjU3IDMuNzYsMTEuNTcgQzEuNTYsMTAuNjkgMC4wMCw4LjUzIDAuMDAsNi4wMCBDMC4wMCwyLjY5IDIuNjcsMC4wMCA1Ljk3LDAuMDAgWiBNMTYuODcsMi4zMSBDMTcuNzEsMi4zMSAxOC4zNCwyLjU0IDE4Ljc2LDIuOTUgQzE5LjIxLDMuMzcgMTkuNDYsMy45NiAxOS40Niw0LjY2IEMxOS40Niw2LjAwIDE4LjU0LDYuOTUgMTcuMTEsNi45NSBMMTUuNzIsNi45NSBMMTUuNzIsOS4yOCBMMTQuMTIsOS4yOCBMMTQuMTIsMi4zMSBMMTYuODcsMi4zMSBaIE0xNi45NCw1LjU4IEMxNy41Niw1LjU4IDE3LjkxLDUuMjEgMTcuOTEsNC42NSBDMTcuOTEsNC4xMCAxNy41NSwzLjc2IDE2Ljk0LDMuNzYgTDE1LjcyLDMuNzYgTDE1LjcyLDUuNTggTDE2Ljk0LDUuNTggWiBNNTAuMDAsNS4yOCBMNDkuMTksNS4yOCBMNDkuMTksNy42MiBDNDkuMTksOC4wMSA0OS40MCw4LjExIDQ5Ljc0LDguMTEgQzQ5LjgzLDguMTEgNDkuOTMsOC4xMCA1MC4wMCw4LjEwIEw1MC4wMCw5LjI4IEM0OS44NCw5LjMxIDQ5LjU4LDkuMzMgNDkuMjIsOS4zMyBDNDguMzAsOS4zMyA0Ny42NCw5LjAzIDQ3LjY0LDcuOTYgTDQ3LjY0LDUuMjggTDQ3LjE2LDUuMjggTDQ3LjE2LDQuMjggTDQ3LjY0LDQuMjggTDQ3LjY0LDIuNzAgTDQ5LjE5LDIuNzAgTDQ5LjE5LDQuMjggTDUwLjAwLDQuMjggTDUwLjAwLDUuMjggWiBNNDUuMzEsNi4xMyBDNDYuMTgsNi4yNyA0Ny4yMSw2LjUwIDQ3LjIxLDcuNzcgQzQ3LjIxLDguODcgNDYuMjUsOS40MyA0NC45NSw5LjQzIEM0My41NSw5LjQzIDQyLjY1LDguODEgNDIuNTQsNy43OCBMNDQuMDUsNy43OCBDNDQuMTUsOC4yMCA0NC40Niw4LjQwIDQ0Ljk0LDguNDAgQzQ1LjQyLDguNDAgNDUuNzIsOC4yMiA0NS43Miw3LjkwIEM0NS43Miw3LjQ1IDQ1LjEyLDcuNDAgNDQuNDYsNy4yOSBDNDMuNTksNy4xNCA0Mi42Nyw2LjkxIDQyLjY3LDUuNzQgQzQyLjY3LDQuNjggNDMuNjQsNC4xNCA0NC44Miw0LjE0IEM0Ni4yMiw0LjE0IDQ2Ljk4LDQuNzUgNDcuMDYsNS43NCBMNDUuNjAsNS43NCBDNDUuNTQsNS4yOSA0NS4yNCw1LjE1IDQ0LjgwLDUuMTUgQzQ0LjQyLDUuMTUgNDQuMTIsNS4zMCA0NC4xMiw1LjYxIEM0NC4xMiw1Ljk2IDQ0LjY4LDYuMDEgNDUuMzEsNi4xMyBaIE0yMC40OCwyLjAwIEMyMS4wMCwyLjAwIDIxLjQzLDIuNDIgMjEuNDMsMi45NSBDMjEuNDMsMy40OCAyMS4wMCwzLjkwIDIwLjQ4LDMuOTAgQzE5Ljk1LDMuOTAgMTkuNTMsMy40OCAxOS41MywyLjk1IEMxOS41MywyLjQyIDE5Ljk1LDIuMDAgMjAuNDgsMi4wMCBaIE0yOC40OCw3LjYyIEMyOC40OCw4LjAxIDI4LjcwLDguMTEgMjkuMDQsOC4xMSBDMjkuMTAsOC4xMSAyOS4xOCw4LjEwIDI5LjI0LDguMTAgTDI5LjI0LDkuMjkgQzI5LjA4LDkuMzEgMjguODMsOS4zMyAyOC41Miw5LjMzIEMyNy42MCw5LjMzIDI2Ljk0LDkuMDMgMjYuOTQsNy45NiBMMjYuOTQsNS4yOCBMMjYuNDIsNS4yOCBMMjYuNDIsNC4yOCBMMjYuOTQsNC4yOCBMMjYuOTQsMi43MCBMMjguNDgsMi43MCBMMjguNDgsNC4yOCBMMjkuMjQsNC4yOCBMMjkuMjQsNS4yOCBMMjguNDgsNS4yOCBMMjguNDgsNy42MiBaIE0yNC42OSw0LjE0IEMyNS43Nyw0LjE0IDI2LjQxLDQuOTIgMjYuNDEsNi4wMyBMMjYuNDEsOS4yOCBMMjQuODMsOS4yOCBMMjQuODMsNi4zNSBDMjQuODMsNS44MiAyNC41Nyw1LjQ2IDI0LjA1LDUuNDYgQzIzLjUzLDUuNDYgMjMuMTgsNS45MCAyMy4xOCw2LjUyIEwyMy4xOCw5LjI4IEwyMS42MCw5LjI4IEwyMS42MCw0LjI4IEwyMy4xMiw0LjI4IEwyMy4xMiw0Ljk3IEwyMy4xNSw0Ljk3IEMyMy41Miw0LjQzIDI0LjAwLDQuMTQgMjQuNjksNC4xNCBaIE0zMy40Miw0Ljc2IEMzMi45OSw0LjM3IDMyLjQzLDQuMTQgMzEuNzIsNC4xNCBDMzAuMjAsNC4xNCAyOS4xNiw1LjI4IDI5LjE2LDYuNzcgQzI5LjE2LDguMjggMzAuMTcsOS40MiAzMS44MSw5LjQyIEMzMi40NCw5LjQyIDMyLjk1LDkuMjYgMzMuMzcsOC45NiBDMzMuODAsOC42NiAzNC4xMCw4LjIzIDM0LjIwLDcuNzggTDMyLjY2LDcuNzggQzMyLjUyLDguMTAgMzIuMjUsOC4yOCAzMS44Myw4LjI4IEMzMS4xOCw4LjI4IDMwLjgxLDcuODYgMzAuNzIsNy4xOSBMMzQuMjksNy4xOSBDMzQuMzAsNi4xOCAzNC4wMSw1LjMxIDMzLjQyLDQuNzYgTDMzLjQyLDQuNzYgWiBNNDEuNjYsNC43NiBDNDIuMjYsNS4zMSA0Mi41NSw2LjE4IDQyLjU0LDcuMTkgTDM4Ljk3LDcuMTkgQzM5LjA2LDcuODYgMzkuNDMsOC4yOCA0MC4wOCw4LjI4IEM0MC41MCw4LjI4IDQwLjc3LDguMTAgNDAuOTEsNy43OCBMNDIuNDUsNy43OCBDNDIuMzQsOC4yMyA0Mi4wNSw4LjY2IDQxLjYyLDguOTYgQzQxLjIwLDkuMjYgNDAuNjksOS40MiA0MC4wNiw5LjQyIEMzOC40Miw5LjQyIDM3LjQxLDguMjggMzcuNDEsNi43NyBDMzcuNDEsNS4yOCAzOC40NSw0LjE0IDM5Ljk3LDQuMTQgQzQwLjY3LDQuMTQgNDEuMjQsNC4zNyA0MS42Niw0Ljc2IFogTTMwLjczLDYuMjQgQzMwLjgzLDUuNjUgMzEuMTQsNS4yNyAzMS43NSw1LjI3IEMzMi4yNiw1LjI3IDMyLjYzLDUuNjUgMzIuNjksNi4yNCBMMzAuNzMsNi4yNCBaIE0zOC45OCw2LjI0IEw0MC45NCw2LjI0IEM0MC44OCw1LjY1IDQwLjUxLDUuMjcgNDAuMDAsNS4yNyBDMzkuMzksNS4yNyAzOS4wOCw1LjY1IDM4Ljk4LDYuMjQgWiBNMzcuNTQsNC4yMSBMMzcuNTQsNS42MCBDMzYuNjQsNS41MSAzNi4wNyw1Ljk5IDM2LjA3LDcuMDMgTDM2LjA3LDkuMjggTDM0LjQ4LDkuMjggTDM0LjQ4LDQuMjggTDM2LjAwLDQuMjggTDM2LjAwLDUuMDYgTDM2LjAzLDUuMDYgQzM2LjM4LDQuNDcgMzYuNzgsNC4yMSAzNy4zOSw0LjIxIEMzNy40NSw0LjIxIDM3LjUwLDQuMjEgMzcuNTQsNC4yMSBaIiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==) 50% 50% no-repeat;
+  background-size: 80px 32px;
+}
+ .PIN_1517481587075_embed_grid .PIN_1517481587075_ft .PIN_1517481587075_button:hover { 
+  box-shadow: inset 0 0 1px #000;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_noscroll .PIN_1517481587075_bd { 
+  overflow: hidden;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_board .PIN_1517481587075_hd .PIN_1517481587075_pinner { 
+  top: 10px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_board .PIN_1517481587075_hd .PIN_1517481587075_board { 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75%;
+  position: absolute;
+  bottom: 10px;
+  left: 56px;
+  color: #363636;
+  font-size: 12px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c2 { 
+  max-width: 494px;
+  min-width: 140px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c2 .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  width: 50%;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c3 { 
+  max-width: 731px;
+  min-width: 200px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c3 .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  width: 33.33%;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c4 { 
+  max-width: 968px;
+  min-width: 260px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c4 .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  width: 25%;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c5 { 
+  max-width: 1205px;
+  min-width: 320px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c5 .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  width: 20%;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c6 { 
+  max-width: 1442px;
+  min-width: 380px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c6 .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  width: 16.66%;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c7 { 
+  max-width: 1679px;
+  min-width: 440px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c7 .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  width: 14.28%;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c8 { 
+  max-width: 1916px;
+  min-width: 500px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c8 .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  width: 12.5%;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c9 { 
+  max-width: 2153px;
+  min-width: 560px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c9 .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  width: 11.11%;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c10 { 
+  max-width: 2390px;
+  min-width: 620px;
+}
+ .PIN_1517481587075_embed_grid.PIN_1517481587075_c10 .PIN_1517481587075_bd .PIN_1517481587075_ct .PIN_1517481587075_col { 
+  width: 10%;
+}
+ .PIN_1517481587075_embed_pin { 
+  width: 100%;
+  min-width: 160px;
+  max-width: 236px;
+  display: inline-block;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 1px #000;
+  border-radius: 5px;
+  overflow: hidden;
+  font: 12px "Helvetica Neue", Helvetica, arial, sans-serif;
+  color: #363636;
+  background: #fff;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+ .PIN_1517481587075_embed_pin * { 
+  display: block;
+  position: relative;
+  font: inherit;
+  cursor: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd { 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd { 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container { 
+  width: 100%;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_img,  .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_iframe,  .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_video { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: transparent url() 0 0 no-repeat;
+  background-size: cover;
+  border: none;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_native { 
+  height: 64px;
+  width: 64px;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNjNweCIgd2lkdGg9IjYzcHgiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGc+PHBhdGggZD0iTSAzMiAzMiBtIC0zMiwgMCBhIDMxLCAzMSAwIDEsIDAgNjMsIDAgYSAzMSwgMzEgMCAxLDAgLTYzLCAwIHoiIGZpbGw9IiMwMDAiPjwvcGF0aD48cGF0aCBkPSJNIDI1IDE5IEwgNDggMzIgIEwgMjUgNDUgWiIgZmlsbD0iI2ZmZiI+PC9wYXRoPjwvZz48L3N2Zz4=) 0 0 no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -32px;
+  margin-left: -32px;
+  opacity: .75;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_control { 
+  width: 50px;
+  height: 24px;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, .4);
+  color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+  border: 2px solid rgba(255, 255, 255, .68);
+  border-radius: 13px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_control.PIN_1517481587075_paused::after,  .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_control.PIN_1517481587075_playing::after { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  line-height: 19px;
+  white-space: pre;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_control.PIN_1517481587075_paused::after { 
+  content: "▶ GIF";
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_control.PIN_1517481587075_playing::after { 
+  content: "❙ ❙ GIF";
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_repin { 
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 28px;
+  width: auto;
+  color: #fff;
+  background: #bd081c url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==) 5px 50% no-repeat;
+  background-size: 18px 18px;
+  text-indent: 28px;
+  font: 14px/28px "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0 6px 0 0;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_repin:hover { 
+  background-color: #aa0719;
+  box-shadow: none;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source { 
+  height: 38px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source .PIN_1517481587075_img { 
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 10px;
+  height: 16px;
+  width: 16px;
+  background: transparent url() 0 0 no-repeat;
+  background-size: 16px 16px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source .PIN_1517481587075_domain { 
+  line-height: 38px;
+  max-width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  color: #b9b9b9;
+  position: absolute;
+  top: 0px;
+  left: 35px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source.PIN_1517481587075_nofav .PIN_1517481587075_img { 
+  display: none;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source.PIN_1517481587075_nofav .PIN_1517481587075_domain { 
+  max-width: 85%;
+  left: 10px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source .PIN_1517481587075_menu { 
+  height: inherit;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source .PIN_1517481587075_menu .PIN_1517481587075_toggle { 
+  position: absolute;
+  top: 0;
+  right: 5px;
+  height: inherit;
+  width: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNXB4IiB3aWR0aD0iMjBweCIgdmlld0JveD0iMCAwIDIwIDUiPjxnPjxwYXRoIGQ9Ik0xNy41LDUgQzE4Ljg4MSw1IDIwLDMuODgxIDIwLDIuNSBDMjAsMS4xMTkgMTguODgxLDAgMTcuNSwwIEMxNi4xMTksMCAxNSwxLjExOSAxNSwyLjUgQzE1LDMuODgxIDE2LjExOSw1IDE3LjUsNSBaIE0xMCw1IEMxMS4zOCw1IDEyLjUsMy44ODEgMTIuNSwyLjUgQzEyLjUsMS4xMTkgMTEuMzgsMCAxMCwwIEM4LjYyLDAgNy41LDEuMTE5IDcuNSwyLjUgQzcuNSwzLjg4MSA4LjYyLDUgMTAsNSBNMi41LDUgQzMuODgxLDUgNSwzLjg4MSA1LDIuNSBDNSwxLjExOSAzLjg4MSwwIDIuNSwwIEMxLjEyLDAgMCwxLjExOSAwLDIuNSBDMCwzLjg4MSAxLjEyIDUsMi41LDUgWiIgZmlsbD0iI2I1YjViNSI+PC9wYXRoPjwvZz48L3N2Zz4=) 50% 50% no-repeat;
+  background-size: fill;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source .PIN_1517481587075_menu .PIN_1517481587075_dropdown { 
+  display: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .33);
+  font-weight: bold;
+  font-size: 12px;
+  background: #fff;
+  text-align: left;
+  padding: 10px;
+  position: absolute;
+  max-width: 195px;
+  right: 10px;
+  top: 39px;
+  z-index: 1;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source .PIN_1517481587075_menu .PIN_1517481587075_dropdown::after { 
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 1px;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_source .PIN_1517481587075_menu .PIN_1517481587075_dropdown::before { 
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 2px;
+  border-bottom: 7px solid #e2e2e2;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_description { 
+  font-size: 14px;
+  line-height: 17px;
+  margin: 8px 12px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_attribution { 
+  height: 22px;
+  margin-top: 5px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_attribution .PIN_1517481587075_img { 
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 10px;
+  height: 16px;
+  width: 16px;
+  background: transparent url() 0 0 no-repeat;
+  background-size: 16px 16px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_attribution .PIN_1517481587075_by { 
+  line-height: 22px;
+  max-width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  font-weight: bold;
+  color: #b9b9b9;
+  position: absolute;
+  top: 0px;
+  left: 35px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_stats { 
+  height: 24px;
+  line-height: 24px;
+  margin: 0 0 0 10px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_stats .PIN_1517481587075_repins { 
+  padding-left: 17px;
+  padding-right: 10px;
+  color: #a8a8a8;
+  font-size: 11px;
+  font-weight: bold;
+  display: inline-block;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTRweCIgd2lkdGg9IjE0cHgiIHZpZXdCb3g9IjAgMCAxNCAxNCI+PGc+PHBhdGggZD0iTTExLjk3OSw2Ljg1OSBMMTMuOTksNS4wMTEgTDExLjI0MSw1LjAxMSBMMTAuNDg2LDAgTDkuNzM5LDUuMDExIEw3LDUuMDExIEw4Ljk4Niw2Ljg1OCBMOC45ODYsMTEuMDE3IEM4LjUwNSwxMC45ODUgOC4xNDMsMTEuMDEyIDguMTQzLDExLjIxMyBDOC4xNDMsMTEuNjg3IDguNTAzLDEyLjAwMSA4Ljk4NiwxMi4wMDEgTDExLjk4MiwxMiBDMTIuNDY1LDEyIDEyLjg4OCwxMS42ODYgMTIuODg4LDExLjIxMyBDMTIuODg4LDExLjAxMSAxMi40NjUsMTAuOTg1IDExLjk4MiwxMS4wMTcgTDExLjk3OSw2Ljg1OSBaIE00Ljk3OSw3LjE0MiBMNi45OSw4Ljk5IEw0LjI0MSw4Ljk5IEwzLjQ4NiwxNC4wMDEgTDIuNzM5LDguOTkgTDAsOC45OSBMMS45ODYsNy4xNDMgTDEuOTg2LDIuOTg0IEMxLjUwNSwzLjAxNiAxLjE0MywyLjk4OSAxLjE0MywyLjc4OCBDMS4xNDMsMi4zMTUgMS41MDMsMiAxLjk4NiwyIEw0Ljk4MiwyLjAwMSBDNS40NjUsMi4wMDEgNS44ODgsMi4zMTUgNS44ODgsMi43ODkgQzUuODg4LDIuOTkgNS40NjUsMy4wMTcgNC45ODIsMi45ODQgTDQuOTc5LDcuMTQyIFoiIGZpbGw9IiNiNWI1YjUiPjwvcGF0aD48L2c+PC9zdmc+) 0 50% no-repeat;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_bd .PIN_1517481587075_stats .PIN_1517481587075_done { 
+  padding-left: 15px;
+  padding-right: 10px;
+  color: #a8a8a8;
+  font-size: 11px;
+  font-weight: bold;
+  display: inline-block;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTJweCIgd2lkdGg9IjEycHgiIHZpZXdCb3g9IjAgMCAxMiAxMiI+PGc+PHBhdGggZD0iTTAsNiBMMiw0IEw1LDcgTDEwLDEgTDEyLDMgTDUsMTEgWiIgZmlsbD0iI2I1YjViNSI+PC9wYXRoPjwvZz48L3N2Zz4=) 0 50% no-repeat;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_ft { 
+  height: 50px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_ft:after { 
+  content: '-------------------------------------------------------------------------------------';
+  display: block;
+  height: 1px;
+  line-height: 1px;
+  color: #fff;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_ft .PIN_1517481587075_img { 
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background: transparent url() 0 0 no-repeat;
+  background-size: 30px 30px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_ft .PIN_1517481587075_pinner,  .PIN_1517481587075_embed_pin .PIN_1517481587075_ft  .PIN_1517481587075_board { 
+  position: absolute;
+  left: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75%;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_ft .PIN_1517481587075_pinner { 
+  font-weight: bold;
+  top: 10px;
+}
+ .PIN_1517481587075_embed_pin .PIN_1517481587075_ft .PIN_1517481587075_board { 
+  bottom: 10px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_ja .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_repin { 
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMThweCIgd2lkdGg9IjQxcHgiIHZpZXdCb3g9IjAgMCA0MSAxOCI+PGc+PHBhdGggZD0iTTE5LjgyMiw3LjE3MyBDMTkuODIyLDYuNTEgMTkuODM1LDYuMjc2IDE5Ljg4Nyw1Ljk2NCBMMTguMTQ1LDUuOTY0IEMxOC4xOTcsNi4yODkgMTguMTk3LDYuNDk3IDE4LjE5Nyw3LjE2IEwxOC4yMSwxMy4xOTIgQzE4LjIxLDEzLjk0NiAxOC4yMjMsMTQuMTY3IDE4LjI0OSwxNC4zODggQzE4LjMyNywxNS4wMjUgMTguNTIyLDE1LjQ0MSAxOC44ODYsMTUuNzE0IEMxOS4zOTMsMTYuMTA0IDIwLjI5LDE2LjI3MyAyMS45MjgsMTYuMjczIEMyMi43MjEsMTYuMjczIDI0LjM1OSwxNi4xOTUgMjUuMTI2LDE2LjExNyBDMjYuNTA0LDE1Ljk4NyAyNi41NjksMTUuOTc0IDI2Ljg0MiwxNS45NzQgTDI2Ljc2NCwxNC4yNDUgQzI2LjE5MiwxNC40MTQgMjUuOTA2LDE0LjQ3OSAyNS4yODIsMTQuNTU3IEMyNC4zMzMsMTQuNjg3IDIzLjEzNywxNC43NjUgMjIuMjY2LDE0Ljc2NSBDMjEuMDA1LDE0Ljc2NSAyMC4yNjQsMTQuNjQ4IDIwLjA0MywxNC40MjcgQzE5Ljg2MSwxNC4yNDUgMTkuODA5LDEzLjk1OSAxOS44MDksMTMuMjMxIEMxOS44MDksMTMuMTc5IDE5LjgwOSwxMy4xMDEgMTkuODIyLDEzLjAyMyBMMTkuODIyLDExLjMwNyBDMjEuOTkzLDEwLjkwNCAyNC4wMDgsMTAuMjI4IDI1LjkzMiw5LjI0IEwyNi4yNyw5LjA3MSBDMjYuMzc0LDkuMDE5IDI2LjQsOS4wMDYgMjYuNTQzLDguOTU0IEwyNS41MDMsNy40ODUgQzI0LjY1OCw4LjI3OCAyMS43ODUsOS40MzUgMTkuODIyLDkuNzk5IEwxOS44MjIsNy4xNzMgWiBNMjcuMzEsNC44NzIgQzI2LjQ5MSw0Ljg3MiAyNS44MTUsNS41NDggMjUuODE1LDYuMzY3IEMyNS44MTUsNy4xOTkgMjYuNDkxLDcuODc1IDI3LjMxLDcuODc1IEMyOC4xNDIsNy44NzUgMjguODE4LDcuMTk5IDI4LjgxOCw2LjM2NyBDMjguODE4LDUuNTQ4IDI4LjE0Miw0Ljg3MiAyNy4zMSw0Ljg3MiBMMjcuMzEsNC44NzIgWiBNMjcuMzEsNS41MjIgQzI3Ljc5MSw1LjUyMiAyOC4xNjgsNS44OTkgMjguMTY4LDYuMzY3IEMyOC4xNjgsNi44MzUgMjcuNzkxLDcuMjI1IDI3LjMxLDcuMjI1IEMyNi44NDIsNy4yMjUgMjYuNDY1LDYuODM1IDI2LjQ2NSw2LjM2NyBDMjYuNDY1LDUuODk5IDI2Ljg0Miw1LjUyMiAyNy4zMSw1LjUyMiBMMjcuMzEsNS41MjIgWiBNMzAuNTg2LDcuNjU0IEMzMS43OTUsOC4zMyAzMi44NjEsOS4xODggMzMuOTAxLDEwLjI5MyBMMzUuMDE5LDguODc2IEMzNC4wMTgsNy45MjcgMzMuMjEyLDcuMzI5IDMxLjY2NSw2LjM2NyBMMzAuNTg2LDcuNjU0IFogTTMxLjA0MSwxNi4yMzQgQzMxLjM0LDE2LjEzIDMxLjM3OSwxNi4xMTcgMzEuODk5LDE2LjAxMyBDMzMuOTE0LDE1LjU4NCAzNS41MjYsMTQuOTQ3IDM2Ljg1MiwxNC4wNjMgQzM4LjYzMywxMi44OCAzOS44NjgsMTEuMzQ2IDQwLjk3Myw4Ljk2NyBDNDAuMzEsOC40OTkgNDAuMTAyLDguMzA0IDM5LjU5NSw3LjY5MyBDMzkuMjA1LDguNzQ2IDM4Ljg0MSw5LjQ2MSAzOC4yNjksMTAuMjkzIEMzNy4yNDIsMTEuNzc1IDM2LjAzMywxMi43NzYgMzQuNDA4LDEzLjQ3OCBDMzMuMjI1LDEzLjk5OCAzMS42NzgsMTQuMzc1IDMwLjU2LDE0LjQ0IEwzMS4wNDEsMTYuMjM0IFogTTcuNDU4LDAgQzIuNSwwIDAsMy41MjIgMCw2LjQ1OSBDMCw4LjIzNyAwLjY4LDkuODE5IDIuMTM3LDEwLjQwOSBDMi4zNzYsMTAuNTA1IDIuNTksMTAuNDEyIDIuNjYsMTAuMTUgQzIuNzA4LDkuOTY5IDIuODIyLDkuNTExIDIuODczLDkuMzIgQzIuOTQzLDkuMDYxIDIuOTE2LDguOTcgMi43MjMsOC43NDQgQzIuMzAyLDguMjUzIDIuMDM0LDcuNjE3IDIuMDM0LDYuNzE2IEMyLjAzNCw0LjEwNCA0LjAwNywxLjc2NSA3LjE3MiwxLjc2NSBDOS45NzUsMS43NjUgMTEuNTE0LDMuNDYxIDExLjUxNCw1LjcyNiBDMTEuNTE0LDguNzA4IDEwLjE4MywxMS4xOCA4LjIwNiwxMS4xOCBDNy4xMTQsMTEuMTggNi4yOTcsMTAuMzI5IDYuNTU5LDkuMjMzIEM2Ljg3Miw3LjkyMiA3LjQ4LDYuNTA5IDcuNDgsNS41NjQgQzcuNDgsNC43MTcgNy4wMjIsNC4wMTEgNi4wNzIsNC4wMTEgQzQuOTU2LDQuMDExIDQuMDYsNS4xNTUgNC4wNiw2LjY4NyBDNC4wNiw3LjY2MyA0LjM5Myw4LjMyMyA0LjM5Myw4LjMyMyBDNC4zOTMsOC4zMjMgMy4yNTEsMTMuMTE3IDMuMDUxLDEzLjk1NyBDMi42NTIsMTUuNjI5IDIuOTkxLDE3LjY3OSAzLjAxOSwxNy44ODYgQzMuMDM2LDE4LjAwOSAzLjE5NSwxOC4wMzggMy4yNjcsMTcuOTQ2IEMzLjM3LDE3LjgxMiA0LjcsMTYuMTg3IDUuMTUxLDE0LjU2MiBDNS4yNzksMTQuMTAyIDUuODg1LDExLjcyIDUuODg1LDExLjcyIEM2LjI0OCwxMi40MDYgNy4zMDgsMTMuMDA5IDguNDM1LDEzLjAwOSBDMTEuNzksMTMuMDA5IDE0LjA2Niw5Ljk3OSAxNC4wNjYsNS45MjMgQzE0LjA2NiwyLjg1NyAxMS40NDQsMCA3LjQ1OCwwIFoiIGZpbGw9IiNmZmYiPjwvcGF0aD48L2c+PC9zdmc+);
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_ja .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_repin.PIN_1517481587075_save { 
+  background: #bd081c url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==) 5px 50% no-repeat;
+  background-size: 16px 16px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_medium { 
+  min-width: 237px;
+  max-width: 345px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large { 
+  min-width: 345px;
+  max-width: 600px;
+  padding: 30px 34px 10px;
+  font-size: 14px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd { 
+  border-bottom: none;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_hd { 
+  padding-top: 50px;
+  border-bottom: none;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_img,  .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_container .PIN_1517481587075_video { 
+  border-radius: 8px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_hd .PIN_1517481587075_repin { 
+  top: 0px;
+  left: 0px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_source { 
+  height: 50px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_source .PIN_1517481587075_domain { 
+  line-height: 50px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_stats { 
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_description { 
+  font-size: 16px;
+  line-height: 20px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_menu { 
+  height: inherit;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_bd .PIN_1517481587075_menu .PIN_1517481587075_dropdown { 
+  top: 50px;
+  font-size: 14px;
+  padding: 10px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_ft { 
+  height: 60px;
+  font-size: 16px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_ft .PIN_1517481587075_board,  .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_ft .PIN_1517481587075_pinner { 
+  left: 60px;
+}
+ .PIN_1517481587075_embed_pin.PIN_1517481587075_large .PIN_1517481587075_ft .PIN_1517481587075_img { 
+  height: 40px;
+  width: 40px;
+  background-size: 40px 40px;
+  border-radius: 20px;
+}
+ .PIN_1517481587075_button_follow { 
+  display: inline-block;
+  color: #363636;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 1px #888;
+  border-radius: 3px;
+  font: 11px "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 4px 0 20px;
+  background-color: #efefef;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+ .PIN_1517481587075_button_follow:hover { 
+  box-shadow: inset 0 0 1px #000;
+}
+ .PIN_1517481587075_button_follow::after { 
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  top: 3px;
+  left: 3px;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==) 0 0 no-repeat;
+  background-size: 14px 14px;
+}
+ .PIN_1517481587075_button_follow.PIN_1517481587075_tall { 
+  height: 26px;
+  line-height: 26px;
+  font-size: 13px;
+  padding: 0 6px 0 25px;
+  border-radius: 3px;
+}
+ .PIN_1517481587075_button_follow.PIN_1517481587075_tall::after { 
+  height: 18px;
+  width: 18px;
+  top: 4px;
+  left: 4px;
+  background-size: 18px 18px;
+}
+ .PIN_1517481587075_button_pin { 
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 1px #888;
+  border-radius: 3px;
+  height: 20px;
+  width: 40px;
+  -webkit-font-smoothing: antialiased;
+  background: #efefef url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMThweCIgd2lkdGg9IjQycHgiIHZpZXdCb3g9IjAgMCA0MiAxOCI+PGc+PHBhdGggZD0iTTE2Ljg1Myw2LjM0NSBDMTcuNjMyLDYuMzQ1IDE4LjM4LDUuNzAyIDE4LjUxLDQuOTA5IEMxOC42NjQsNC4xMzggMTguMTM1LDMuNDk0IDE3LjM1NywzLjQ5NCBDMTYuNTc4LDMuNDk0IDE1LjgzLDQuMTM4IDE1LjY5OCw0LjkwOSBDMTUuNTQ2LDUuNzAyIDE2LjA1Myw2LjM0NSAxNi44NTMsNi4zNDUgWiBNNy40NTgsMCBDMi41LDAgMCwzLjUyMiAwLDYuNDU5IEMwLDguMjM3IDAuNjgsOS44MTkgMi4xMzcsMTAuNDA5IEMyLjM3NiwxMC41MDUgMi41OSwxMC40MTIgMi42NiwxMC4xNSBDMi43MDgsOS45NjkgMi44MjIsOS41MTEgMi44NzMsOS4zMiBDMi45NDMsOS4wNjEgMi45MTYsOC45NyAyLjcyMyw4Ljc0NCBDMi4zMDIsOC4yNTMgMi4wMzQsNy42MTcgMi4wMzQsNi43MTYgQzIuMDM0LDQuMTA0IDQuMDA3LDEuNzY1IDcuMTcyLDEuNzY1IEM5Ljk3NSwxLjc2NSAxMS41MTQsMy40NjEgMTEuNTE0LDUuNzI2IEMxMS41MTQsOC43MDggMTAuMTgzLDExLjE4IDguMjA2LDExLjE4IEM3LjExNCwxMS4xOCA2LjI5NywxMC4zMjkgNi41NTksOS4yMzMgQzYuODcyLDcuOTIyIDcuNDgsNi41MDkgNy40OCw1LjU2NCBDNy40OCw0LjcxNyA3LjAyMiw0LjAxMSA2LjA3Miw0LjAxMSBDNC45NTYsNC4wMTEgNC4wNiw1LjE1NSA0LjA2LDYuNjg3IEM0LjA2LDcuNjYzIDQuMzkzLDguMzIzIDQuMzkzLDguMzIzIEM0LjM5Myw4LjMyMyAzLjI1MSwxMy4xMTcgMy4wNTEsMTMuOTU3IEMyLjY1MiwxNS42MjkgMi45OTEsMTcuNjc5IDMuMDE5LDE3Ljg4NiBDMy4wMzYsMTguMDA5IDMuMTk1LDE4LjAzOCAzLjI2NywxNy45NDYgQzMuMzcsMTcuODEyIDQuNywxNi4xODcgNS4xNTEsMTQuNTYyIEM1LjI3OSwxNC4xMDIgNS44ODUsMTEuNzIgNS44ODUsMTEuNzIgQzYuMjQ4LDEyLjQwNiA3LjMwOCwxMy4wMDkgOC40MzUsMTMuMDA5IEMxMS43OSwxMy4wMDkgMTQuMDY2LDkuOTc5IDE0LjA2Niw1LjkyMyBDMTQuMDY2LDIuODU3IDExLjQ0NCwwIDcuNDU4LDAgWiBNMjYuODk2LDE0LjE4OSBDMjYuMzQ4LDE0LjE4OSAyNi4xMTcsMTMuOTE1IDI2LjExNywxMy4zMjggQzI2LjExNywxMi40MDQgMjcuMDM1LDEwLjA5MSAyNy4wMzUsOS4wNDEgQzI3LjAzNSw3LjYzOCAyNi4yNzYsNi44MjYgMjQuNzIsNi44MjYgQzIzLjczOSw2LjgyNiAyMi43MjIsNy40NTMgMjIuMjkxLDguMDAzIEMyMi4yOTEsOC4wMDMgMjIuNDIyLDcuNTUzIDIyLjQ2Nyw3LjM4IEMyMi41MTUsNy4xOTYgMjIuNDE1LDYuODg0IDIyLjE3Myw2Ljg4NCBMMjAuNjUxLDYuODg0IEMyMC4zMjgsNi44ODQgMjAuMjM4LDcuMDU1IDIwLjE5MSw3LjI0NCBDMjAuMTcyLDcuMzIgMTkuNjI0LDkuNTg0IDE5LjA5OCwxMS42MzIgQzE4LjczOCwxMy4wMzQgMTcuODYzLDE0LjIwNSAxNi45MjgsMTQuMjA1IEMxNi40NDcsMTQuMjA1IDE2LjIzMywxMy45MDYgMTYuMjMzLDEzLjM5OSBDMTYuMjMzLDEyLjk1OSAxNi41MTksMTEuODc3IDE2Ljg2LDEwLjUzNCBDMTcuMjc2LDguODk4IDE3LjY0Miw3LjU1MSAxNy42ODEsNy4zOTQgQzE3LjczMiw3LjE5MiAxNy42NDIsNy4wMTcgMTcuMzc5LDcuMDE3IEwxNS44NDksNy4wMTcgQzE1LjU3Miw3LjAxNyAxNS40NzMsNy4xNjEgMTUuNDE0LDcuMzYxIEMxNS40MTQsNy4zNjEgMTQuOTgzLDguOTc3IDE0LjUyNywxMC43NzUgQzE0LjE5NiwxMi4wNzkgMTMuODMsMTMuNDA5IDEzLjgzLDE0LjAzNCBDMTMuODMsMTUuMTQ4IDE0LjMzNiwxNS45NDQgMTUuNzI0LDE1Ljk0NCBDMTYuNzk2LDE1Ljk0NCAxNy42NDQsMTUuNDUgMTguMjkyLDE0Ljc2NCBDMTguMTk3LDE1LjEzNSAxOC4xMzYsMTUuNDE0IDE4LjEzLDE1LjQzOSBDMTguMDc0LDE1LjY1IDE4LjE0MiwxNS44MzggMTguMzk0LDE1LjgzOCBMMTkuOTYxLDE1LjgzOCBDMjAuMjMzLDE1LjgzOCAyMC4zMzcsMTUuNzMgMjAuMzk0LDE1LjQ5NCBDMjAuNDQ5LDE1LjI2OSAyMS42MTksMTAuNjY3IDIxLjYxOSwxMC42NjcgQzIxLjkyOCw5LjQ0MyAyMi42OTIsOC42MzIgMjMuNzY4LDguNjMyIEMyNC4yNzksOC42MzIgMjQuNzIsOC45NjcgMjQuNjY5LDkuNjE4IEMyNC42MTIsMTAuMzMzIDIzLjc0MSwxMi45MDMgMjMuNzQxLDE0LjAzMSBDMjMuNzQxLDE0Ljg4NCAyNC4wNiwxNS45NDUgMjUuNjgzLDE1Ljk0NSBDMjYuNzg5LDE1Ljk0NSAyNy42MDMsMTUuNDY0IDI4LjE5NSwxNC43ODYgTDI3LjQ4OSwxMy45NDEgQzI3LjMxMSwxNC4wOTQgMjcuMTE0LDE0LjE4OSAyNi44OTYsMTQuMTg5IFogTTQxLjcwMSw2Ljg3MyBMNDAuMTM0LDYuODczIEM0MC4xMzQsNi44NzMgNDAuODU2LDQuMTA5IDQwLjg3Myw0LjAzNSBDNDAuOTQyLDMuNzQ1IDQwLjY5OCwzLjU3OCA0MC40NDEsMy42MzEgQzQwLjQ0MSwzLjYzMSAzOS4yMywzLjg2NiAzOS4wMDUsMy45MTMgQzM4Ljc3OSwzLjk1OCAzOC42MDQsNC4wODEgMzguNTIyLDQuNDAzIEMzOC41MTIsNC40NDUgMzcuODgsNi44NzMgMzcuODgsNi44NzMgTDM2LjYyMiw2Ljg3MyBDMzYuMzg1LDYuODczIDM2LjI0NSw2Ljk2OCAzNi4xOTIsNy4xODggQzM2LjExNSw3LjUwNCAzNS45NzUsOC4xNDUgMzUuOTM2LDguMjk3IEMzNS44ODUsOC40OTQgMzYsOC42NDQgMzYuMjIyLDguNjQ0IEwzNy40NTcsOC42NDQgQzM3LjQ0OCw4LjY3NyAzNy4wNjQsMTAuMTI1IDM2LjcyNSwxMS41MjEgTDM2LjcyNCwxMS41MTYgQzM2LjcyLDExLjUzMiAzNi43MTYsMTEuNTQ2IDM2LjcxMiwxMS41NjIgTDM2LjcxMiwxMS41NTYgQzM2LjcxMiwxMS41NTYgMzYuNzA4LDExLjU3MSAzNi43MDIsMTEuNTk4IEMzNi4zMjQsMTIuOTY4IDM1LjExOCwxNC4yMDkgMzQuMjAxLDE0LjIwOSBDMzMuNzIxLDE0LjIwOSAzMy41MDYsMTMuOTA5IDMzLjUwNiwxMy40MDIgQzMzLjUwNiwxMi45NjMgMzMuNzkyLDExLjg4IDM0LjEzNCwxMC41MzcgQzM0LjU0OSw4LjkwMSAzNC45MTUsNy41NTUgMzQuOTU1LDcuMzk3IEMzNS4wMDYsNy4xOTYgMzQuOTE1LDcuMDIgMzQuNjUyLDcuMDIgTDMzLjEyMiw3LjAyIEMzMi44NDUsNy4wMiAzMi43NDYsNy4xNjQgMzIuNjg3LDcuMzY0IEMzMi42ODcsNy4zNjQgMzIuMjU3LDguOTggMzEuOCwxMC43NzggQzMxLjQ2OSwxMi4wODMgMzEuMTAzLDEzLjQxMiAzMS4xMDMsMTQuMDM3IEMzMS4xMDMsMTUuMTUxIDMxLjYwOSwxNS45NDggMzIuOTk3LDE1Ljk0OCBDMzQuMDcsMTUuOTQ4IDM1LjEzNiwxNS40NTMgMzUuNzgzLDE0Ljc2NyBDMzUuNzgzLDE0Ljc2NyAzNi4wMTEsMTQuNTIxIDM2LjIzLDE0LjIyOSBDMzYuMjQxLDE0LjU4MSAzNi4zMjQsMTQuODM3IDM2LjQxMSwxNS4wMTggQzM2LjQ1OCwxNS4xMTkgMzYuNTE1LDE1LjIxNSAzNi41ODEsMTUuMzAzIEMzNi41ODIsMTUuMzA0IDM2LjU4MywxNS4zMDYgMzYuNTg1LDE1LjMwOCBMMzYuNTg1LDE1LjMwOCBDMzYuODkxLDE1LjcxMyAzNy4zOTgsMTUuOTYyIDM4LjE1MSwxNS45NjIgQzM5Ljg5NCwxNS45NjIgNDAuOTQ0LDE0LjkzOCA0MS41NjIsMTMuOTA5IEw0MC43MDQsMTMuMjM5IEM0MC4zMzMsMTMuNzc0IDM5LjgzOSwxNC4xNzUgMzkuMzI0LDE0LjE3NSBDMzguODQ2LDE0LjE3NSAzOC41NzksMTMuODc4IDM4LjU3OSwxMy4zNzIgQzM4LjU3OSwxMi45MzUgMzguODg5LDExLjg2OCAzOS4yMjksMTAuNTMgQzM5LjM0NCwxMC4wODMgMzkuNTE2LDkuNDAxIDM5LjcwOCw4LjY0NCBMNDEuMzAyLDguNjQ0IEM0MS41MzksOC42NDQgNDEuNjc4LDguNTQ5IDQxLjczMiw4LjMyOSBDNDEuODA4LDguMDEyIDQxLjk0OCw3LjM3MiA0MS45ODgsNy4yMjEgQzQyLjAzOSw3LjAyMyA0MS45MjMsNi44NzMgNDEuNzAxLDYuODczIFogTTM0LjEyNiw2LjM0OCBDMzQuOTA1LDYuMzQ4IDM1LjY1Myw1LjcwNiAzNS43ODMsNC45MTIgQzM1LjkzNyw0LjE0MSAzNS40MDksMy40OTggMzQuNjMsMy40OTggQzMzLjg1MSwzLjQ5OCAzMy4xMDMsNC4xNDEgMzIuOTcxLDQuOTEyIEMzMi44MTksNS43MDYgMzMuMzI2LDYuMzQ4IDM0LjEyNiw2LjM0OCBaIiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==) 50% 50% no-repeat;
+  background-size: 75%;
+  position: relative;
+  font: 12px "Helvetica Neue", Helvetica, arial, sans-serif;
+  color: #555;
+  text-align: center;
+  vertical-align: baseline;
+}
+ .PIN_1517481587075_button_pin:hover { 
+  box-shadow: inset 0 0 1px #000;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_above .PIN_1517481587075_count { 
+  position: absolute;
+  top: -28px;
+  left: 0;
+  height: 28px;
+  width: inherit;
+  line-height: 24px;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNzZweCIgd2lkdGg9IjExNHB4IiB2aWV3Qm94PSIwIDAgMTE0IDc2Ij48Zz48cGF0aCBkPSJNOSAxQzQuNiAxIDEgNC42IDEgOXY0M2MwIDQuMyAzLjYgOCA4IDhoMjZsMTggMTVoNy41bDE2LTE1SDEwNWM0LjQgMCA4LTMuNyA4LThWOWMwLTQuNC0zLjYtOC04LThIOXoiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2I1YjViNSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+PC9nPjwvc3ZnPg==) 0 0 no-repeat;
+  background-size: 40px 28px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_above.PIN_1517481587075_padded { 
+  margin-top: 28px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_beside .PIN_1517481587075_count { 
+  position: absolute;
+  right: -45px;
+  text-align: center;
+  text-indent: 5px;
+  height: inherit;
+  width: 45px;
+  font-size: 11px;
+  line-height: 20px;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNTZweCIgd2lkdGg9IjEyNnB4IiB2aWV3Qm94PSIyIDAgMTMwIDYwIj48Zz48cGF0aCBkPSJNMTE5LjYgMmM0LjUgMCA4IDMuNiA4IDh2NDBjMCA0LjQtMy41IDgtOCA4SDIzLjNMMS42IDMyLjR2LTQuNkwyMy4zIDJoOTYuM3oiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2I1YjViNSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+PC9nPjwvc3ZnPg==);
+  background-size: cover;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_beside.PIN_1517481587075_padded { 
+  margin-right: 45px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_ja { 
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMThweCIgd2lkdGg9IjQxcHgiIHZpZXdCb3g9IjAgMCA0MSAxOCI+PGc+PHBhdGggZD0iTTE5LjgyMiw3LjE3MyBDMTkuODIyLDYuNTEgMTkuODM1LDYuMjc2IDE5Ljg4Nyw1Ljk2NCBMMTguMTQ1LDUuOTY0IEMxOC4xOTcsNi4yODkgMTguMTk3LDYuNDk3IDE4LjE5Nyw3LjE2IEwxOC4yMSwxMy4xOTIgQzE4LjIxLDEzLjk0NiAxOC4yMjMsMTQuMTY3IDE4LjI0OSwxNC4zODggQzE4LjMyNywxNS4wMjUgMTguNTIyLDE1LjQ0MSAxOC44ODYsMTUuNzE0IEMxOS4zOTMsMTYuMTA0IDIwLjI5LDE2LjI3MyAyMS45MjgsMTYuMjczIEMyMi43MjEsMTYuMjczIDI0LjM1OSwxNi4xOTUgMjUuMTI2LDE2LjExNyBDMjYuNTA0LDE1Ljk4NyAyNi41NjksMTUuOTc0IDI2Ljg0MiwxNS45NzQgTDI2Ljc2NCwxNC4yNDUgQzI2LjE5MiwxNC40MTQgMjUuOTA2LDE0LjQ3OSAyNS4yODIsMTQuNTU3IEMyNC4zMzMsMTQuNjg3IDIzLjEzNywxNC43NjUgMjIuMjY2LDE0Ljc2NSBDMjEuMDA1LDE0Ljc2NSAyMC4yNjQsMTQuNjQ4IDIwLjA0MywxNC40MjcgQzE5Ljg2MSwxNC4yNDUgMTkuODA5LDEzLjk1OSAxOS44MDksMTMuMjMxIEMxOS44MDksMTMuMTc5IDE5LjgwOSwxMy4xMDEgMTkuODIyLDEzLjAyMyBMMTkuODIyLDExLjMwNyBDMjEuOTkzLDEwLjkwNCAyNC4wMDgsMTAuMjI4IDI1LjkzMiw5LjI0IEwyNi4yNyw5LjA3MSBDMjYuMzc0LDkuMDE5IDI2LjQsOS4wMDYgMjYuNTQzLDguOTU0IEwyNS41MDMsNy40ODUgQzI0LjY1OCw4LjI3OCAyMS43ODUsOS40MzUgMTkuODIyLDkuNzk5IEwxOS44MjIsNy4xNzMgWiBNMjcuMzEsNC44NzIgQzI2LjQ5MSw0Ljg3MiAyNS44MTUsNS41NDggMjUuODE1LDYuMzY3IEMyNS44MTUsNy4xOTkgMjYuNDkxLDcuODc1IDI3LjMxLDcuODc1IEMyOC4xNDIsNy44NzUgMjguODE4LDcuMTk5IDI4LjgxOCw2LjM2NyBDMjguODE4LDUuNTQ4IDI4LjE0Miw0Ljg3MiAyNy4zMSw0Ljg3MiBMMjcuMzEsNC44NzIgWiBNMjcuMzEsNS41MjIgQzI3Ljc5MSw1LjUyMiAyOC4xNjgsNS44OTkgMjguMTY4LDYuMzY3IEMyOC4xNjgsNi44MzUgMjcuNzkxLDcuMjI1IDI3LjMxLDcuMjI1IEMyNi44NDIsNy4yMjUgMjYuNDY1LDYuODM1IDI2LjQ2NSw2LjM2NyBDMjYuNDY1LDUuODk5IDI2Ljg0Miw1LjUyMiAyNy4zMSw1LjUyMiBMMjcuMzEsNS41MjIgWiBNMzAuNTg2LDcuNjU0IEMzMS43OTUsOC4zMyAzMi44NjEsOS4xODggMzMuOTAxLDEwLjI5MyBMMzUuMDE5LDguODc2IEMzNC4wMTgsNy45MjcgMzMuMjEyLDcuMzI5IDMxLjY2NSw2LjM2NyBMMzAuNTg2LDcuNjU0IFogTTMxLjA0MSwxNi4yMzQgQzMxLjM0LDE2LjEzIDMxLjM3OSwxNi4xMTcgMzEuODk5LDE2LjAxMyBDMzMuOTE0LDE1LjU4NCAzNS41MjYsMTQuOTQ3IDM2Ljg1MiwxNC4wNjMgQzM4LjYzMywxMi44OCAzOS44NjgsMTEuMzQ2IDQwLjk3Myw4Ljk2NyBDNDAuMzEsOC40OTkgNDAuMTAyLDguMzA0IDM5LjU5NSw3LjY5MyBDMzkuMjA1LDguNzQ2IDM4Ljg0MSw5LjQ2MSAzOC4yNjksMTAuMjkzIEMzNy4yNDIsMTEuNzc1IDM2LjAzMywxMi43NzYgMzQuNDA4LDEzLjQ3OCBDMzMuMjI1LDEzLjk5OCAzMS42NzgsMTQuMzc1IDMwLjU2LDE0LjQ0IEwzMS4wNDEsMTYuMjM0IFogTTcuNDU4LDAgQzIuNSwwIDAsMy41MjIgMCw2LjQ1OSBDMCw4LjIzNyAwLjY4LDkuODE5IDIuMTM3LDEwLjQwOSBDMi4zNzYsMTAuNTA1IDIuNTksMTAuNDEyIDIuNjYsMTAuMTUgQzIuNzA4LDkuOTY5IDIuODIyLDkuNTExIDIuODczLDkuMzIgQzIuOTQzLDkuMDYxIDIuOTE2LDguOTcgMi43MjMsOC43NDQgQzIuMzAyLDguMjUzIDIuMDM0LDcuNjE3IDIuMDM0LDYuNzE2IEMyLjAzNCw0LjEwNCA0LjAwNywxLjc2NSA3LjE3MiwxLjc2NSBDOS45NzUsMS43NjUgMTEuNTE0LDMuNDYxIDExLjUxNCw1LjcyNiBDMTEuNTE0LDguNzA4IDEwLjE4MywxMS4xOCA4LjIwNiwxMS4xOCBDNy4xMTQsMTEuMTggNi4yOTcsMTAuMzI5IDYuNTU5LDkuMjMzIEM2Ljg3Miw3LjkyMiA3LjQ4LDYuNTA5IDcuNDgsNS41NjQgQzcuNDgsNC43MTcgNy4wMjIsNC4wMTEgNi4wNzIsNC4wMTEgQzQuOTU2LDQuMDExIDQuMDYsNS4xNTUgNC4wNiw2LjY4NyBDNC4wNiw3LjY2MyA0LjM5Myw4LjMyMyA0LjM5Myw4LjMyMyBDNC4zOTMsOC4zMjMgMy4yNTEsMTMuMTE3IDMuMDUxLDEzLjk1NyBDMi42NTIsMTUuNjI5IDIuOTkxLDE3LjY3OSAzLjAxOSwxNy44ODYgQzMuMDM2LDE4LjAwOSAzLjE5NSwxOC4wMzggMy4yNjcsMTcuOTQ2IEMzLjM3LDE3LjgxMiA0LjcsMTYuMTg3IDUuMTUxLDE0LjU2MiBDNS4yNzksMTQuMTAyIDUuODg1LDExLjcyIDUuODg1LDExLjcyIEM2LjI0OCwxMi40MDYgNy4zMDgsMTMuMDA5IDguNDM1LDEzLjAwOSBDMTEuNzksMTMuMDA5IDE0LjA2Niw5Ljk3OSAxNC4wNjYsNS45MjMgQzE0LjA2NiwyLjg1NyAxMS40NDQsMCA3LjQ1OCwwIFoiIGZpbGw9IiNiZDA4MWMiPjwvcGF0aD48L2c+PC9zdmc+);
+  background-size: 72%;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_red { 
+  background-color: #bd081c;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMThweCIgd2lkdGg9IjQycHgiIHZpZXdCb3g9IjAgMCA0MiAxOCI+PGc+PHBhdGggZD0iTTE2Ljg1Myw2LjM0NSBDMTcuNjMyLDYuMzQ1IDE4LjM4LDUuNzAyIDE4LjUxLDQuOTA5IEMxOC42NjQsNC4xMzggMTguMTM1LDMuNDk0IDE3LjM1NywzLjQ5NCBDMTYuNTc4LDMuNDk0IDE1LjgzLDQuMTM4IDE1LjY5OCw0LjkwOSBDMTUuNTQ2LDUuNzAyIDE2LjA1Myw2LjM0NSAxNi44NTMsNi4zNDUgWiBNNy40NTgsMCBDMi41LDAgMCwzLjUyMiAwLDYuNDU5IEMwLDguMjM3IDAuNjgsOS44MTkgMi4xMzcsMTAuNDA5IEMyLjM3NiwxMC41MDUgMi41OSwxMC40MTIgMi42NiwxMC4xNSBDMi43MDgsOS45NjkgMi44MjIsOS41MTEgMi44NzMsOS4zMiBDMi45NDMsOS4wNjEgMi45MTYsOC45NyAyLjcyMyw4Ljc0NCBDMi4zMDIsOC4yNTMgMi4wMzQsNy42MTcgMi4wMzQsNi43MTYgQzIuMDM0LDQuMTA0IDQuMDA3LDEuNzY1IDcuMTcyLDEuNzY1IEM5Ljk3NSwxLjc2NSAxMS41MTQsMy40NjEgMTEuNTE0LDUuNzI2IEMxMS41MTQsOC43MDggMTAuMTgzLDExLjE4IDguMjA2LDExLjE4IEM3LjExNCwxMS4xOCA2LjI5NywxMC4zMjkgNi41NTksOS4yMzMgQzYuODcyLDcuOTIyIDcuNDgsNi41MDkgNy40OCw1LjU2NCBDNy40OCw0LjcxNyA3LjAyMiw0LjAxMSA2LjA3Miw0LjAxMSBDNC45NTYsNC4wMTEgNC4wNiw1LjE1NSA0LjA2LDYuNjg3IEM0LjA2LDcuNjYzIDQuMzkzLDguMzIzIDQuMzkzLDguMzIzIEM0LjM5Myw4LjMyMyAzLjI1MSwxMy4xMTcgMy4wNTEsMTMuOTU3IEMyLjY1MiwxNS42MjkgMi45OTEsMTcuNjc5IDMuMDE5LDE3Ljg4NiBDMy4wMzYsMTguMDA5IDMuMTk1LDE4LjAzOCAzLjI2NywxNy45NDYgQzMuMzcsMTcuODEyIDQuNywxNi4xODcgNS4xNTEsMTQuNTYyIEM1LjI3OSwxNC4xMDIgNS44ODUsMTEuNzIgNS44ODUsMTEuNzIgQzYuMjQ4LDEyLjQwNiA3LjMwOCwxMy4wMDkgOC40MzUsMTMuMDA5IEMxMS43OSwxMy4wMDkgMTQuMDY2LDkuOTc5IDE0LjA2Niw1LjkyMyBDMTQuMDY2LDIuODU3IDExLjQ0NCwwIDcuNDU4LDAgWiBNMjYuODk2LDE0LjE4OSBDMjYuMzQ4LDE0LjE4OSAyNi4xMTcsMTMuOTE1IDI2LjExNywxMy4zMjggQzI2LjExNywxMi40MDQgMjcuMDM1LDEwLjA5MSAyNy4wMzUsOS4wNDEgQzI3LjAzNSw3LjYzOCAyNi4yNzYsNi44MjYgMjQuNzIsNi44MjYgQzIzLjczOSw2LjgyNiAyMi43MjIsNy40NTMgMjIuMjkxLDguMDAzIEMyMi4yOTEsOC4wMDMgMjIuNDIyLDcuNTUzIDIyLjQ2Nyw3LjM4IEMyMi41MTUsNy4xOTYgMjIuNDE1LDYuODg0IDIyLjE3Myw2Ljg4NCBMMjAuNjUxLDYuODg0IEMyMC4zMjgsNi44ODQgMjAuMjM4LDcuMDU1IDIwLjE5MSw3LjI0NCBDMjAuMTcyLDcuMzIgMTkuNjI0LDkuNTg0IDE5LjA5OCwxMS42MzIgQzE4LjczOCwxMy4wMzQgMTcuODYzLDE0LjIwNSAxNi45MjgsMTQuMjA1IEMxNi40NDcsMTQuMjA1IDE2LjIzMywxMy45MDYgMTYuMjMzLDEzLjM5OSBDMTYuMjMzLDEyLjk1OSAxNi41MTksMTEuODc3IDE2Ljg2LDEwLjUzNCBDMTcuMjc2LDguODk4IDE3LjY0Miw3LjU1MSAxNy42ODEsNy4zOTQgQzE3LjczMiw3LjE5MiAxNy42NDIsNy4wMTcgMTcuMzc5LDcuMDE3IEwxNS44NDksNy4wMTcgQzE1LjU3Miw3LjAxNyAxNS40NzMsNy4xNjEgMTUuNDE0LDcuMzYxIEMxNS40MTQsNy4zNjEgMTQuOTgzLDguOTc3IDE0LjUyNywxMC43NzUgQzE0LjE5NiwxMi4wNzkgMTMuODMsMTMuNDA5IDEzLjgzLDE0LjAzNCBDMTMuODMsMTUuMTQ4IDE0LjMzNiwxNS45NDQgMTUuNzI0LDE1Ljk0NCBDMTYuNzk2LDE1Ljk0NCAxNy42NDQsMTUuNDUgMTguMjkyLDE0Ljc2NCBDMTguMTk3LDE1LjEzNSAxOC4xMzYsMTUuNDE0IDE4LjEzLDE1LjQzOSBDMTguMDc0LDE1LjY1IDE4LjE0MiwxNS44MzggMTguMzk0LDE1LjgzOCBMMTkuOTYxLDE1LjgzOCBDMjAuMjMzLDE1LjgzOCAyMC4zMzcsMTUuNzMgMjAuMzk0LDE1LjQ5NCBDMjAuNDQ5LDE1LjI2OSAyMS42MTksMTAuNjY3IDIxLjYxOSwxMC42NjcgQzIxLjkyOCw5LjQ0MyAyMi42OTIsOC42MzIgMjMuNzY4LDguNjMyIEMyNC4yNzksOC42MzIgMjQuNzIsOC45NjcgMjQuNjY5LDkuNjE4IEMyNC42MTIsMTAuMzMzIDIzLjc0MSwxMi45MDMgMjMuNzQxLDE0LjAzMSBDMjMuNzQxLDE0Ljg4NCAyNC4wNiwxNS45NDUgMjUuNjgzLDE1Ljk0NSBDMjYuNzg5LDE1Ljk0NSAyNy42MDMsMTUuNDY0IDI4LjE5NSwxNC43ODYgTDI3LjQ4OSwxMy45NDEgQzI3LjMxMSwxNC4wOTQgMjcuMTE0LDE0LjE4OSAyNi44OTYsMTQuMTg5IFogTTQxLjcwMSw2Ljg3MyBMNDAuMTM0LDYuODczIEM0MC4xMzQsNi44NzMgNDAuODU2LDQuMTA5IDQwLjg3Myw0LjAzNSBDNDAuOTQyLDMuNzQ1IDQwLjY5OCwzLjU3OCA0MC40NDEsMy42MzEgQzQwLjQ0MSwzLjYzMSAzOS4yMywzLjg2NiAzOS4wMDUsMy45MTMgQzM4Ljc3OSwzLjk1OCAzOC42MDQsNC4wODEgMzguNTIyLDQuNDAzIEMzOC41MTIsNC40NDUgMzcuODgsNi44NzMgMzcuODgsNi44NzMgTDM2LjYyMiw2Ljg3MyBDMzYuMzg1LDYuODczIDM2LjI0NSw2Ljk2OCAzNi4xOTIsNy4xODggQzM2LjExNSw3LjUwNCAzNS45NzUsOC4xNDUgMzUuOTM2LDguMjk3IEMzNS44ODUsOC40OTQgMzYsOC42NDQgMzYuMjIyLDguNjQ0IEwzNy40NTcsOC42NDQgQzM3LjQ0OCw4LjY3NyAzNy4wNjQsMTAuMTI1IDM2LjcyNSwxMS41MjEgTDM2LjcyNCwxMS41MTYgQzM2LjcyLDExLjUzMiAzNi43MTYsMTEuNTQ2IDM2LjcxMiwxMS41NjIgTDM2LjcxMiwxMS41NTYgQzM2LjcxMiwxMS41NTYgMzYuNzA4LDExLjU3MSAzNi43MDIsMTEuNTk4IEMzNi4zMjQsMTIuOTY4IDM1LjExOCwxNC4yMDkgMzQuMjAxLDE0LjIwOSBDMzMuNzIxLDE0LjIwOSAzMy41MDYsMTMuOTA5IDMzLjUwNiwxMy40MDIgQzMzLjUwNiwxMi45NjMgMzMuNzkyLDExLjg4IDM0LjEzNCwxMC41MzcgQzM0LjU0OSw4LjkwMSAzNC45MTUsNy41NTUgMzQuOTU1LDcuMzk3IEMzNS4wMDYsNy4xOTYgMzQuOTE1LDcuMDIgMzQuNjUyLDcuMDIgTDMzLjEyMiw3LjAyIEMzMi44NDUsNy4wMiAzMi43NDYsNy4xNjQgMzIuNjg3LDcuMzY0IEMzMi42ODcsNy4zNjQgMzIuMjU3LDguOTggMzEuOCwxMC43NzggQzMxLjQ2OSwxMi4wODMgMzEuMTAzLDEzLjQxMiAzMS4xMDMsMTQuMDM3IEMzMS4xMDMsMTUuMTUxIDMxLjYwOSwxNS45NDggMzIuOTk3LDE1Ljk0OCBDMzQuMDcsMTUuOTQ4IDM1LjEzNiwxNS40NTMgMzUuNzgzLDE0Ljc2NyBDMzUuNzgzLDE0Ljc2NyAzNi4wMTEsMTQuNTIxIDM2LjIzLDE0LjIyOSBDMzYuMjQxLDE0LjU4MSAzNi4zMjQsMTQuODM3IDM2LjQxMSwxNS4wMTggQzM2LjQ1OCwxNS4xMTkgMzYuNTE1LDE1LjIxNSAzNi41ODEsMTUuMzAzIEMzNi41ODIsMTUuMzA0IDM2LjU4MywxNS4zMDYgMzYuNTg1LDE1LjMwOCBMMzYuNTg1LDE1LjMwOCBDMzYuODkxLDE1LjcxMyAzNy4zOTgsMTUuOTYyIDM4LjE1MSwxNS45NjIgQzM5Ljg5NCwxNS45NjIgNDAuOTQ0LDE0LjkzOCA0MS41NjIsMTMuOTA5IEw0MC43MDQsMTMuMjM5IEM0MC4zMzMsMTMuNzc0IDM5LjgzOSwxNC4xNzUgMzkuMzI0LDE0LjE3NSBDMzguODQ2LDE0LjE3NSAzOC41NzksMTMuODc4IDM4LjU3OSwxMy4zNzIgQzM4LjU3OSwxMi45MzUgMzguODg5LDExLjg2OCAzOS4yMjksMTAuNTMgQzM5LjM0NCwxMC4wODMgMzkuNTE2LDkuNDAxIDM5LjcwOCw4LjY0NCBMNDEuMzAyLDguNjQ0IEM0MS41MzksOC42NDQgNDEuNjc4LDguNTQ5IDQxLjczMiw4LjMyOSBDNDEuODA4LDguMDEyIDQxLjk0OCw3LjM3MiA0MS45ODgsNy4yMjEgQzQyLjAzOSw3LjAyMyA0MS45MjMsNi44NzMgNDEuNzAxLDYuODczIFogTTM0LjEyNiw2LjM0OCBDMzQuOTA1LDYuMzQ4IDM1LjY1Myw1LjcwNiAzNS43ODMsNC45MTIgQzM1LjkzNyw0LjE0MSAzNS40MDksMy40OTggMzQuNjMsMy40OTggQzMzLjg1MSwzLjQ5OCAzMy4xMDMsNC4xNDEgMzIuOTcxLDQuOTEyIEMzMi44MTksNS43MDYgMzMuMzI2LDYuMzQ4IDM0LjEyNiw2LjM0OCBaIiBmaWxsPSIjZmZmIj48L3BhdGg+PC9nPjwvc3ZnPg==);
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_red.PIN_1517481587075_ja { 
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMThweCIgd2lkdGg9IjQxcHgiIHZpZXdCb3g9IjAgMCA0MSAxOCI+PGc+PHBhdGggZD0iTTE5LjgyMiw3LjE3MyBDMTkuODIyLDYuNTEgMTkuODM1LDYuMjc2IDE5Ljg4Nyw1Ljk2NCBMMTguMTQ1LDUuOTY0IEMxOC4xOTcsNi4yODkgMTguMTk3LDYuNDk3IDE4LjE5Nyw3LjE2IEwxOC4yMSwxMy4xOTIgQzE4LjIxLDEzLjk0NiAxOC4yMjMsMTQuMTY3IDE4LjI0OSwxNC4zODggQzE4LjMyNywxNS4wMjUgMTguNTIyLDE1LjQ0MSAxOC44ODYsMTUuNzE0IEMxOS4zOTMsMTYuMTA0IDIwLjI5LDE2LjI3MyAyMS45MjgsMTYuMjczIEMyMi43MjEsMTYuMjczIDI0LjM1OSwxNi4xOTUgMjUuMTI2LDE2LjExNyBDMjYuNTA0LDE1Ljk4NyAyNi41NjksMTUuOTc0IDI2Ljg0MiwxNS45NzQgTDI2Ljc2NCwxNC4yNDUgQzI2LjE5MiwxNC40MTQgMjUuOTA2LDE0LjQ3OSAyNS4yODIsMTQuNTU3IEMyNC4zMzMsMTQuNjg3IDIzLjEzNywxNC43NjUgMjIuMjY2LDE0Ljc2NSBDMjEuMDA1LDE0Ljc2NSAyMC4yNjQsMTQuNjQ4IDIwLjA0MywxNC40MjcgQzE5Ljg2MSwxNC4yNDUgMTkuODA5LDEzLjk1OSAxOS44MDksMTMuMjMxIEMxOS44MDksMTMuMTc5IDE5LjgwOSwxMy4xMDEgMTkuODIyLDEzLjAyMyBMMTkuODIyLDExLjMwNyBDMjEuOTkzLDEwLjkwNCAyNC4wMDgsMTAuMjI4IDI1LjkzMiw5LjI0IEwyNi4yNyw5LjA3MSBDMjYuMzc0LDkuMDE5IDI2LjQsOS4wMDYgMjYuNTQzLDguOTU0IEwyNS41MDMsNy40ODUgQzI0LjY1OCw4LjI3OCAyMS43ODUsOS40MzUgMTkuODIyLDkuNzk5IEwxOS44MjIsNy4xNzMgWiBNMjcuMzEsNC44NzIgQzI2LjQ5MSw0Ljg3MiAyNS44MTUsNS41NDggMjUuODE1LDYuMzY3IEMyNS44MTUsNy4xOTkgMjYuNDkxLDcuODc1IDI3LjMxLDcuODc1IEMyOC4xNDIsNy44NzUgMjguODE4LDcuMTk5IDI4LjgxOCw2LjM2NyBDMjguODE4LDUuNTQ4IDI4LjE0Miw0Ljg3MiAyNy4zMSw0Ljg3MiBMMjcuMzEsNC44NzIgWiBNMjcuMzEsNS41MjIgQzI3Ljc5MSw1LjUyMiAyOC4xNjgsNS44OTkgMjguMTY4LDYuMzY3IEMyOC4xNjgsNi44MzUgMjcuNzkxLDcuMjI1IDI3LjMxLDcuMjI1IEMyNi44NDIsNy4yMjUgMjYuNDY1LDYuODM1IDI2LjQ2NSw2LjM2NyBDMjYuNDY1LDUuODk5IDI2Ljg0Miw1LjUyMiAyNy4zMSw1LjUyMiBMMjcuMzEsNS41MjIgWiBNMzAuNTg2LDcuNjU0IEMzMS43OTUsOC4zMyAzMi44NjEsOS4xODggMzMuOTAxLDEwLjI5MyBMMzUuMDE5LDguODc2IEMzNC4wMTgsNy45MjcgMzMuMjEyLDcuMzI5IDMxLjY2NSw2LjM2NyBMMzAuNTg2LDcuNjU0IFogTTMxLjA0MSwxNi4yMzQgQzMxLjM0LDE2LjEzIDMxLjM3OSwxNi4xMTcgMzEuODk5LDE2LjAxMyBDMzMuOTE0LDE1LjU4NCAzNS41MjYsMTQuOTQ3IDM2Ljg1MiwxNC4wNjMgQzM4LjYzMywxMi44OCAzOS44NjgsMTEuMzQ2IDQwLjk3Myw4Ljk2NyBDNDAuMzEsOC40OTkgNDAuMTAyLDguMzA0IDM5LjU5NSw3LjY5MyBDMzkuMjA1LDguNzQ2IDM4Ljg0MSw5LjQ2MSAzOC4yNjksMTAuMjkzIEMzNy4yNDIsMTEuNzc1IDM2LjAzMywxMi43NzYgMzQuNDA4LDEzLjQ3OCBDMzMuMjI1LDEzLjk5OCAzMS42NzgsMTQuMzc1IDMwLjU2LDE0LjQ0IEwzMS4wNDEsMTYuMjM0IFogTTcuNDU4LDAgQzIuNSwwIDAsMy41MjIgMCw2LjQ1OSBDMCw4LjIzNyAwLjY4LDkuODE5IDIuMTM3LDEwLjQwOSBDMi4zNzYsMTAuNTA1IDIuNTksMTAuNDEyIDIuNjYsMTAuMTUgQzIuNzA4LDkuOTY5IDIuODIyLDkuNTExIDIuODczLDkuMzIgQzIuOTQzLDkuMDYxIDIuOTE2LDguOTcgMi43MjMsOC43NDQgQzIuMzAyLDguMjUzIDIuMDM0LDcuNjE3IDIuMDM0LDYuNzE2IEMyLjAzNCw0LjEwNCA0LjAwNywxLjc2NSA3LjE3MiwxLjc2NSBDOS45NzUsMS43NjUgMTEuNTE0LDMuNDYxIDExLjUxNCw1LjcyNiBDMTEuNTE0LDguNzA4IDEwLjE4MywxMS4xOCA4LjIwNiwxMS4xOCBDNy4xMTQsMTEuMTggNi4yOTcsMTAuMzI5IDYuNTU5LDkuMjMzIEM2Ljg3Miw3LjkyMiA3LjQ4LDYuNTA5IDcuNDgsNS41NjQgQzcuNDgsNC43MTcgNy4wMjIsNC4wMTEgNi4wNzIsNC4wMTEgQzQuOTU2LDQuMDExIDQuMDYsNS4xNTUgNC4wNiw2LjY4NyBDNC4wNiw3LjY2MyA0LjM5Myw4LjMyMyA0LjM5Myw4LjMyMyBDNC4zOTMsOC4zMjMgMy4yNTEsMTMuMTE3IDMuMDUxLDEzLjk1NyBDMi42NTIsMTUuNjI5IDIuOTkxLDE3LjY3OSAzLjAxOSwxNy44ODYgQzMuMDM2LDE4LjAwOSAzLjE5NSwxOC4wMzggMy4yNjcsMTcuOTQ2IEMzLjM3LDE3LjgxMiA0LjcsMTYuMTg3IDUuMTUxLDE0LjU2MiBDNS4yNzksMTQuMTAyIDUuODg1LDExLjcyIDUuODg1LDExLjcyIEM2LjI0OCwxMi40MDYgNy4zMDgsMTMuMDA5IDguNDM1LDEzLjAwOSBDMTEuNzksMTMuMDA5IDE0LjA2Niw5Ljk3OSAxNC4wNjYsNS45MjMgQzE0LjA2NiwyLjg1NyAxMS40NDQsMCA3LjQ1OCwwIFoiIGZpbGw9IiNmZmYiPjwvcGF0aD48L2c+PC9zdmc+);
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_white { 
+  background-color: #fff;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_save { 
+  border-radius: 2px;
+  text-indent: 20px;
+  width: auto;
+  padding: 0 4px 0 0;
+  text-align: center;
+  text-decoration: none;
+  font: 11px/20px "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  color: #fff!important;
+  background: #bd081c url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==) 3px 50% no-repeat;
+  background-size: 14px 14px;
+  -webkit-font-smoothing: antialiased;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_save:hover { 
+  background-color: #aa0719;
+  box-shadow: none;
+  color: #fff!important;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_save .PIN_1517481587075_count { 
+  text-indent: 0;
+  position: absolute;
+  color: #555;
+  background: #efefef;
+  border-radius: 2px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_save .PIN_1517481587075_count::before { 
+  content: "";
+  position: absolute;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_save.PIN_1517481587075_beside .PIN_1517481587075_count { 
+  right: -46px;
+  height: 20px;
+  width: 40px;
+  font-size: 10px;
+  line-height: 20px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_save.PIN_1517481587075_beside .PIN_1517481587075_count::before { 
+  top: 3px;
+  left: -4px;
+  border-right: 7px solid #efefef;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_save.PIN_1517481587075_above .PIN_1517481587075_count { 
+  top: -36px;
+  width: 100%;
+  height: 30px;
+  font-size: 10px;
+  line-height: 30px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_save.PIN_1517481587075_above .PIN_1517481587075_count::before { 
+  bottom: -4px;
+  left: 4px;
+  border-top: 7px solid #efefef;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_save.PIN_1517481587075_above.PIN_1517481587075_padded { 
+  margin-top: 28px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall { 
+  height: 28px;
+  width: 56px;
+  border-radius: 3px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_above .PIN_1517481587075_count { 
+  position: absolute;
+  height: 37px;
+  width: inherit;
+  top: -37px;
+  left: 0;
+  line-height: 30px;
+  font-size: 14px;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNzZweCIgd2lkdGg9IjExNHB4IiB2aWV3Qm94PSIwIDAgMTE0IDc2Ij48Zz48cGF0aCBkPSJNOSAxQzQuNiAxIDEgNC42IDEgOXY0M2MwIDQuMyAzLjYgOCA4IDhoMjZsMTggMTVoNy41bDE2LTE1SDEwNWM0LjQgMCA4LTMuNyA4LThWOWMwLTQuNC0zLjYtOC04LThIOXoiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2I1YjViNSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+PC9nPjwvc3ZnPg==);
+  background-size: cover;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_above.PIN_1517481587075_padded { 
+  margin-top: 37px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_beside .PIN_1517481587075_count { 
+  text-indent: 5px;
+  position: absolute;
+  right: -63px;
+  height: inherit;
+  width: 63px;
+  font-size: 14px;
+  line-height: 28px;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNTZweCIgd2lkdGg9IjEyNnB4IiB2aWV3Qm94PSIyIDAgMTMwIDYwIj48Zz48cGF0aCBkPSJNMTE5LjYgMmM0LjUgMCA4IDMuNiA4IDh2NDBjMCA0LjQtMy41IDgtOCA4SDIzLjNMMS42IDMyLjR2LTQuNkwyMy4zIDJoOTYuM3oiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2I1YjViNSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+PC9nPjwvc3ZnPg==);
+  background-size: cover;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_beside.PIN_1517481587075_padded { 
+  margin-right: 63px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_save { 
+  border-radius: 4px;
+  width: auto;
+  background-position-x: 6px;
+  background-size: 18px 18px;
+  text-indent: 29px;
+  font: 14px/28px "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  font-weight: bold;
+  padding: 0 6px 0 0;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_save .PIN_1517481587075_count { 
+  position: absolute;
+  color: #555;
+  font-size: 12px;
+  text-indent: 0;
+  background: #efefef;
+  border-radius: 4px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_save .PIN_1517481587075_count::before { 
+  content: "";
+  position: absolute;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_save.PIN_1517481587075_above .PIN_1517481587075_count { 
+  font-size: 14px;
+  top: -50px;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_save.PIN_1517481587075_above .PIN_1517481587075_count::before { 
+  bottom: -4px;
+  left: 7px;
+  border-top: 7px solid #efefef;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_save.PIN_1517481587075_beside .PIN_1517481587075_count { 
+  font-size: 14px;
+  right: -63px;
+  width: 56px;
+  height: 28px;
+  line-height: 28px;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_tall.PIN_1517481587075_save.PIN_1517481587075_beside .PIN_1517481587075_count::before { 
+  top: 7px;
+  left: -4px;
+  border-right: 7px solid #efefef;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_round { 
+  height: 16px;
+  width: 16px;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==) 0 0 no-repeat;
+  background-size: 16px 16px;
+  box-shadow: none;
+}
+ .PIN_1517481587075_button_pin.PIN_1517481587075_round.PIN_1517481587075_tall { 
+  height: 32px;
+  width: 32px;
+  background-size: 32px 32px;
+}
+</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{height:100%;overflow:hidden;position:fixed;width:100%}.fb_shrink_active{opacity:1;transform:scale(1, 1);transition-duration:200ms;transition-timing-function:ease-out}.fb_shrink_active:active{opacity:.5;transform:scale(.75, .75)}</style></head><body class="" style=""><header id="gbl-header" class="nopin"><div class="top-bar"><div class="container content-match"><a id="header-robot" href="http://www.instructables.com/" class="svg-instructable-logo"><h2 class="sr-only">Instructables</h2><img id="instructables-logo" alt="Instructables" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/instructables-logo@2x.png" nopin="nopin"></a><div id="header-search"><form id="header-search-form" class="form-horizontal" action="http://www.instructables.com/howto/" method="get"><div class="input-append"><input class="input-medium" type="text" name="q" id="q" placeholder="Let&#39;s Make ..."><button class="btn" type="button" id="header-search-btn"><i class="bg-icon search"></i></button></div></form></div><nav id="header-nav"><h2 class="sr-only icon-list">Main Menu</h2><ul><li><a class="btn btn-clear explore-btn" href="http://www.instructables.com/featured/">Featured</a></li><li><a class="btn btn-clear write-btn" href="http://www.instructables.com/about/create.jsp">Write an Instructable</a></li></ul></nav><div id="you-menu-container" class="pull-right"><div id="login-menu">
+<a class="login-link" data-sourcea="header" href="http://www.instructables.com/account/login/">Login</a>
+<span class="pipe">|</span>
+<a class="signup-link" data-sourcea="header" href="http://www.instructables.com/account/gopro">Sign Up</a>
+</div></div></div></div><div class="bottom-bar" id="header-promo-container"><div class="container main content-match"><nav id="promo-menu"><h2 class="sr-only">Secondary Menu</h2><i class="icon-list"></i><ul id="promo-tabs" class="clearfix"><li class="extra"><a href="http://www.instructables.com/featured/">Featured</a></li><li class="extra"><a href="http://www.instructables.com/about/create.jsp">Write an Instructable</a></li><li><a href="http://www.instructables.com/classes/">Classes</a></li><li><a href="http://www.instructables.com/contest/">Contests</a></li><li><a href="http://www.instructables.com/topics/">Community</a></li><li><a href="http://www.instructables.com/teachers/">Teachers</a></li></ul></nav><a id="autodesk-header-link" href="http://www.autodesk.com/" title="Autodesk: Make Anything"><img id="autodesk-make-logo" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/autodesk-makeanything.png" srcset="/intl_static/img/autodesk-makeanything.png, /intl_static/img/autodesk-makeanything%402x.png 2x" alt="Autodesk: Make Anything" nopin="nopin"></a></div></div></header><div class="aspace-wrap"><div class="aspace container" hidden="" ltqzlwp=""><div id="aplace"><div id="gpt-ad-leaderboard" class="gpt-ad" hidden="" ltqzlwp=""><script>
+                    renderAdSlot('gpt-ad-leaderboard');
+                </script></div></div></div></div><main role="main"><article id="article" class="full-wrapper"><header class="article-header"><h1 class="title">Remote Temperature Monitoring Using MQTT and ESP8266 Modules</h1><div class="crumbs"><a class="category" href="http://www.instructables.com/technology/">Technology</a><a class="channel" href="http://www.instructables.com/technology/arduino/">Arduino</a>
+        
+        by <a class="author" rel="author" href="http://www.instructables.com/member/padeath/">padeath</a><button class="btn btn-clear follow-btn">Follow</button></div><div class="counts"><p class="svg-views view-count">35,139</p><p class="svg-favorite favorite-count">208</p><p class="svg-comments comment-count">12</p><p class="svg-featured">&nbsp;</p></div><div class="meta "><span class="posted">Posted <time datetime="2016-04-18T03:34:21">Apr. 18, 2016</time></span><button class="stats-btn author-action">Stats</button><button class="license-btn" data-url="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="license" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/by-nc-sa_small.png"></button></div></header><div class="article-body"><div class="main-content"><section id="intro" class="step" data-id="S9AVVORIMMFFN3O"><h2 class="step-title sr-only">Introduction: Remote Temperature Monitoring Using MQTT and ESP8266 Modules</h2><figure class="photoset"><div class="photoset-row cols-1" style="height: auto;"><div class="photoset-cell image-cell" style="width: 100%;">
+        <div class="photoset-item photoset-image" style="height: auto;">
+            <a class="gallery-link" rel="photoset111" href="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FVUUXK2IMNUVGF0.LARGE.jpg"><img alt="Picture of Remote Temperature Monitoring Using MQTT and ESP8266 Modules" data-src="https://cdn.instructables.com/FVU/UXK2/IMNUVGF0/FVUUXK2IMNUVGF0.LARGE.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FVUUXK2IMNUVGF0.LARGE.jpg" style="opacity: 1;">
+            
+            </a>
+        </div>
+    </div></div></figure><div class="step-body"><p>If you want to monitor some remote temperatures this Instructable will show you can do this by using some ESP8266 modules, MQTT (with a broker), LCD screen (for local monitoring), home-assistant (for local and remote monitoring), and of cause some temperature sensors (I use DS18b20 as they are pretty good and cheap enough)</p><p>I will divide this Instructable into several little projects as there is quite a bit to do to get it all working.  These will be:</p><ol><li>Build a temperature sensor using an ESP8266 and DS18b20 - output to serial      </li><li>Setup MQTT broker on a ubuntu server      </li><li>Modify the sketch on the ESP8266 to publish temperature to the MQTT broker      </li><li>Connect LCD screen to another ESP8266 for local monitoring (Instructable <a href="https://www.instructables.com/id/Using-a-Nodemcu-Devkit-esp8266-to-Display-Temperat/">https://www.instructables.com/id/Using-a-Nodemcu-Devkit-esp8266-to-Display-Temperat/</a>)      </li><li>Install and configure home-assistant on a ubuntu server (for local and remote monitoring)</li></ol><p><iframe allowfullscreen="" frameborder="0" height="315" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/YP34KloQvxE.html" width="560"></iframe></p></div><div class="step-discussion"><button class="btn tip-btn">Add Tip</button><button class="btn ask-btn">Ask Question</button></div></section><section id="step1" class="step" data-id="S59Y1BPIMMFFN3V"><h2 class="step-title">Step 1: Build a Temperature Sensor Using an ESP8266 and DS18b20 - Output to Serial</h2><figure class="photoset"><div class="photoset-row cols-1" style="margin-bottom: 5px; height: auto;"><div class="photoset-cell image-cell" style="width: 100%;">
+        <div class="photoset-item photoset-image" style="height: auto;">
+            <a class="gallery-link" rel="photoset113" href="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FIGM5PVIN4VW790.LARGE.jpg"><img alt="Picture of Build a Temperature Sensor Using an ESP8266 and DS18b20 - Output to Serial" data-src="https://cdn.instructables.com/FIG/M5PV/IN4VW790/FIGM5PVIN4VW790.LARGE.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FIGM5PVIN4VW790.LARGE.jpg" style="opacity: 1;">
+            
+            </a>
+        </div>
+    </div></div><div class="photoset-row cols-1" style="height: auto;"><div class="photoset-cell image-cell" style="width: 100%;">
+        <div class="photoset-item photoset-image" style="height: auto;">
+            <a class="gallery-link" rel="photoset113" href="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/F3GLGNNIN4VW9OG.LARGE.jpg"><img alt="Picture of Build a Temperature Sensor Using an ESP8266 and DS18b20 - Output to Serial" data-src="https://cdn.instructables.com/F3G/LGNN/IN4VW9OG/F3GLGNNIN4VW9OG.LARGE.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/F3GLGNNIN4VW9OG.LARGE.jpg" style="opacity: 1;">
+            
+            </a>
+        </div>
+    </div></div></figure><div class="step-body"><p>Connecting the DS18b20 to the ESP8266 is very simple.  The picture above along with the BreadBoard Fritzing should help.</p><p>You simply connect the left hand pin to Ground, the centre pin to the GPIO that you want to use (I use D1 which is GPIO5), and the right had ping to 5v.</p><p>Once this is all connected up you can use the Simple DallasTemperature example to get the temperature from the sensor which is sent to the serial output.</p><p>I added sensors.setResolution(12) which sets the resolution of the device to 12 bits so that I get a more precise temperature reading.  You can see from the values below what you can expect from each of the bit resolutions:</p><p>Mode    Resol      Conversion time</p><p>9 bits    0.5°C       93.75 ms</p><p>10 bits  0.25°C     187.5 ms</p><p>11 bits  0.125°C    375 ms</p><p>12 bits  0.0625°C  750 ms </p><p>You can get the library for the DS18b20 from the Arduino Library manager, so no need to download it from github separately. </p><p><iframe allowfullscreen="" frameborder="0" height="315" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/YP34KloQvxE(1).html" width="560"></iframe><br></p></div><div class="step-discussion"><button class="btn tip-btn">Add Tip</button><button class="btn ask-btn">Ask Question</button></div></section><section id="step2" class="step" data-id="SWGA5S1IMMFFN40"><h2 class="step-title">Step 2: Setup MQTT Broker on a Ubuntu Server</h2><div class="step-body"><p>This part of the Instructable assumes you know how to install and update ubuntu.  Once you have got this far you'll need to install mosquitto.</p><pre>root@ubuntu:~# apt-get install mosquitto
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  libwebsockets3
+The following NEW packages will be installed
+  libwebsockets3 mosquitto
+0 to upgrade, 2 to newly install, 0 to remove and 3 not to upgrade.
+Need to get 0 B/163 kB of archives.
+After this operation, 490 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Selecting previously unselected package libwebsockets3:amd64.
+(Reading database ... 64521 files and directories currently installed.)
+Preparing to unpack .../libwebsockets3_1.2.2-1_amd64.deb ...
+Unpacking libwebsockets3:amd64 (1.2.2-1) ...
+Selecting previously unselected package mosquitto.
+Preparing to unpack .../mosquitto_1.4.8-0mosquitto1_amd64.deb ...
+Unpacking mosquitto (1.4.8-0mosquitto1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libwebsockets3:amd64 (1.2.2-1) ...
+Setting up mosquitto (1.4.8-0mosquitto1) ...
+mosquitto start/running, process 12955
+Processing triggers for libc-bin (2.19-0ubuntu6.7) ...</pre><p>Once mosquitto is installed it should be running, check it by running a ps:</p><pre>root@ubuntu:~# ps aux |grep mosquitto
+mosquit+ 12955  0.1  0.0  37236  2420 ?        Ss   16:45   0:01 /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
+root     13307  0.0  0.0  11744   948 pts/0    S+   16:58   0:00 grep --color=auto mosquitto</pre><p>Now if you run the following command to subscribe to the broker you should see nothing, but mosquitto_sub will sit and wait for something to be published to the broker.</p><pre>root@ubuntu:~# mosquitto_sub -h localhost -v -t "#"</pre><p>This will subscribe to all topics (as you've used the # for the topic) so anything that is sent to the broker will be displayed.</p><p>Then in another ssh window send a message to the broker as follows :</p><pre>rot@ubuntu:~# mosquitto_pub -h localhost -t "ha/test" -m "Hello"</pre><p>Then back in the other window that is running the mosquitto_sub you should see the following :</p><pre>root@ubuntu:~# mosquitto_sub -h localhost -v -t "#"
+ha/test Hello</pre><p>This shows that the broker is working and is ready for receiving data from the ESP8266 nodes and sending it onto home-assistant.</p></div><div class="step-discussion"><button class="btn tip-btn">Add Tip</button><button class="btn ask-btn">Ask Question</button></div></section><section id="step3" class="step" data-id="SNX4W33IMMFFN44"><h2 class="step-title">Step 3: Modify the Sketch on the ESP8266 to Publish Temperature to the MQTT Broker</h2><div class="step-body"><p>Now that the MQTT broker is running on your ubuntu server you can now update the sketch on your ESP8266 to start sending temperatures to it.</p><p>The follow sketch will need a little modifying to include your own wifi SSID and the IP address of your ubuntu server that has mosquitto running on it.</p><p>You will need the following libraries which you can get from github:</p><ul><li><a href="https://github.com/PaulStoffregen/OneWire">https://github.com/PaulStoffregen/OneWire</a></li><li><a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">https://github.com/milesburton/Arduino-Temperature-Control-Library</a></li><li><a href="https://github.com/knolleary/pubsubclient">https://github.com/knolleary/pubsubclient</a></li></ul><pre><p>#include &lt;ESP8266WiFi.h&gt;</p><p>#include &lt;PubSubClient.h&gt;</p><p>#include &lt;OneWire.h&gt;</p><p>#include &lt;DallasTemperature.h&gt;</p><p>// Data wire is plugged into pin 2 on the Arduino
+#define ONE_WIRE_BUS 5</p><p>// Setup a oneWire instance to communicate with any OneWire devices 
+// (not just Maxim/Dallas temperature ICs)
+OneWire oneWire(ONE_WIRE_BUS);</p><p>DallasTemperature sensors(&amp;oneWire);</p><p>// Update these with values suitable for your network.
+const char* ssid = "";
+const char* password = "";
+const char* mqtt_server = "";</p><p>WiFiClient espClient;
+PubSubClient client(espClient);
+long lastMsg = 0;
+float temp = 0;
+int inPin = 5;</p><p>void setup_wifi() {
+  delay(10);
+  // We start by connecting to a WiFi network
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+  WiFi.begin(ssid, password);</p><p>  while (WiFi.status() != WL_CONNECTED) 
+  {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+}</p><p>void reconnect() {
+  // Loop until we're reconnected
+  while (!client.connected()) {
+    Serial.print("Attempting MQTT connection...");
+    // Attempt to connect
+    if (client.connect("arduinoClient_temperature_sensor")) {
+      Serial.println("connected");
+    } else {
+      Serial.print("failed, rc=");
+      Serial.print(client.state());
+      Serial.println(" try again in 5 seconds");
+      // Wait 5 seconds before retrying
+      delay(5000);
+    }
+  }
+}
+ 
+void setup()
+{
+  Serial.begin(115200);
+  setup_wifi(); 
+  client.setServer(mqtt_server, 1883);
+  pinMode(inPin, INPUT);
+  sensors.begin();
+}</p><p>void loop()
+{
+  if (!client.connected()) {
+    reconnect();
+  }
+  client.loop();</p><p>  long now = millis();
+  if (now - lastMsg &gt; 60000) {
+    lastMsg = now;
+    sensors.setResolution(12);
+    sensors.requestTemperatures(); // Send the command to get temperatures
+    temp = sensors.getTempCByIndex(0);
+    Serial.println(temp);
+    if((temp &gt; -20) &amp;&amp; (temp &lt;60))
+      {
+      client.publish("ha/_temperature1", String(temp).c_str(),TRUE);
+      }
+  }
+}</p></pre><p>.</p></div><div class="step-discussion"><button class="btn tip-btn">Add Tip</button><button class="btn ask-btn">Ask Question</button></div></section><section id="step4" class="step" data-id="S0T9Q4PIMMFFN48"><h2 class="step-title">Step 4: Install and Configure Home-assistant on a Ubuntu Server (for Local and Remote Monitoring)</h2><figure class="photoset"><div class="photoset-row cols-1" style="height: auto;"><div class="photoset-cell image-cell" style="width: 100%;">
+        <div class="photoset-item photoset-image" style="height: auto;">
+            <a class="gallery-link" rel="photoset115" href="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/F8FYJ17IMNUVGSZ.LARGE.jpg"><img alt="Picture of Install and Configure Home-assistant on a Ubuntu Server (for Local and Remote Monitoring)" data-src="https://cdn.instructables.com/F8F/YJ17/IMNUVGSZ/F8FYJ17IMNUVGSZ.LARGE.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/F8FYJ17IMNUVGSZ.LARGE.jpg" style="opacity: 1;">
+            
+            </a>
+        </div>
+    </div></div></figure><div class="step-body"><p>For full instructions to install and configure home-assistant you can pop over to <a href="https://home-assistant.io/getting-started/">https://home-assistant.io/getting-started/</a>. But here are some pointers to get things working.</p><p>You will need to have python3-pip installed first of all:</p><pre>root@ubuntu:~# apt-get install python3-pip</pre><p>Once pip is installed you can install home-assistant:</p><pre>pip3 install homeassistant</pre><p>You then just run hass as follows:</p><pre>root@ubuntu:~# hass</pre><p>This will run hass and will create a basic configuration file which we will now edit to add the sensor for the temperature.</p><p>Your home-assistant configuration file should be in your /home/USERID/.homeassistant dir, called configuration.yaml. Open this and you'll need to add a section for the MQTT server and add a new sensor to it as follows:</p><pre>mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  keepalive: 1000
+  protocol: 3.1
+  client_id: home-assistant-1
+
+sensor:
+   platform: mqtt
+   state_topic: "ha/_temperature1"
+   name: "Back garden"
+   unit_of_measurement: "°C"
+   qos: 1</pre><p>As you can see the state_topic is the same as what you have set in the sketch on the ESP8266.  Once you have saved the config file, restart hass, by just pressing ctrl-c to stop it then run it again by typing hass again.</p><p>If you then browse to the IP address of your ubuntu server on port 8123 (default port for home-assistant) you should see something like the pic above.</p><p>If you want to add the temperature to a 'card' on the webpage, which does look much nicer, then you can just add a group for the temperatures (in this case just the one temperature for now) as follows:</p><pre>group:  temperatures:
+    name: Temperatures
+    entities:
+       - sensor.back_garden</pre></div><div class="step-discussion"><button class="btn tip-btn">Add Tip</button><button class="btn ask-btn">Ask Question</button></div></section><div class="dual-ads"><div class="dual-ads-inner"><div id="gpt-ad-inline-med-1" class="gpt-ad" hidden="" ltqzlwp=""><script>
+                renderAdSlot('gpt-ad-inline-med-1');
+            </script></div><div id="gpt-ad-inline-med-2" class="gpt-ad" hidden="" ltqzlwp=""><script>
+                renderAdSlot('gpt-ad-inline-med-2');
+            </script></div></div></div><section class="imadeits"><h2>Share</h2><ul class="list-unstyled unstyled imadeit-list"><li class="share"><div class="share-inner"><p>Did you make this project?</p><p><b>Share it with us!</b></p><button class="btn btn-orange made-it-btn">I Made It!</button></div></li></ul></section><section class="recommendations"><h2>Recommendations</h2><ul class="list-unstyled projects"><li><article><a href="http://www.instructables.com/id/Joy-Robot-Rob%C3%B4-Da-Alegria-Open-Source-3D-Printed-A/"><img alt="Joy Robot (Robô Da Alegria) - Open Source 3D Printed, Arduino Powered Robot!" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FEX0AMBJCQK38PY.RECTANGLE1.jpg"></a><div class="caption"><h3><a href="http://www.instructables.com/id/Joy-Robot-Rob%C3%B4-Da-Alegria-Open-Source-3D-Printed-A/">Joy Robot (Robô Da Alegria) - Open Source 3D Printed, Arduino Powered Robot!</a></h3><footer><p>by <a href="http://www.instructables.com/member/IgorF2/">IgorF2</a> in
+                        
+                            <a href="http://www.instructables.com/technology/">technology</a></p></footer></div></article></li><li><article><a href="http://www.instructables.com/id/YouTube-Subscriber-Counter-With-ESP8266-V2/"><img alt="YouTube Subscriber Counter With ESP8266" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FA08I1MJCUUM8X4.RECTANGLE1.jpg"></a><div class="caption"><h3><a href="http://www.instructables.com/id/YouTube-Subscriber-Counter-With-ESP8266-V2/">YouTube Subscriber Counter With ESP8266</a></h3><footer><p>by <a href="http://www.instructables.com/member/bekathwia/">bekathwia</a> in
+                        
+                            <a href="http://www.instructables.com/technology/arduino/">arduino</a></p></footer></div></article></li><li><article><a href="http://www.instructables.com/class/Arduino-Class/"><img alt="Arduino Class" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FVRH9FVJ1WW2UOV.RECTANGLE1.jpg"></a><div class="caption"><img alt="Arduino Class" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FMJFMG5IMZ65K95.SQUARE2.jpg"><h3><a href="http://www.instructables.com/id/Arduino-Class/">Arduino Class</a></h3><footer><p>64,586 Enrolled</p></footer></div></article></li></ul><ul class="list-unstyled contests"><li><h3 class="sr-only">Remote Control Contest 2017</h3><a href="http://www.instructables.com/contest/rc2017/"><img src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FTRIWSCJB3ZOVQI.MEDIUM.jpg" alt="Remote Control Contest 2017"></a></li><li><h3 class="sr-only">Epilog Challenge 9</h3><a href="http://www.instructables.com/contest/epilog9/"><img src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/F33PYJYJB6U0T7Y.MEDIUM.jpg" alt="Epilog Challenge 9"></a></li><li><h3 class="sr-only">Voice Activated Challenge</h3><a href="http://www.instructables.com/contest/voiceactivated2018/"><img src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/FRQDOR0JBI9M0BI.MEDIUM.jpg" alt="Voice Activated Challenge"></a></li></ul></section><div id="discuss"><div class="discuss discuss-all"><div class="postbox"><img class="poster" alt="user" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/user.TINY.gif"><div class="field"><button class="tip">Add Tip</button><button class="question">Ask Question</button><button class="comment">Post Comment</button></div></div><div class="image-bucket clearfix"></div><div class="actions"><p class="policy">We have a <b>be nice</b> policy.<br> Please be positive and constructive.</p><button class="btn add-image-btn" disabled="">Add Images</button><button class="btn btn-orange post-btn" disabled="">Post</button></div></div></div><section class="discussion tips  hide"><h2>Tips</h2><div class="posts"></div><button class="btn btn-orange tip-btn">Add Tip</button></section><section class="discussion questions  hide"><h2>Questions</h2><div class="posts"></div><button class="btn btn-orange ask-btn">Ask Question</button></section><section id="comments" class="discussion comments "><h2>11  Comments</h2><div class="posts"><article class="post" data-id="C67T40EJAWTYU0R" data-authorid="MXKZS04JAWTYTMD"><footer><h3 class="byline"><a class="user " href="http://www.instructables.com/member/Lokkeblomst/">Lokkeblomst</a><span class="time">7 weeks ago</span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/Lokkeblomst/"><div class="achievement-holder"><div class="author-achievements hide"><i style="display:none" class="achievement achievement-featured icon-featured"></i>
+<i style="display:none" class="achievement achievement-views icon-views1"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://www.instructables.com/static/defaultIMG/default.TINY.png" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/default.TINY.png" alt="user" style="display: inline; opacity: 1;"></a></footer><div class="text"><p>how do i add another temp sensor to the esp8266? and can i send the other sensor on another topic?</p></div></article><article class="post" data-id="CEMPY4ZIRXT9NOS" data-authorid="MS1RXVDFSSIUNUT"><footer><h3 class="byline"><a class="user " href="http://www.instructables.com/member/siddhc/">siddhc</a><span class="time">1 year ago</span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/siddhc/"><div class="achievement-holder"><div class="author-achievements hide"><i style="display:none" class="achievement achievement-featured icon-featured"></i>
+<i style="display:none" class="achievement achievement-views icon-views1"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://www.instructables.com/static/defaultIMG/default.TINY.png" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="user"></a></footer><div class="text"><p>Hi,<br>Great post.<br>This is a request for guidance.<br>My ESP8266 module connects to “test.mosquitto.org” and subscribes to a topic say “b1”. What ever is published to “b1”, it can read it immediately.<br>Problem happens when my second ESP8266 module subscribes to “test.mosquitto.org” to “b1”. It continuously returns :</p><p>WiFi connected<br>IP address:<br>192.168.0.9<br>Attempting MQTT connection…connected<br>Message arrived [b1] 0<br>Attempting MQTT connection…connected<br>Message arrived [b1] 0<br>Attempting MQTT connection…connected<br>Message arrived [b1] 0<br>Attempting MQTT connection…connected</p><p>Could you kindly suggest what might be going wrong. I look forward to your advice.</p></div></article><article class="post reply" data-id="C2PKEFLISCARAMA" data-authorid="MMEGHTSF1B3RBNH" data-inreplyto="CEMPY4ZIRXT9NOS"><footer><h3 class="byline"><a class="user " href="http://www.instructables.com/member/quattro/">quattro</a><span class="time">1 year ago</span><span class="replied-to">in reply to <a class="reply-to" href="http://www.instructables.com/member/siddhc/">siddhc</a></span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/quattro/"><div class="achievement-holder"><div class="author-achievements hide"><i style="display:none" class="achievement achievement-featured icon-featured"></i>
+<i style="display:none" class="achievement achievement-views icon-views1"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://www.instructables.com/static/defaultIMG/default.TINY.png" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="user"></a></footer><div class="text"><p>Its not well documented, but in the call to client.connect, clientID should be unique. This tripped me up as well.  You can use the MAC address as the clientID, it will be unique to the network.</p><p><i>        char myClientID[18];</i></p><p><em>        WiFi.macAddress( ).toCharArray( myClientID, sizeof( myClientID ));</em></p><p><em>        if (client.connect( myClientID )) { </em></p><p><em>            Serial.println("connected"); </em></p><p><em>        }</em></p><p>The Arduino IDE really should be able to generate a unique UUID at compile time. It would save a lot of headaches.</p></div></article><article class="post" data-id="CLRZ78SIRLQQJN9" data-authorid="M6DX9AKIHZ6RS5N"><footer><h3 class="byline"><a class="user " href="http://www.instructables.com/member/Bielefeldt/">Bielefeldt</a><span class="time">1 year ago</span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/Bielefeldt/"><div class="achievement-holder"><div class="author-achievements hide"><i style="display:none" class="achievement achievement-featured icon-featured"></i>
+<i style="display:none" class="achievement achievement-views icon-views1"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://cdn.instructables.com/F1L/3MDF/IJSX1M76/F1L3MDFIJSX1M76.TINY.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="user"></a></footer><div class="text"><p>Thanks for the super good and inspiring article on Remote Temperature Monitoring Using MQTT and ESP8266.</p><p>Currently I have a mosquitto Broker running on a Raspberry Pi, and a ESP8266 with your sample code. It works fine, and I can see the temperature in a terminal window on my RPI.</p><p>Now, I try with another ESP8266 with the same code, but then it goes wrong.</p><p>On the other ESP8266 I can see in the terminal window that it loses the connection to mosquitto Broker, and constantly trying to reconnect. There are 8 meters between the two ESP8266 so that they should not disturb each other.</p><p>Via an android WiFi analyzes App, I can see that the two ESP8266 emits a WiFI signal called DoitWiFi, on the same channel as my WiFi Access Point / Router. It is perhaps the reason for the bad connection, but how do I turn this WiFi signal off ?.</p><p>It is as if ESP8266 acting as an independent Access Point. Can it be changed?</p><p>The applied ESP8266 is a GreekCreit.NodeMcu-Lua-ESP8266-ESP12E. See link below.</p><p>http://www.banggood.com/Geekcreit-Doit-NodeMcu-Lua-ESP8266-ESP-12E-WIFI-Development-Board-p-985891.html </p></div><div class="photos"><a data-fancybox-group="fbg-CLRZ78SIRLQQJN9" href="https://cdn.instructables.com/FB4/SV2F/IRLQQJHW/FB4SV2FIRLQQJHW.LARGE.jpg"><img class="lazy-img-scroll" data-src="https://cdn.instructables.com/FB4/SV2F/IRLQQJHW/FB4SV2FIRLQQJHW.SQUARE2.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="WiFi Analyser.JPG"></a><a data-fancybox-group="fbg-CLRZ78SIRLQQJN9" href="https://cdn.instructables.com/F9E/I29D/IRLQQJKF/F9EI29DIRLQQJKF.LARGE.jpg"><img class="lazy-img-scroll" data-src="https://cdn.instructables.com/F9E/I29D/IRLQQJKF/F9EI29DIRLQQJKF.SQUARE2.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="MQTT connection.JPG"></a></div></article><article class="post reply" data-id="CUMP0ZLIRLQQL9Z" data-authorid="M6DX9AKIHZ6RS5N" data-inreplyto="CLRZ78SIRLQQJN9"><footer><h3 class="byline"><a class="user " href="http://www.instructables.com/member/Bielefeldt/">Bielefeldt</a><span class="time">1 year ago</span><span class="replied-to">in reply to <a class="reply-to" href="http://www.instructables.com/member/Bielefeldt/">Bielefeldt</a></span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/Bielefeldt/"><div class="achievement-holder"><div class="author-achievements hide"><i style="display:none" class="achievement achievement-featured icon-featured"></i>
+<i style="display:none" class="achievement achievement-views icon-views1"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://cdn.instructables.com/F1L/3MDF/IJSX1M76/F1L3MDFIJSX1M76.TINY.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="user"></a></footer><div class="text"><p>It turns out that ESP8266 by default run in Mixed Mode and that this can be changed by inserting the following sentence in the Void Setup_wifi ()</p><p>void setup_wifi () {</p><p>WiFi.mode (WIFI_STA); // Sets the unit in Station Mode, and not by default Mixed Mode.</p><p>This disappears this extra WiFi signal.</p><p>Unfortunately, it has not changed that when two devices connected while you lose the current connection to MQTT broker? ? ?</p><p>Is it something to be used different user account, or else ii compared to MQTT broker?<br><br></p></div><div class="photos"><a data-fancybox-group="fbg-CUMP0ZLIRLQQL9Z" href="https://cdn.instructables.com/F77/LI86/IRLQQL6U/F77LI86IRLQQL6U.LARGE.jpg"><img class="lazy-img-scroll" data-src="https://cdn.instructables.com/F77/LI86/IRLQQL6U/F77LI86IRLQQL6U.SQUARE2.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="MQTT connection2.JPG"></a></div></article><article class="post" data-id="C80WPH0IP5P831J" data-authorid="M6Q3SR4IO7EPK4P"><footer><h3 class="byline"><a class="user " href="http://www.instructables.com/member/FauzanR3/">FauzanR3</a><span class="time">1 year ago</span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/FauzanR3/"><div class="achievement-holder"><div class="author-achievements hide"><i style="display:none" class="achievement achievement-featured icon-featured"></i>
+<i style="display:none" class="achievement achievement-views icon-views1"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://www.instructables.com/static/defaultIMG/default.TINY.png" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="user"></a></footer><div class="text"><p>Is this concept using internet? or local wifi only?</p></div></article><article class="post" data-id="CT8X3KUINER5GUG" data-authorid="MLUJLT9GHDSNCNS"><footer><h3 class="byline"><a class="user " href="http://www.instructables.com/member/CatalinRO/">CatalinRO</a><span class="time">1 year ago</span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/CatalinRO/"><div class="achievement-holder"><div class="author-achievements"><i style="display: block;" class="achievement achievement-featured icon-featured coin-bronze"></i>
+<i style="display: block;" class="achievement achievement-views icon-views1 coin-bronze"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://cdn.instructables.com/FPV/4O4C/HZCJ74RO/FPV4O4CHZCJ74RO.TINY.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="user"></a></footer><div class="text"><p>Did you try any measurements on the power consumption for ESP8266 configuration? I think about some sensors in my garden and having them on battery sounds not so promising at a first glance. Sending temperature every 15 minutes is ok, but I am not sure how much the batteries will last, 1 month will be ideal :D </p></div></article><article class="post reply" data-id="C97SIMWING9CMTW" data-authorid="MSLINNKIM5WKPGE" data-inreplyto="CT8X3KUINER5GUG"><footer><h3 class="byline"><a class="user owner" href="http://www.instructables.com/member/padeath/">padeath</a><span class="time">1 year ago</span><span class="replied-to">in reply to <a class="reply-to" href="http://www.instructables.com/member/CatalinRO/">CatalinRO</a></span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/padeath/"><div class="achievement-holder"><div class="author-achievements"><i style="display: block;" class="achievement achievement-featured icon-featured coin-bronze"></i>
+<i style="display: block;" class="achievement achievement-views icon-views1 coin-bronze"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://cdn.instructables.com/F1W/H8BH/IMKTSA9E/F1WH8BHIMKTSA9E.TINY.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="user"></a></footer><div class="text"><p>I've not done any measurements of power usage for any of my ESP8266 projects (yet) mainly because they are all indoors and connected to a mains power adapter of some kind.</p><p>You can put the ESP8266 into sleep mode and only wake up (switch wifi on again) every 15mins if that is how often you would like to send the data, this would reduce the power usage.  Also you could include a solar cell to keep the battery (if you're using rechargeable) topped up.</p></div></article><article class="post reply" data-id="CF5NI6PINGBH1RG" data-authorid="MLUJLT9GHDSNCNS" data-inreplyto="C97SIMWING9CMTW"><footer><h3 class="byline"><a class="user " href="http://www.instructables.com/member/CatalinRO/">CatalinRO</a><span class="time">1 year ago</span><span class="replied-to">in reply to <a class="reply-to" href="http://www.instructables.com/member/padeath/">padeath</a></span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/CatalinRO/"><div class="achievement-holder"><div class="author-achievements"><i style="display: block;" class="achievement achievement-featured icon-featured coin-bronze"></i>
+<i style="display: block;" class="achievement achievement-views icon-views1 coin-bronze"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://cdn.instructables.com/FPV/4O4C/HZCJ74RO/FPV4O4CHZCJ74RO.TINY.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="user"></a></footer><div class="text"><p>Thanks, I'll let you know my findings when I'm done, your project is a good start for what I want to do :)</p></div></article><article class="post" data-id="CAF7B3TIN69D78Z" data-authorid="MV7ICAPI21RG0H9"><footer><h3 class="byline"><a class="user " href="http://www.instructables.com/member/Jean0x7BE/">Jean0x7BE</a><span class="time">1 year ago</span></h3><div class="toolbar"><button class="btn reply-btn">Reply</button></div><a class="avatar" href="http://www.instructables.com/member/Jean0x7BE/"><div class="achievement-holder"><div class="author-achievements"><i style="display: block;" class="achievement achievement-featured icon-featured coin-bronze"></i>
+<i style="display: block;" class="achievement achievement-views icon-views1 coin-bronze"></i>
+<i style="display:none" class="achievement achievement-comments icon-comments"></i></div></div><img class="lazy-img-scroll" data-src="https://cdn.instructables.com/FTK/O07M/IE7J5SW8/FTKO07MIE7J5SW8.TINY.jpg" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/pixel.png" alt="user"></a></footer><div class="text"><p>Thanks for this, love the focus om MQTT!</p></div></article></div><button class="btn more-btn">More Comments</button><button class="btn btn-orange comment-btn">Post Comment</button></section></div><div class="sidebar"><div class="adBlockWrapper"><div class="adBlock" hidden="" ltqzlwp=""><div id="gpt-ad-med-rectangle" class="gpt-ad" hidden="" ltqzlwp=""><script>
+                renderAdSlot('gpt-ad-med-rectangle');
+            </script></div></div></div><div id="ible-stickyad-wrapper" class="adBlockWrapper" style="height: 0px;"><div id="ible-stickyad" style="top: 72px; bottom: auto; position: fixed;"><div id="gpt-ad-sidebar-brand" class="gpt-ad" hidden="" ltqzlwp=""><script>
+                renderAdSlot('gpt-ad-sidebar-brand');
+            </script></div></div></div></div></div><div id="admin-container"></div><aside class="sticky-header affix">
+    <h2 class="sr-only title">Remote Temperature Monitoring Using MQTT and ESP8266 Modules</h2>
+    <span class="byline"><a class="avatar" rel="author" href="http://www.instructables.com/member/padeath/"><img src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/F1WH8BHIMKTSA9E.TINY.jpg"></a><button class="btn btn-clear btn-yellow follow-btn">Follow</button>By <a class="author" rel="author" href="http://www.instructables.com/member/padeath/">padeath</a></span>
+    <span class="inline-menu">
+        <button class="svg-pdf pdf-btn" data-role-group="pdf" data-sourcea="download">Download</button>
+        <button class="svg-not-favorite favorite-btn"><span class="sr-only">Mark as favorite</span></button>
+        <button class="svg-comments comments-btn"><span class="sr-only">Comments</span></button>
+        <button class="svg-facebook fb-btn"><span class="sr-only">Share on Facebook</span></button>
+        <button class="svg-twitter twit-btn"><span class="sr-only">Share on Twitter</span></button>
+        <button class="svg-pinterest pin-btn"><span class="sr-only">Share on Pinterest</span></button>
+        <button class="svg-ellipsis more-menu-btn"><span class="sr-only">More Options</span></button>
+    </span>
+    <div class="more-menu" style="display: none;">
+        <button class="btn flag-menu-btn">Flag</button>
+        <ul class="flag-menu unstyled hide">
+            <li><a class="flag-btn list-group-item" data-as="wrong-category">Wrong Category</a></li>
+            <li><a class="flag-btn list-group-item" data-as="inappropriate">Inappropriate</a></li>
+            <li><a class="flag-btn list-group-item" data-as="incomplete">Incomplete</a></li>
+            <li><a class="flag-btn list-group-item" data-as="spam">Spam</a></li>
+        </ul>
+        <button class="btn add-to-collection-btn">Add To Collection</button>
+        <button class="btn add-to-contest-btn author-action">Add to Contest</button>
+    </div>
+</aside><div class="social-share-overlay" style="top: 3274px; left: 461px; display: none;">
+    <a class="share-overlay-btn facebook-share-btn"></a>
+    <a class="share-overlay-btn twitter-share-btn"></a>
+    <a class="share-overlay-btn pinterest-share-btn"></a>
+    <a class="share-overlay-btn email-share-btn"></a>
+</div></article></main><footer id="jsp-footer"><div id="gbl-footer"><div class="container"><div class="row-fluid"><img alt="robot" class="lazy-img-onload" data-src="https://cdn.instructables.com/static/image/instructables-robot.svg" id="footer-robot" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/instructables-robot.svg" style="display: inline; opacity: 1;"><div class="col" id="footer-newsletter"><h3>Newsletter</h3><p>Let your inbox help you discover our best projects, classes, and contests. Instructables will help you learn how to make anything!</p><form class="form-horizontal" onsubmit="javascript:$(&#39;#newsletter-signup-btn&#39;).click(); return false;"><div class="input-append"><input class="span8" id="email-input-field" placeholder="enter email" type="text"><button class="btn btn-dark-grey" id="newsletter-signup-btn" type="button">I'm in!</button></div></form></div><div class="col" id="footer-aboutus"><h3>About Us</h3><ul><li><a href="http://www.instructables.com/about/" title="About Us">Who We Are</a></li><li><a href="http://www.instructables.com/advertise/" title="Advertise">Advertise</a></li><li><a href="http://www.instructables.com/about/contact.jsp" title="Contact">Contact</a></li><li><a href="http://www.instructables.com/community/Positions-available-at-Instructables/" title="Jobs">Jobs</a></li><li><a href="http://www.instructables.com/id/how-to-write-a-great-instructable/" title="Help">Help</a></li></ul></div><div class="col" id="footer-findus"><h3>Find Us</h3><ul><li><a class="facebook" href="http://www.facebook.com/instructables" title="Facebook">Facebook</a></li><li><a class="youtube" href="http://www.youtube.com/user/instructablestv" title="Youtube">Youtube</a></li><li><a class="twitter" href="http://www.twitter.com/instructables" title="Twitter">Twitter</a></li><li><a class="pinterest" href="http://www.pinterest.com/instructables" title="Pinterest">Pinterest</a></li><li><a class="googleplus" href="https://plus.google.com/+instructables" rel="publisher" title="Google+">Google+</a></li></ul></div><div class="col" id="footer-resources"><h3>Resources</h3><ul><li><a href="http://www.instructables.com/teachers/" title="Teachers">For Teachers</a></li><li><a href="http://www.instructables.com/pier9residency" title="Residency Program">Residency Program</a></li><li><a href="http://www.instructables.com/account/give?sourcea=footer" title="Give A Premium Membership">Gift Premium Account</a></li><li><a href="http://www.instructables.com/community/?categoryGroup=all&amp;category=all" title="Forums">Forums</a></li><li><a href="http://www.instructables.com/tag/type-question/?sort=RECENT" title="Answers">Answers</a></li><li><a href="http://www.instructables.com/sitemap/" title="Sitemap">Sitemap</a></li></ul></div></div></div><div class="container content-match"><div class="row-fluid"><hr><div class="pull-right" id="footer-links"><ul><li><a href="http://usa.autodesk.com/adsk/servlet/item?siteID=123112&amp;id=21959721" target="_blank" title="Terms of Service">Terms of Service</a><span class="divider">|</span></li><li><a href="http://usa.autodesk.com/adsk/servlet/item?siteID=123112&amp;id=21292079" target="_blank" title="Privacy Statement">Privacy Statement</a><span class="divider">|</span></li><li><a href="http://usa.autodesk.com/legal-notices-trademarks/" target="_blank">Legal Notices &amp; Trademarks</a><span class="divider">|</span></li><li><a href="https://www.instructables.com/" id="mobile-site-link" title="Mobile Site">Mobile Site</a></li><li><a href="http://usa.autodesk.com/adsk/servlet/pc/index?id=20781545&amp;siteID=123112" id="adsk-logo" target="blank" title="Autodesk"><img alt="autodesk" class="lazy-img-onload" data-src="/static/img/footer/autodesk-logo.png" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/autodesk-logo.png" style="display: inline; opacity: 1;"></a></li></ul></div><div id="copyright-notice"><p>© 2017 Autodesk, Inc.</p></div></div></div></div></footer><script id="js-page-context" type="application/json">{"category":"technology","recaptchaSiteKey":"6Le9TAwTAAAAADEB44pkYQS2fm7hroFthrNqnoAb","sourceCookie":"iblesource","paymentPlans":{"quarterly":"QUARTERLY_SUBSCRIPTION","course":"CLASS_SUBSCRIPTION","annual":"ANNUAL_SUBSCRIPTION","twoYearSinglePayment":null},"ibleData":{"commentingEnabled":true,"featureFlag":true,"shareImageUrl":"https://cdn.instructables.com/F2K/FSUF/IN4W29QN/F2KFSUFIN4W29QN.RECT2100.jpg","indexTags":["internal"],"publishDate":"2016-04-18 03:34:21.0","id":"ELLXGBJIMMFFN3P","category":"technology","author":{"tinyUrl":"https://cdn.instructables.com/F1W/H8BH/IMKTSA9E/F1WH8BHIMKTSA9E.TINY.jpg","id":"MSLINNKIM5WKPGE","screenName":"padeath"},"coverImage":{"rectangle1Url":"https://cdn.instructables.com/F2K/FSUF/IN4W29QN/F2KFSUFIN4W29QN.RECTANGLE1.jpg"},"title":"Remote Temperature Monitoring Using MQTT and ESP8266 Modules","urlString":"Remote-Temperature-Monitoring-Using-MQTT-and-ESP82","typeChar":"E","pgFlag":false,"type":"Step by Step","fullUrl":"http://www.instructables.com/id/Remote-Temperature-Monitoring-Using-MQTT-and-ESP82/","channel":"arduino"},"staticRoot":"/intl_static/","loggedInCookie":"authy","nativeApp":false,"userCookie":"ibleuser","cacheUrls":["http://www.instructables.com/id/Remote-Temperature-Monitoring-Using-MQTT-and-ESP82/","http://api.instructables.com/json-api/showInstructableModel?versionId=&id=Remote-Temperature-Monitoring-Using-MQTT-and-ESP82","http://api.instructables.com/json-api/searchComments?instructableId=ELLXGBJIMMFFN3P&limit=4&IMadeIt=true","http://api.instructables.com/json-api/getComments?instructableId=ELLXGBJIMMFFN3P&limit=10&IMadeIt=false&designation=tip","http://api.instructables.com/json-api/getComments?instructableId=ELLXGBJIMMFFN3P&limit=10&IMadeIt=false&designation=question&designation=answer&designation=bestAnswer","http://api.instructables.com/json-api/getComments?commentId=&instructableId=ELLXGBJIMMFFN3P&limit=10&IMadeIt=false&designation=comment","http://api.instructables.com/json-api/searchInstructables?sort=&featuredHomePage=true&limit=20&offset=0&additionalParams=-indexTags%3AdesignOnly%2C+%2B%28category%3Atechnology+OR+channel%3Aarduino%29&type=id","http://api.instructables.com/json-api/searchInstructables?sort=&isCourse=true&limit=20&offset=0&additionalParams=%2B%28indexTags%3AfeaturedTechnology+OR+indexTags%3AfeaturedArduino%29&type=guide","http://api.instructables.com/json-api/getContests?sort=open&limit=20&offset=0"],"remoteRoot":"http://www.instructables.com/","currentLocale":"en_US","disableEmailVerifyWidget":false,"sessionCookie":"JSESSIONID","mobile":false,"remoteHost":"http://www.instructables.com","oauthGetAuthUrl":"http://www.instructables.com/oauth/getAuthUrl/","facebookAppId":"140028286058792","gtmContainerID":"GTM-PLDK3K","oauthCallbackUrl":"http://www.instructables.com/oauth/callback/","cookieSyncDomains":["https://www.instructables.community","https://www.instructables.com"],"channel":"arduino"}</script><script>
+        head.test({
+            test: Ibles.isLoggedIn,
+            success: ["/intl_static/ible-desktop-in-0d7dfcad.js",],
+            failure: ["/intl_static/ible-desktop-out-d843f9ef.js",],
+            callback: function() {
+                
+                var model = new Ibles.models.InstructableModel(_.extend({
+                    disableComments: false,
+                    allSteps: true,
+                    fetchUserData: true,
+                    fetchStats: true
+                }, Ibles.pageContext.ibleData));
+                
+                var view = new Ibles.views.DesktopInstructableView({
+                    el: "#article",
+                    model: model
+                });
+                       
+            }
+        });
+    </script><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/widget_iframe.83d5793f6ebbe2046330abda6016ae93.html" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/saved_resource.html"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/lY4eZXm_YWu.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Remote Temperature Monitoring Using MQTT and ESP8266 Modules_ 4 Steps (with Pictures)_files/lY4eZXm_YWu(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><script id="PIN_1517481587075.f.callback[0]" type="text/javascript" charset="utf-8" src="https://log.pinterest.com/?guid=FgfLfXq64XsT&amp;tv=2017100302&amp;type=pidget&amp;sub=www&amp;button_count=0&amp;follow_count=0&amp;pin_count=0&amp;profile_count=0&amp;board_count=0&amp;section_count=0&amp;lang=en&amp;via=http%3A%2F%2Fwww.instructables.com%2Fid%2FRemote-Temperature-Monitoring-Using-MQTT-and-ESP82%2F&amp;callback=PIN_1517481587075.f.callback[0]"></script></body></html>

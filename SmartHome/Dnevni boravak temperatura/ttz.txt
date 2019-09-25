@@ -1,0 +1,5 @@
+temperatura
+vlaznost
+daljinski
+tasteri
+reley

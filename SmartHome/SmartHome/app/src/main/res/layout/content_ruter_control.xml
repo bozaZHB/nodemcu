@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:padding="15dp"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context="com.example.zhb.smarthome.RuterControl"
+    android:background="@color/svetlozelena">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ruter:"
+        android:id="@+id/textView2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRuterOn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/my_button_bg"
+            android:text="ON" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="OFF"
+            android:id="@+id/btnRuterOff"
+            android:background="@drawable/my_button_bg"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sijalica:"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ON"
+            android:id="@+id/btnSijalicaOn"
+            android:background="@drawable/my_button_bg"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="OFF"
+            android:id="@+id/btnSijalicaOff"
+            android:background="@drawable/my_button_bg"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="left|bottom"
+        android:orientation="vertical" >
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="DISKONEKCIJA"
+        android:id="@+id/button4"
+        android:background="@drawable/my_button_crveno"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,1 @@
+Pin ne sme da visi zato ide otpornik od 1k da eliminise moguci sum

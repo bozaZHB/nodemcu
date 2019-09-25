@@ -1,0 +1,5 @@
+  String str(topic);
+  if (str =="bozaSub/1")
+      digitalWrite(LED1, HIGH); 
+  else
+      digitalWrite(LED1, LOW); 

@@ -1,0 +1,16 @@
+cd /var/www/html
+ls -al
+sudo nano phptest.php
+
+<html>
+<head>
+<title>PHP Test</title>
+</head>
+<body>
+<?php
+phpinfo();
+?>
+</body>
+</html>
+
+phpinfo() je podrazumenavi ekran za php

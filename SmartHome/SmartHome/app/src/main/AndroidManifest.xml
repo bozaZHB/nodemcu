@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zhb.smarthome">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" >
+        </service>
+
+        <activity android:name=".Dvoriste"
+            android:label="Dvorište" />
+
+        <activity android:name=".Fontana"
+            android:label="Daljinski fontane" />
+
+        <activity android:name=".Grejanje"
+            android:label="Grejanje" />
+
+        <activity android:name=".Kapija"
+            android:label="Kapija" />
+
+        <activity android:name=".KlimaH"
+            android:label="Klima Hodnik" />
+
+        <activity android:name=".KlimaK"
+            android:label="Klima Kuhinja" />
+
+        <activity android:name=".Kucica"
+            android:label="Kućica" />
+        <activity android:name=".Settings"
+            android:parentActivityName=".MainActivity"
+            android:label="Podedšavanja">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity android:name=".DeviceList"
+            android:label="Spisak povezanih uređaja" />
+        <activity android:name=".RuterControl"
+            android:label="Potkrovlje" />
+    </application>
+
+</manifest>

@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Smart Home</string>
+
+    <string name="app_home">Home</string>
+    <string name="app_dvoriste">Dvorište</string>
+    <string name="app_kapija">Kapija</string>
+    <string name="app_fontana">Fontana</string>
+    <string name="app_grejanje">Grejanje</string>
+    <string name="app_klima_hodnik">Klima Hodnik</string>
+    <string name="app_klima_kuhinja">Klima Kuhinja</string>
+    <string name="app_kucica">Kućica</string>
+
+    <string name="appmenuname">Smart Home Božanić</string>
+
+    <string name="navdemo">Home</string>
+    <string name="kapija">Kapija kartica</string>
+    <string name="dvoriste">Dvoriste kartica</string>
+    <string name="grejanje">Grejanje kartica</string>
+    <string name="fontana">Fontana kartica</string>
+    <string name="klimaH">Klima hodnik kartica</string>
+    <string name="klimaK">Klima kuhinja kartica</string>
+    <string name="kucica">Kucica kartica</string>
+
+    <string name="action_settings">podešavanja</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+    <string name="dugme1">Dugme 1</string>
+    <string name="dugme2">dugme 2</string>
+    <string name="dugme3">DUgme 3</string>
+
+    <string name="spoljna_temperatura">Spoljna temperatura</string>
+    <string name="temperatura_dnevni_boravak">Temperatura kuće</string>
+    <string name="temperatura_hodnik">Temperatura hodnika</string>
+    <string name="vlaznost">vlažnost</string>
+
+    <string name="fontana_prskalica">Fontana</string>
+    <string name="steker">Šteker</string>
+    <string name="ulazna_vrata">Ulazna vrata</string>
+    <string name="radio">Radio</string>
+    <string name="svetlo1">Neonka</string>
+    <string name="svetlo2">Svetlo 2</string>
+    <string name="svetlo3">Svetlo 3</string>
+    <string name="svetlo4">Svetlo 4</string>
+
+    <string name="prsklalice">PRSKALICE</string>
+    <string name="prsklaliceVremeHeder">Vremena prskalica:</string>
+    <string name="prsklaliceVreme1">  11:00</string>
+    <string name="prsklaliceVreme2">  12:00</string>
+    <string name="pustiOdmahPrskalicu">PUSTI ODMAH</string>
+
+    <string name="off">OFF</string>
+    <string name="pojacaj">+</string>
+    <string name="smanji">-</string>
+    <string name="ukljuci">ON</string>
+    <string name="R">R</string>
+    <string name="G">G</string>
+    <string name="B">B</string>
+    <string name="W">W</string>
+    <string name="flash">FLASH</string>
+    <string name="strobe">STROBE</string>
+    <string name="fade">FADE</string>
+    <string name="smooth">SMOOTH</string>
+    <string name="daljinski_za_fontanu">Daljinski za fontanu</string>
+    <string name="podesavanjeFontane">Fontana:</string>
+    <string name="promeni">PROMENI</string>
+    <string name="odustani">ODUSTANI</string>
+    <string name="lakuNoc">Laku noć</string>
+    <string name="fontanaOsvetljenje">Osvetljenje fontane</string>
+    <string name="ruter">Ruter</string>
+
+
+    <string name="prskalica1">Prskalica 1</string>
+    <string name="prskalica2">Prskalica 2</string>
+    <string name="prskalica3">Prskalica 3</string>
+    <string name="prskalica4">Prskalica 4</string>
+
+    <string name="title_activity_led_control">ledControl</string>
+
+    <string-array name="trajanje">
+        <item>10min</item>
+        <item>15min</item>
+        <item>20min</item>
+    </string-array>
+
+
+
+
+</resources>

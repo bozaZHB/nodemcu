@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2 -->
+<html class="arduino-html" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/create-nav.css"><meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+<script src="https://js-agent.newrelic.com/nr-1071.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KR3BZMN&amp;l=gglTagMngrDataLayer"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"df8ed87324","applicationID":"20455843","transactionName":"IQ0IQ0tXVAhQQx1DRg0IA1RNSxcXXV5F","queueTime":2,"applicationTime":266,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><meta content="414718878625776" property="fb:app_id"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="arduino-api.hackster.io" id="api-uri" name="api-uri"><meta content="/projecthub" id="path-prefix" name="path-prefix"><title>Measuring Distance using Ultrasonic sensor - Arduino Project Hub</title><meta content="Using ultrasonic sensor to find the distance between the sensor and the object placed." name="description"><meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="b77hykqsD+1K4vwI6kPCJH9t6ty5J2qd4tJuroSTfSzG67CGyiikiS/frV0jciLpk+TmqQZKT18/qLOJMDOaDQ=="><!--Le HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]
+= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"--><link rel="stylesheet" media="all" href="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/application-693e496322bf5fab5bb35814288ae7b901726c68e9cebeca99ecee2331387ec5.css"><link href="https://halckemy.s3.amazonaws.com/uploads/favicon/file/103324/FaviconB.ico" rel="shortcut icon"><meta content="Arduino Project Hub" name="apple-mobile-web-app-title"><meta content="Arduino Project Hub" name="application-name"><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22581631-11', 'auto');
+  ga('send', 'pageview');
+
+</script><style></style><script>gglTagMngrDataLayer = [{
+  'loggedIn': "false",
+  'pageType': "projects#show",
+  'virtualPageview': "false"
+}];</script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','gglTagMngrDataLayer','GTM-KR3BZMN');</script><meta content="Measuring Distance using Ultrasonic sensor" property="og:title"><meta content="Using ultrasonic sensor to find the distance between the sensor and the object placed. By Akshit1729." property="og:description"><meta content="https://hackster.imgix.net/uploads/attachments/191589/IMG_20160908_211955_HDR.jpg?auto=compress%2Cformat&amp;w=600&amp;h=450&amp;fit=min" property="og:image"><meta content="600" property="og:image:width"><meta content="450" property="og:image:height"><meta content="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2" property="og:url"><meta content="summary_large_image" property="twitter:card"><meta content="Measuring Distance using Ultrasonic sensor" property="twitter:title"><meta content="Using ultrasonic sensor to find the distance between the sensor and the object placed." property="twitter:description"><meta content="https://hackster.imgix.net/uploads/attachments/191589/IMG_20160908_211955_HDR.jpg?auto=compress%2Cformat&amp;w=600&amp;h=450&amp;fit=min" property="twitter:image"><link href="https://www.hackster.io/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2" rel="canonical"><meta content="smart appliances,ultrasound" name="keywords"><meta content="@arduino" property="twitter:site"><meta content="create.arduino.cc" property="twitter:domain"><meta content="Arduino Project Hub" property="og:site_name"><style type="text/css">.arduino-projects {
+  background-color: #00979C;
+}
+a:hover {
+  text-decoration: none;
+}
+#page {
+  padding: 0 !important;
+}
+.navbar-static-top {
+  z-index: 10;
+}
+.top-bar, .top-bar a {
+  font-weight: bold;
+}
+.row .row.collapse:before, .row .row.collapse:after {
+  content: " ";
+  display: table; }
+.row .row.collapse:after {
+  clear: both; }
+@media (min-width: 1200px) {
+  .navbar-in .container {
+    max-width: 990px;
+  }
+}
+body.whitelabel .powered-by {
+  padding: 20px 0;
+}
+.thumb-inner {
+  padding: 10px 20px;
+  height: 150px;
+  position: relative;
+}
+.thumb-inner h4 {
+  margin-top: 0;
+}
+.thumb-inner .project-stats {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0 15px;
+}
+.arduino-html .alert.alert-top {
+  font-size: 11.5px;
+  top: 104px;
+}
+#outer-wrapper {
+  margin-bottom: -120px;
+  padding-bottom: 120px;
+}</style><link rel="stylesheet" media="screen" href="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/application-ff4249d34d0a550d698f91de3a36b25dc655b26f960f0605814668df0599ee2b.css"><link rel="stylesheet" href="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/arduino_application.css"><script>window.defaultAvatarUrl = 'https://dcw9y8se13llu.cloudfront.net/avatars/default.svg';
+function showDefaultAvatar(img){
+  img.src = window.defaultAvatarUrl;
+}</script><script src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/application-a9b2fc5bc0e5daefecb60a837c14b4536ded2d791f69083009792a9f8135b610.js.download"></script><script src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/create-nav.js.download"></script></head><body class="whitelabel collapsed-nav"><div class="icons" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg">
+  <symbol viewBox="0 0 18 18" id="icon-Global-Menu_Home-BBCube">
+    <title>Global-Menu_Home-BBCube</title>
+    <g>
+      <path d="M4 3.158C4 3.623 3.623 4 3.158 4H.842C.377 4 0 3.623 0 3.158V.842C0 .377.377 0 .842 0h2.316C3.623 0 4 .377 4 .842v2.316zM18 3.158c0 .465-.377.842-.842.842h-2.316C14.377 4 14 3.623 14 3.158V.842c0-.465.377-.842.842-.842h2.316c.465 0 .842.377.842.842v2.316zM11 3.158c0 .465-.377.842-.842.842H7.842C7.377 4 7 3.623 7 3.158V.842C7 .377 7.377 0 7.842 0h2.316c.465 0 .842.377.842.842v2.316zM4 17.158c0 .465-.377.842-.842.842H.842C.377 18 0 17.623 0 17.158v-2.316C0 14.377.377 14 .842 14h2.316c.465 0 .842.377.842.842v2.316zM18 17.158c0 .465-.377.842-.842.842h-2.316c-.465 0-.842-.377-.842-.842v-2.316c0-.465.377-.842.842-.842h2.316c.465 0 .842.377.842.842v2.316zM11 17.158c0 .465-.377.842-.842.842H7.842C7.377 18 7 17.623 7 17.158v-2.316c0-.465.377-.842.842-.842h2.316c.465 0 .842.377.842.842v2.316zM4 10.158c0 .465-.377.842-.842.842H.842C.377 11 0 10.623 0 10.158V7.842C0 7.377.377 7 .842 7h2.316c.465 0 .842.377.842.842v2.316zM18 10.158c0 .465-.377.842-.842.842h-2.316c-.465 0-.842-.377-.842-.842V7.842c0-.465.377-.842.842-.842h2.316c.465 0 .842.377.842.842v2.316zM11 10.158c0 .465-.377.842-.842.842H7.842C7.377 11 7 10.623 7 10.158V7.842C7 7.377 7.377 7 7.842 7h2.316c.465 0 .842.377.842.842v2.316z"></path>
+    </g>
+  </symbol>
+  <symbol viewBox="0 0 130.208 28.333" id="icon-Global-WebApp_Compressed">
+    <title>Global-WebApp_Compressed</title>
+    <g>
+      <path d="M51.066 14.02c0-6.424-5.416-11.655-12.082-11.655-.612 0-1.24.045-1.854.13-5.18.738-8.646 4.463-10.588 7.32-1.942-2.856-5.41-6.58-10.583-7.32-.62-.085-1.243-.13-1.86-.13-6.663 0-12.084 5.23-12.084 11.654 0 6.425 5.422 11.654 12.082 11.654.615 0 1.242-.047 1.862-.13 5.175-.744 8.64-4.467 10.583-7.33 1.942 2.863 5.407 6.586 10.588 7.33.615.083 1.243.13 1.863.13 6.656 0 12.073-5.228 12.073-11.655zm-35.69 7.432c-.43.062-.856.097-1.28.097-4.384 0-7.95-3.38-7.95-7.53S9.71 6.49 14.1 6.49c.42 0 .848.034 1.275.093 4.88.698 7.865 5.508 8.877 7.433-1.016 1.932-4 6.74-8.877 7.434zm13.463-7.433c1.007-1.93 3.995-6.736 8.87-7.434.426-.06.857-.093 1.273-.093 4.387 0 7.95 3.38 7.95 7.527 0 4.15-3.563 7.53-7.943 7.53-.42 0-.855-.035-1.282-.097-4.874-.695-7.86-5.505-8.87-7.434z"></path>
+      <rect x="10.77" y="12.884" width="7.257" height="2.335"></rect>
+      <polygon points="39.79,15.219 42.246,15.219 42.246,12.884 39.79,12.884 39.79,10.422 37.45,10.422 37.45,12.884 34.989,12.884 34.989,15.219 37.45,15.219 37.45,17.68 39.79,17.68"></polygon>
+      <path d="M51.934 2.826c-.09-.21-.215-.393-.365-.542-.15-.15-.33-.27-.53-.36-.207-.09-.426-.134-.66-.134-.237 0-.46.043-.663.133-.204.09-.382.21-.53.36-.15.15-.274.334-.364.543-.088.208-.135.432-.135.68 0 .233.047.46.135.67.09.218.214.397.363.55.15.154.327.274.53.362.205.09.428.137.663.137.235 0 .453-.045.66-.137.202-.088.38-.208.53-.36.148-.154.274-.334.364-.55.088-.21.133-.44.133-.672 0-.248-.045-.472-.133-.68zm-.375 1.2c-.066.162-.16.3-.28.42-.123.122-.257.217-.41.29-.15.07-.312.107-.49.107-.18 0-.35-.038-.502-.107-.16-.073-.292-.168-.41-.29-.114-.12-.206-.258-.273-.42-.065-.16-.1-.332-.1-.52s.035-.364.1-.527c.067-.17.16-.308.273-.43.118-.12.25-.214.41-.28.153-.067.322-.102.5-.102.18 0 .343.035.493.1.153.068.288.162.41.283.12.123.214.26.28.43.068.162.104.338.104.525 0 .188-.035.36-.105.522zM50.745 3.67c.096-.044.168-.115.22-.2.053-.083.08-.178.08-.28 0-.162-.06-.302-.172-.42-.116-.12-.31-.176-.582-.176-.104 0-.195 0-.276.008-.082.004-.16.01-.236.018v1.69h.427v-.556h.172l.297.557h.48l-.41-.64zm-.424-.227c-.057 0-.098-.004-.126-.013v-.455c.028-.008.075-.017.138-.017.182 0 .273.085.273.245 0 .162-.093.24-.284.24z"></path>
+    </g>
+    <g>
+      <path d="M79.724 11.917c0-1.647-.737-2.264-2.487-2.264h-2.162v4.426h2.248c1.338-.002 2.4-.5 2.4-2.163z"></path>
+      <polygon points="96.968,15.502 100.691,15.502 98.821,9.91"></polygon>
+      <path d="M58.66 2.498v23.074h69.573V2.498H58.66zm9.002 17.276c-3.07 0-5.147-1.664-5.147-5.678 0-3.74 2.145-5.8 5.3-5.8 1.133 0 2.3.276 2.934.67l-.464 1.287c-.635-.515-1.63-.755-2.505-.755-2.538 0-3.79 1.647-3.79 4.563 0 3.02 1.252 4.53 3.774 4.53 1.115 0 2.264-.326 2.796-.67l.344 1.168c-.875.463-2.04.686-3.242.686zm12.44-.172l-2.402-4.34h-2.625v4.34h-1.39V8.453h3.604c2.812 0 3.893 1.183 3.893 3.413 0 1.56-.79 2.642-2.076 3.122l2.642 4.615H80.1zm11.94-9.95h-6.175v3.637h5.593v1.183h-5.593v3.91h6.176v1.22h-7.565V8.45h7.565v1.202zm10.02 9.95l-.995-2.95H96.59l-.96 2.95h-1.39l3.894-11.15h1.475l3.91 11.15h-1.457zm11.12-9.95h-3.842v9.95h-1.39v-9.95h-3.86v-1.2h9.092v1.2zm10.054 0h-6.176v3.637h5.593v1.183h-5.593v3.91h6.176v1.22h-7.565V8.45h7.566v1.202z"></path>
+    </g>
+  </symbol>
+  <symbol viewBox="0 0 24.202 24.276" id="icon-Global-user-profile">
+    <title>Global-user-profile</title>
+    <path d="M20.912 19.718h-1c0-3.827-.883-6.2-5.28-6.2h-5.44c-4.397 0-5.28 2.23-5.28 5.825h-1v-.115c.017-3.337.81-6.71 6.28-6.71h5.44c5.534 0 6.28 3.64 6.28 7.2zM11.95 13.156c-2.464 0-4.468-2.1-4.468-4.68s2.004-4.68 4.467-4.68c2.462 0 4.466 2.1 4.466 4.68s-2.004 4.68-4.467 4.68zm0-8.36c-1.913 0-3.468 1.65-3.468 3.68 0 2.03 1.555 3.68 3.467 3.68 1.91 0 3.466-1.65 3.466-3.68 0-2.03-1.555-3.68-3.467-3.68zM12.034 23.98C5.436 23.98.07 18.61.07 12.013S5.435.05 12.033.05 24 5.415 24 12.013 18.63 23.98 12.033 23.98zm0-22.43C6.264 1.55 1.57 6.242 1.57 12.013S6.262 22.48 12.033 22.48 22.5 17.783 22.5 12.013 17.803 1.55 12.033 1.55z"></path>
+  </symbol>
+  <symbol viewBox="0 0 20.597 18.807" id="icon-Home-Grid-Open_in_new">
+    <title>Home-Grid-Open_in_new</title>
+    <rect x="14.542" y="-.105" transform="matrix(-.707 -.707 .707 -.707 23.247 19.503)" width="2.241" height="10.084"></rect>
+    <path d="M20.597 1.123c0-.62-.5-1.12-1.12-1.12h-7.843V2h6.93v6.966h2.033V1.123zM19.24 18.807H1.356c-.747 0-1.355-.64-1.355-1.424V1.426C0 .64.608.003 1.355.003H8.24l.03 1.982H1.99l-.03 14.807h16.604v-3.988h2.032v4.58c0 .784-.608 1.423-1.355 1.423z"></path>
+  </symbol>
+</svg></div><div id="outer-wrapper"><div class="popup-overlay modal-popup" data-width="450" id="simplified-signup-popup"><div class="popup-overlay-bg"></div><div class="popup-overlay-outer"><div class="popup-overlay-inner"><button class="close" data-target="#simplified-signup-popup">×</button><h4>Please sign in to continue:</h4><a class="btn btn-primary" href="https://www.hackster.io/users/auth/arduino?current_site=arduino&amp;setup=true&amp;redirect_to=%2Fprojecthub%2FAkshit1729%2Fmeasuring-distance-using-ultrasonic-sensor-0eaab2">Sign in</a></div></div></div><div id="sign_in_container"><a class="login-link" href="https://www.hackster.io/users/auth/arduino?current_site=arduino&amp;setup=true&amp;redirect_to=%2Fprojecthub%2FAkshit1729%2Fmeasuring-distance-using-ultrasonic-sensor-0eaab2">Sign In</a></div><div class="hidden"></div><div class="arduino-bbq collapsed">
+	
+	<div id="create-nav"><div id="ino-create-nav" style="">
+
+  <div class="nav-bar">
+    <svg class="menu-toggle">
+      <use xlink:href="#icon-Global-Menu_Home-BBCube"></use>
+    </svg>
+    <div class="desktop-only">
+      <a class="login-button">
+        SIGN IN
+      </a>
+
+      <div class="user-profile">
+        <svg class="avatar default">
+          <use xlink:href="#icon-Global-user-profile"></use>
+        </svg>
+        <img class="avatar userpic" alt="userpicture">
+
+        <div class="dropover">
+          <ul>
+            <li>
+              <a target="_blank" href="https://id.arduino.cc/">
+                Profile
+              </a>
+            </li>
+            <li>
+              <a class="logout">
+                Sign Out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-overlay">
+
+  </div>
+
+  <div class="grid-nav-wrapper">
+
+    <!-- VIDEO BACKGROUND -->
+    <video poster="https://cdn.arduino.cc/video/01.jpg" preload="metadata" loop="" muted="" id="bgvid">
+      <source src="https://cdn.arduino.cc/video/01.mp4" type="video/mp4" id="mp4">
+      <source src="" type="video/ogg" id="ogg">
+    </video>
+    <!-- gradient overlay -->
+    <div class="home-gradient"></div>
+
+    <div class="columns">
+
+      <!-- FEED -->
+      <div class="feed-cont">
+        <h2>Arduino News</h2>
+        <div class="posts-cont scrollable">
+          <div id="news-feed">
+            <!-- content generated in create-nav.js -->
+          <a href="https://blog.arduino.cc/2018/02/19/levitate-water-drops-with-rgb-leds-and-arduino/" target="_blank"><p>Levitate water drops with RGB LEDs and Arduino</p></a><a href="https://blog.arduino.cc/2018/02/19/play-striker-air-hockey-on-a-capacitive-touch-surface/" target="_blank"><p>Play Striker Air Hockey on a capacitive touch surface</p></a><a href="https://blog.arduino.cc/2018/02/14/water-speakers-enhanced-with-an-arduino-mega/" target="_blank"><p>Water speakers enhanced with an Arduino Mega</p></a><a href="https://blog.arduino.cc/2018/02/14/video-game-head-tracking-with-wii-remote-camera/" target="_blank"><p>Video game head tracking with Wii Remote camera</p></a><a href="https://blog.arduino.cc/2018/02/12/youtuber-creates-an-organ-out-of-44-furbies/" target="_blank"><p>YouTuber creates an organ out of 44 Furbies</p></a><a href="https://blog.arduino.cc/2018/02/09/recreate-optimus-primes-blaster-with-arduino/" target="_blank"><p>Recreate Optimus Prime’s blaster with Arduino</p></a><a href="https://blog.arduino.cc/2018/02/08/pour-reception-turns-water-into-radio-controls/" target="_blank"><p>Pour Reception turns water into radio controls</p></a><a href="https://blog.arduino.cc/2018/02/08/scribble-is-an-arduino-controlled-haptic-drawing-robot/" target="_blank"><p>Scribble is an Arduino-controlled haptic interface</p></a><a href="https://blog.arduino.cc/2018/02/05/automated-ic-testing-with-arduino-mega/" target="_blank"><p>IC testing with Arduino Mega</p></a><a href="https://blog.arduino.cc/2018/01/31/kids-kitchen-beeps-with-the-help-of-an-arduino/" target="_blank"><p>Kid’s kitchen beeps with the help of an Arduino</p></a></div>
+        </div>
+      </div>
+
+      <!-- HOME GRID -->
+      <div class="grid-nav">
+        <a href="http://create.arduino.cc/editor" target="_blank">
+          <div class="button">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-Editor.svg" class="main-icon">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-Editor_hover.svg" class="main-icon_hover">
+            <p class="desktop-text">Arduino Web Editor</p>
+            <p class="mobile-text">Web Editor</p>
+          </div>
+        </a>
+
+        <a href="http://create.arduino.cc/getting-started" target="_blank" class="editor">
+          <div class="button">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-Start.svg" class="main-icon">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-Start_hover.svg" class="main-icon_hover">
+            <p>Getting Started</p>
+          </div>
+        </a>
+
+        <a href="http://create.arduino.cc/projecthub" target="_blank" id="projecthub">
+          <div class="button">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-Ideas.svg" class="ideas main-icon">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-Ideas_hover.svg" class="ideas main-icon_hover">
+            <p class="desktop-text">Arduino Project Hub</p>
+            <p class="mobile-text">Project Hub</p>
+          </div>
+        </a>
+
+        <a href="http://create.arduino.cc/devices" target="_blank">
+          <div class="button">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-Devices.svg" class="main-icon">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-Devices_hover.svg" class="main-icon_hover">
+            <p>My Devices</p>
+          </div>
+        </a>
+
+        <a href="http://store.arduino.cc/" target="_blank">
+          <div class="button external">
+            <svg class="openNew">
+              <use xlink:href="#icon-Home-Grid-Open_in_new"></use>
+            </svg>
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-Store.svg">
+            <p class="desktop-text">Arduino Store</p>
+            <p class="mobile-text">Store</p>
+          </div>
+        </a>
+
+        <a href="https://cloud.arduino.cc/" target="_blank" id="iot" class="cloud">
+          <div class="button">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-IoT.svg" class="main-icon">
+            <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Home-Grid-IoT_hover.svg" class="main-icon_hover">
+            <p>Arduino Cloud</p>
+          </div>
+        </a>
+
+        <div class="mobile-only" style="display: none;">
+          <a class="login-button mobile-button">
+            <div class="button">
+              <p class="mobile-text">Sign In</p>
+            </div>
+          </a>
+
+          <a href="https://id.arduino.cc/" target="_blank" class="mobile-button user-profile">
+            <div class="button">
+              <p class="mobile-text">Profile</p>
+            </div>
+          </a>
+
+          <a class="mobile-button user-profile">
+            <div class="button logout">
+              <p class="mobile-text">Sign Out</p>
+            </div>
+          </a>
+        </div>
+
+      <a id="user-signin-signout" href="https://www.hackster.io/users/auth/arduino?current_site=arduino&amp;setup=true&amp;redirect_to=%2Fprojecthub%2FAkshit1729%2Fmeasuring-distance-using-ultrasonic-sensor-0eaab2"><div class="button mobile-auth-button"><p>Sign In</p></div></a></div>
+
+      <!-- CHROME APP BANNER -->
+      <div class="chromeos-banner">
+        <a href="https://chrome.google.com/webstore/detail/arduino-create/dcgicpihgkmccjigalccipmjlnjopdfe" target="_blank" class="chromeos-cont">
+          <h2>NOW CHROME OS READY!</h2>
+          <img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/Banner-ChromeOS.svg" alt="Chrome OS App. $0.99 month">
+          <div class="chrome-os-available">Arduino Create is now available on Chrome OS!</div>
+          <div class="download-chrome-os">Download the App</div>
+        </a></div><a href="https://chrome.google.com/webstore/detail/arduino-create/dcgicpihgkmccjigalccipmjlnjopdfe" target="_blank" class="chromeos-cont">
+      </a>
+    </div>
+  </div>
+
+  <svg class="logo-bottom" viewBox="0 0 130.208 28.333">
+    <use xlink:href="#icon-Global-WebApp_Compressed"></use>
+  </svg>
+
+</div></div>
+
+	<div class="navbar navbar-default navbar-static-top" id="navigation">
+		<div class="navbar-in" style="position:relative;">
+			
+			<a class="create-logo" href="https://create.arduino.cc/projecthub"></a>
+			
+			<div class="pull-right" id="navbar-search">
+				<form action="https://create.arduino.cc/projecthub/search" class="navbar-form" method="get">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-search"></i>
+							</span>
+							<input class="form-control" id="q" name="q" placeholder="Search projects" type="text">
+						</div>
+					</div>
+				</form>
+			</div>
+			
+			<div class="pull-right" style="padding-top: 11px;">
+				<a class="btn btn-primary logged-out" id="my_dashboard">
+					<span>My dashboard</span>
+				</a>
+				<a class="btn btn-primary" id="add_project" href="https://create.arduino.cc/projecthub/projects/new">
+					<span class="text">Add project</span>
+					<span class="icon-minified"></span>
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="filler-bg-toolbar"></div>
+</div><div id="main"><a class="project-switcher previous istooltip" data-container="body" data-placement="right" href="https://create.arduino.cc/projecthub/projects/0eaab2/next?dir=prev" rel="nofollow tooltip" title="" data-original-title="Previous project"><div class="inner"><i class="fa fa-chevron-left"></i></div></a><a class="project-switcher next istooltip" data-container="body" data-placement="left" href="https://create.arduino.cc/projecthub/projects/0eaab2/next?dir=next" rel="nofollow tooltip" title="" data-original-title="Next project"><div class="inner"><i class="fa fa-chevron-right"></i></div></a><div class="popup-overlay modal-popup" id="embed-popup"><div class="popup-overlay-bg"></div><div class="popup-overlay-outer"><div class="popup-overlay-inner"><button class="close unselectable" data-effect="fade" data-target="#embed-popup">×</button><h3 class="top">Share</h3><!-- AddThis Button BEGIN --><div class="addthis_toolbox addthis_default_style addthis_32x32_style" hidden="" aph6ppz=""><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a></div><!-- AddThis Button END --><div class="add-to-list"></div><h3>Embed the widget on your own site</h3><div id="project-embed"><p>Add the following snippet to your HTML:<input class="embed-code" onclick="this.select();" type="text" value="&lt;iframe frameborder=&#39;0&#39; height=&#39;410&#39; scrolling=&#39;no&#39; src=&#39;https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2/embed?use_route=project&#39; width=&#39;360&#39; style=&#39;margin-top:30px&#39;&gt;&lt;/iframe&gt;"></p><div class="row"><div class="project-embed-thumb col-sm-6 col-md-4 "><div class="project-thumb-container"><div class="project-23990"><div class="thumb project-thumb"><div class="thumb-image has-link-overlay"><img alt="Measuring Distance using Ultrasonic sensor" class="project-thumb-img loaded" src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/IMG_20160908_211955_HDR.jpg"><a class="link-overlay project-link-with-ref" target="_blank" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2"></a><div class="thumb-image-inner-top"><div class="award-container"></div><p class="description show-on-hover">Using ultrasonic sensor to find the distance between the sensor and the object placed.</p></div><div class="thumb-image-inner"><h4><a class="project-link-with-ref" target="_blank" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2">Measuring Distance using Ultrasonic sensor</a> </h4><p>Project tutorial by <span class="user-name"><a target="_blank" href="https://create.arduino.cc/projecthub/Akshit1729">Akshit1729</a></span></p><ul class="list-inline project-stats"><li><span class="stat-figure">17,123</span> views</li><li><span class="stat-figure">1</span> comment</li><li><span class="stat-figure">5</span> respects</li></ul></div><div class="thumb-super"></div></div></div></div></div></div></div><div class="clearfix"></div></div></div></div></div><!-- AddThis Button BEGIN --><script>var addthis_share = {
+  "data_track_addressbar":false,
+  url: "https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2",
+  title: "Awesome project: Measuring Distance using Ultrasonic sensor by Akshit1729"
+};</script><!-- AddThis Button END --><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51b26f5613fb83d2" async="async"></script><div class="project-page project-23990" id="content"><div class="container-desktop container"><div class="info-header">Project tutorial</div><div class="row"><div class="col-md-8 left-column"><div class="project-banner" id="home" style="background-image: url(&#39;https://hackster.imgix.net/uploads/attachments/191589/IMG_20160908_211955_HDR.jpg?auto=compress%2Cformat&amp;w=900&amp;h=675&amp;fit=min&#39;)"></div><div class="project-banner-inner"><h1 class="project-title">Measuring Distance using Ultrasonic sensor <a class="copyright" href="http://opensource.org/licenses/MPL-2.0" target="_blank">©&nbsp;MPL-2.0</a></h1><p class="project-one-liner">Using ultrasonic sensor to find the distance between the sensor and the object placed.</p><ul class="list-inline tags"><li><a class="tag" href="https://create.arduino.cc/projecthub/projects/tags/smart+appliances">smart appliances</a></li><li><a class="tag" href="https://create.arduino.cc/projecthub/projects/tags/ultrasound">ultrasound</a></li></ul><ul class="list-inline project-stats"><li class="impression-stats"><span class="stat-figure">17,384</span> views</li><li class="comment-stats"><span class="stat-figure">1</span> comment</li><li class="respect-stats"><span class="stat-figure">5</span> respects</li></ul></div><section class="section-container section-collapsible" id="components"><h2 class="section-title"><span class="title title-toggle"><a class="title-anchor" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#components"><i class="fa fa-link"></i></a><span>Components and supplies</span><i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></span></h2><div class="section-content"><table class="sortable-table table table-hover fields-container parts-table"><tbody><tr class="fields part-row" id="part-8233"><td class="part-img"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/41?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A"><img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/A000066_iso_both.jpg" alt="A000066 iso both"></a></td><td><table class="part-body" style="width:100%"><tbody><tr class="part-name"><td><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/41?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">Arduino UNO &amp; Genuino UNO</a></td></tr><tr class="part-comment"><td style="color: #888;font-size:75%;"></td></tr></tbody></table></td><td style="width:30px;text-align:center;vertical-align:middle"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/41?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">×</a></td><td style="width:10%;min-width:20px;text-align:center;vertical-align:middle"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/41?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">1</a></td><td style="vertical-align:middle"><a target="_blank" style="color:#333" rel="nofollow" href="https://create.arduino.cc/projecthub/products/buy/41?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A"><i class="fa fa-shopping-cart"></i></a></td></tr><tr class="fields part-row" id="part-8237"><td class="part-img"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/45?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A"><img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/11026-02.jpg" alt="11026 02"></a></td><td><table class="part-body" style="width:100%"><tbody><tr class="part-name"><td><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/45?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">Jumper wires (generic)</a></td></tr><tr class="part-comment"><td style="color: #888;font-size:75%;"></td></tr></tbody></table></td><td style="width:30px;text-align:center;vertical-align:middle"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/45?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">×</a></td><td style="width:10%;min-width:20px;text-align:center;vertical-align:middle"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/45?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">4</a></td><td style="vertical-align:middle"><a target="_blank" style="color:#333" rel="nofollow" href="https://create.arduino.cc/projecthub/products/buy/45?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A"><i class="fa fa-shopping-cart"></i></a></td></tr><tr class="fields part-row" id="part-27125"><td class="part-img"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/893?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A"><img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/51GZZ5EU9PL._SX425_.jpg" alt="51gzz5eu9pl. sx425 "></a></td><td><table class="part-body" style="width:100%"><tbody><tr class="part-name"><td><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/893?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">Ultrasonic Sensor - HC-SR04 (Generic)</a></td></tr><tr class="part-comment"><td style="color: #888;font-size:75%;"></td></tr></tbody></table></td><td style="width:30px;text-align:center;vertical-align:middle"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/893?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">×</a></td><td style="width:10%;min-width:20px;text-align:center;vertical-align:middle"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/893?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">1</a></td><td style="vertical-align:middle"><a target="_blank" style="color:#333" rel="nofollow" href="https://create.arduino.cc/projecthub/products/buy/893?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A"><i class="fa fa-shopping-cart"></i></a></td></tr><tr class="fields part-row" id="part-8234"><td class="part-img"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/42?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A"><img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/12002-04.jpg" alt="12002 04"></a></td><td><table class="part-body" style="width:100%"><tbody><tr class="part-name"><td><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/42?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">Breadboard (generic)</a></td></tr><tr class="part-comment"><td style="color: #888;font-size:75%;"></td></tr></tbody></table></td><td style="width:30px;text-align:center;vertical-align:middle"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/42?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">×</a></td><td style="width:10%;min-width:20px;text-align:center;vertical-align:middle"><a target="_blank" href="https://create.arduino.cc/projecthub/products/buy/42?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A">1</a></td><td style="vertical-align:middle"><a target="_blank" style="color:#333" rel="nofollow" href="https://create.arduino.cc/projecthub/products/buy/42?s=BAhJIhYyMzk5MCxCYXNlQXJ0aWNsZQY6BkVG%0A"><i class="fa fa-shopping-cart"></i></a></td></tr></tbody></table></div></section><section class="section-container section-collapsible" id="apps"><h2 class="section-title"><span class="title title-toggle"><a class="title-anchor" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#apps"><i class="fa fa-link"></i></a><span>Apps and online services</span><i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></span></h2><div class="section-content"><table class="sortable-table table table-hover fields-container parts-table"><tbody><tr class="fields part-row" id="part-10308"><td class="part-img"><a target="_blank" href="https://www.arduino.cc/en/main/software"><img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/IDE_web.jpg" alt="Ide web"></a></td><td><table class="part-body" style="width:100%"><tbody><tr class="part-name"><td><a target="_blank" href="https://www.arduino.cc/en/main/software">Arduino IDE</a></td></tr><tr class="part-comment"><td style="color: #888;font-size:75%;"></td></tr></tbody></table></td><td style="vertical-align:middle"><a target="_blank" style="color:#333" rel="nofollow" href="https://www.arduino.cc/en/main/software"><i class="fa fa-link"></i></a></td></tr></tbody></table></div></section><section class="section-container section-collapsible" id="about-project"><h2 class="section-title"><span class="title title-toggle"><a class="title-anchor" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#about-project"><i class="fa fa-link"></i></a><span>About this project</span><i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></span></h2><div class="section-content hljs-active hljs-arduino"><div class="medium-editor"><p></p><div class="embed-frame" data-type="widget"><div class="figure image_widget"><div class="figcaption embed-figcaption"></div><div class="embed original"><div class="image-gallery-container"><div class="image-gallery slick-initialized slick-slider"><div aria-live="polite" class="slick-list draggable" style="height: 369px;"><div class="slick-track" style="opacity: 1; width: 655px;"><div class="image slick-slide slick-active" data-slick-index="0" aria-hidden="false" style="width: 655px; position: relative; left: 0px; top: 0px; z-index: 900; opacity: 1;"><figure><a class="embed-img" href="javascript:openLightBox(&#39;815447728c&#39;, 0);"><img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/IMG_20160908_211955_HDR(1).jpg"></a></figure></div></div></div></div></div></div></div></div><script>if (typeof(lightBoxImages) == 'undefined') {
+  lightBoxImages = {};
+}
+lightBoxImages['815447728c'] = [{
+          URL: 'https://hackster.imgix.net/uploads/attachments/191591/IMG_20160908_211955_HDR.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max',
+          caption: '',
+          type: 'image'
+      }];</script><p>This a very simple project to find the distance between .While going through the internet i got an idea to make something using ultrasonic sensor&amp; arduino uno.</p><p>In this project i will use SR04 ultrasonic sensor.</p><p><span>And you will also need ping.h </span><a href="http://library.you/" rel="nofollow">library.You</a><span> can find it on the internet. </span></p><p>Wiring...</p><p>Connect the SR04  VCC pin to the Arduino 5v</p><p>Connect the SR04  GND pin to the Arduino GND</p><p>Connect the SR04  TRG pin to the Arduino Digital pin 12</p><p>Connect the SR04  ECHO pin to the Arduino Digital pin 11</p><p>Code for making this...</p><pre class="hljs arduino"><code><span><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;NewPing.h&gt;</span></span>
+</span><span> 
+</span><span><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> TRIGGER_PIN  12  </span>
+</span><span><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ECHO_PIN     11  </span>
+</span><span><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAX_DISTANCE 200 </span>
+</span><span> 
+</span><span>NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); 
+</span><span> 
+</span><span><span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
+</span><span>  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">begin</span>(<span class="hljs-number">115200</span>); 
+</span><span>}
+</span><span> 
+</span><span><span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
+</span><span>  <span class="hljs-built_in">delay</span>(<span class="hljs-number">50</span>);                     
+</span><span>  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">print</span>(<span class="hljs-string">"Ping: "</span>);
+</span><span>  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">print</span>(sonar.ping_cm());
+</span><span>  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"cm"</span>);
+</span><span>}
+</span></code></pre><div class="embed-frame"><div class="figure youtube"><div class="figcaption embed-figcaption" data-contenteditable="true" data-default-text="Type in a caption" data-disable-toolbar="true"></div><div class="embed widescreen" contenteditable="false"><iframe width="100%" height="100%" src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/lMLj6Gnly0s.html" frameborder="0" allowfullscreen=""></iframe></div><figcaption class="text-center">Distance measuring using a SR-04 Ultrasonic Sensor and Arduino UN0</figcaption></div></div><p></p></div></div></section><section class="section-container section-collapsible" id="code"><h2 class="section-title"><span class="title title-toggle"><a class="title-anchor" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#code"><i class="fa fa-link"></i></a><span>Code</span><i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></span></h2><div class="section-content"><div class="code-widgets single-file "><div class="sidebar"><ul><li><a data-target="#code-widget-73260" class="active" href="javascript:void(0)">Ultrasonic.ino</a></li></ul></div><div class="preview-container"><div class="preview-pane active" id="code-widget-73260"><div class="preview-header"><div class="clearfix"><h5>Ultrasonic.ino<small>C/C++</small></h5><div class="buttons btn-group btn-group-default"><button class="btn btn-primary btn-xs copy-code istooltip" data-container="body" data-trigger="hover" title="" data-original-title="Copy the code"><i class="fa fa-clipboard"></i></button><a class="btn btn-primary btn-xs" data-container="body" href="https://create.arduino.cc/projecthub/code_files/73260/download" rel="tooltip" title="" data-original-title="Download"><i class="fa fa-cloud-download"></i></a></div></div></div><div class="preview-body pygments-syntax all" style="height: 440px;"><div class="highlight"><pre><span id="line-1"><span class="cp">#include</span> <span class="cpf">&lt;NewPing.h&gt;</span><span class="cp"></span>
+</span><span id="line-2">
+</span><span id="line-3"><span class="cp">#define TRIGGER_PIN  12  </span><span class="c1">// Arduino pin tied to trigger pin on the ultrasonic sensor.</span>
+</span><span id="line-4"><span class="cp">#define ECHO_PIN     11  </span><span class="c1">// Arduino pin tied to echo pin on the ultrasonic sensor.</span>
+</span><span id="line-5"><span class="cp">#define MAX_DISTANCE 200 </span><span class="c1">// Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.</span>
+</span><span id="line-6">
+</span><span id="line-7"><span class="n">NewPing</span> <span class="nf">sonar</span><span class="p">(</span><span class="n">TRIGGER_PIN</span><span class="p">,</span> <span class="n">ECHO_PIN</span><span class="p">,</span> <span class="n">MAX_DISTANCE</span><span class="p">);</span> <span class="c1">// NewPing setup of pins and maximum distance.</span>
+</span><span id="line-8">
+</span><span id="line-9"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="line-10">  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span> <span class="c1">// Open serial monitor at 115200 baud to see ping results.</span>
+</span><span id="line-11"><span class="p">}</span>
+</span><span id="line-12">
+</span><span id="line-13"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="line-14">  <span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>                     <span class="c1">// Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between pings.</span>
+</span><span id="line-15">  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Ping: "</span><span class="p">);</span>
+</span><span id="line-16">  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sonar</span><span class="p">.</span><span class="n">ping_cm</span><span class="p">());</span> <span class="c1">// Send ping, get distance in cm and print result (0 = outside set distance range)</span>
+</span><span id="line-17">  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"cm"</span><span class="p">);</span>
+</span><span id="line-18"><span class="p">}</span>
+</span></pre></div></div></div></div></div></div></section><section class="section-container section-collapsible" id="schematics"><h2 class="section-title"><span class="title title-toggle"><a class="title-anchor" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#schematics"><i class="fa fa-link"></i></a><span>Schematics</span><i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></span></h2><div class="section-content"><div class="repository"><div class="button-content-container"><div class="button-content"><h5>Distance using Ultrasonic Sensor</h5><div class="buttons"><a class="btn btn-primary btn-sm" href="https://halckemy.s3.amazonaws.com/uploads/attachments/191919/Ultrasonic%20Distance.fzz">Download </a></div></div></div><div class="document-widget"><div class="file"><i class="fa fa-file-o fa-lg"></i><span>Ultrasonic%20Distance.fzz</span></div></div></div></div></section><section class="section-container section-collapsible" id="comments"><h2 class="section-title"><span class="title title-toggle"><a class="title-anchor" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#comments"><i class="fa fa-link"></i></a><span>Comments</span><i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></span></h2><div class="section-content"><div class="comments"><div class="user-signed-out" style=""><p class="sign-up-to-comment">Please <a href="https://create.arduino.cc/projecthub/users/sign_in?id=23990&amp;m=base_article&amp;reason=comment&amp;redirect_to=%2Fprojecthub%2FAkshit1729%2Fmeasuring-distance-using-ultrasonic-sensor-0eaab2%23comments">log in</a> or <a href="https://create.arduino.cc/projecthub/users/sign_up?id=23990&amp;m=base_article&amp;reason=comment&amp;redirect_to=%2Fprojecthub%2FAkshit1729%2Fmeasuring-distance-using-ultrasonic-sensor-0eaab2%23comments&amp;source=popup">sign up</a> to comment.</p></div><div data-react-class="Comments" data-react-props="{&quot;commentable&quot;:{&quot;id&quot;:&quot;0eaab2&quot;,&quot;type&quot;:&quot;projects&quot;},&quot;placeholder&quot;:&quot;Share your thoughts! What do you like about this project? How could it be improved? Be respectful and constructive – most Hackster members create and share personal projects in their free time.&quot;,&quot;cacheVersion&quot;:&quot;arduino&quot;}"><div data-reactroot="" class="r-comments"><div><div><div class="comment" id="25725"><div class="comment-title"><div class="avatar"><a href="https://create.arduino.cc/projecthub/javier-munoz-saez"><img src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/img_20170807_193654_3Kx5VTcCvB.jpg" alt="javier muñoz sáez"></a></div><div class="profile-name"><h4><strong><a href="https://create.arduino.cc/projecthub/javier-munoz-saez">javier muñoz sáez</a></strong></h4><span class="text-muted comment-date">a year ago</span></div></div><div class="comment-body"><p>Hi, i did something similar but with a Oled display check it out<br>
+I did not calibrate the thing... 😦<br>
+<a href="https://www.hackster.io/javier-munoz-saez/distance-sensor-oled-ad9e35?ref=user&amp;ref_id=85424&amp;offset=2">https://www.hackster.io/javier-munoz-saez/distance-sensor-oled-ad9e35?ref=user&amp;ref_id=85424&amp;offset=2</a></p>
+</div></div></div></div></div></div></div></div></section></div><div class="col-md-4 right-column"><div class="container-mobile"><section class="section-thumbs" id="team"><h4>Author</h4><div class="thumb wide-thumb clearfix"><a href="https://create.arduino.cc/projecthub/Akshit1729"><img class="media-object" onerror="javascript:showDefaultAvatar(this);" src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/default.svg" alt="Akshit1729"></a><div class="wide-thumb-body"><h5><a href="https://create.arduino.cc/projecthub/Akshit1729">Akshit1729</a> </h5><ul class="project-stats list-inline"><li><strong>1</strong> project </li><li><strong>0</strong> followers </li></ul><div class="wide-thumb-body-bottom"><a class="follow-button btn btn-secondary btn-sm btn-shorter show-simplified-signup" data-redirect-to="/projecthub/followers/create?followable_id=109100&amp;followable_type=User&amp;source=projects%23show" data-source="follow_user" href="https://create.arduino.cc/projecthub/users/sign_up?id=109100&amp;m=user&amp;reason=follow&amp;redirect_to=%2Fprojecthub%2Ffollowers%2Fcreate%3Ffollowable_id%3D109100%26followable_type%3DUser">Follow</a></div></div></div></section><section class="section-thumbs"><h4>Published on</h4>September  9, 2016</section><section class="section-thumbs"><div class="project-actions"><div class="mg-10"><a class="respect-button btn btn-block btn-ellipsis btn-primary show-simplified-signup base_article-23990-respect" data-container="body" data-redirect-to="/projecthub/articles/0eaab2/respects/create" data-source="respect_project" href="https://create.arduino.cc/projecthub/users/sign_up?id=23990&amp;m=article&amp;reason=respect&amp;redirect_to=%2Fprojecthub%2Farticles%2F0eaab2%2Frespects%2Fcreate"><i class="fa fa-thumbs-o-up"></i><span>Respect project</span></a></div><a class="btn btn-secondary btn-sm show-feedback-form project-feedback-form give-feedback" href="javascript:void(0)"><i class="fa fa-pencil-square-o"></i><span>Give feedback</span></a><div class="text-center" style="position:relative"><a data-target="#embed-popup" class="btn btn-link btn-sm modal-open" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#"><i class="fa fa-share-square-o"></i><span>Share</span></a><a class="follow-button btn btn-link btn-sm show-simplified-signup" data-redirect-to="/projecthub/followers/create?followable_id=23990&amp;followable_type=BaseArticle&amp;source=projects%23show" data-source="follow_base_article" href="https://create.arduino.cc/projecthub/users/sign_up?id=23990&amp;m=base_article&amp;reason=follow&amp;redirect_to=%2Fprojecthub%2Ffollowers%2Fcreate%3Ffollowable_id%3D23990%26followable_type%3DBaseArticle"><i class="fa fa-code-fork"></i><span>I made one</span></a></div></div></section><section class="section-thumbs"><h4>Members who respect this project</h4><div class="project-widget-with-user-thumbs"><div class="user-thumbs clearfix"><a data-container="body" rel="tooltip" title="" href="https://create.arduino.cc/projecthub/alvin-botelho" data-original-title="Alvin Botelho"><img class="img-responsive user-img img-rounded" onerror="javascript:showDefaultAvatar(this);" src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/10354686_10150004552801856_220367501106153455_n.jpg" alt="10354686 10150004552801856 220367501106153455 n"></a><a data-container="body" rel="tooltip" title="" href="https://create.arduino.cc/projecthub/almalki-almalki" data-original-title="Almalki Almalki"><img class="img-responsive user-img img-rounded" onerror="javascript:showDefaultAvatar(this);" src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/15977172_113754469133338_8365970855296756148_n.jpg" alt="15977172 113754469133338 8365970855296756148 n"></a></div><p class="others-count">and 3 others</p></div></section><section class="section-thumbs hidden-xs hidden-sm affixable affix" data-top="50" id="project-side-nav" style="top:50px"><h4>Table of contents</h4><div class="section-container" id="scroll-nav"><ul class="nav"><li class=""><a class="smooth-scroll" data-offset="-40" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#content">Measuring Distance using Ultrasonic sensor</a></li><li class=""><a class="smooth-scroll" data-offset="-70" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#components">Components and supplies</a></li><li class=""><a class="smooth-scroll" data-offset="-70" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#apps">Apps and online services</a></li><li class="active"><a class="smooth-scroll" data-offset="-70" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#about-project">About this project</a></li><li class=""><a class="smooth-scroll" data-offset="-70" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#code">Code</a></li><li><a class="smooth-scroll" data-offset="-70" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#schematics">Schematics</a></li><li><a class="smooth-scroll" data-offset="-70" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#comments">Comments<span class="nav-count">(1)</span></a></li></ul></div><div class="show-on-affix" style="margin-top:20px;"><div class="project-actions"><div class="mg-10"><a class="respect-button btn btn-block btn-ellipsis btn-primary show-simplified-signup base_article-23990-respect" data-container="body" data-redirect-to="/projecthub/articles/0eaab2/respects/create" data-source="respect_project" href="https://create.arduino.cc/projecthub/users/sign_up?id=23990&amp;m=article&amp;reason=respect&amp;redirect_to=%2Fprojecthub%2Farticles%2F0eaab2%2Frespects%2Fcreate"><i class="fa fa-thumbs-o-up"></i><span>Respect project</span></a></div><a class="btn btn-secondary btn-sm show-feedback-form project-feedback-form give-feedback" href="javascript:void(0)"><i class="fa fa-pencil-square-o"></i><span>Give feedback</span></a><div class="text-center" style="position:relative"><a data-target="#embed-popup" class="btn btn-link btn-sm modal-open" href="https://create.arduino.cc/projecthub/Akshit1729/measuring-distance-using-ultrasonic-sensor-0eaab2#"><i class="fa fa-share-square-o"></i><span>Share</span></a><a class="follow-button btn btn-link btn-sm show-simplified-signup" data-redirect-to="/projecthub/followers/create?followable_id=23990&amp;followable_type=BaseArticle&amp;source=projects%23show" data-source="follow_base_article" href="https://create.arduino.cc/projecthub/users/sign_up?id=23990&amp;m=base_article&amp;reason=follow&amp;redirect_to=%2Fprojecthub%2Ffollowers%2Fcreate%3Ffollowable_id%3D23990%26followable_type%3DBaseArticle"><i class="fa fa-code-fork"></i><span>I made one</span></a></div></div></div></section></div></div></div></div></div></div></div><div id="mini-footer"><a class="logoArduinoGenuino" href="https://www.arduino.cc/"></a><p>Powered by<br><a id="hackster-logo" href="https://www.hackster.io/"></a></p></div><div class="popup-overlay modal-popup" data-width="450" id="login-popup"><div class="popup-overlay-bg"></div><div class="popup-overlay-outer"><div class="popup-overlay-inner"><button class="close" data-target="#login-popup">×</button><h4>Good to see you again</h4><form class="simple_form form-compact disable-on-submit user-form" id="login-form" novalidate="novalidate" action="https://create.arduino.cc/projecthub/users/sign_in?redirect_to=%2Fprojecthub%2FAkshit1729%2Fmeasuring-distance-using-ultrasonic-sensor-0eaab2" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><div class="form-group email optional user_email"><input class="string email optional form-control form-control" autofocus="autofocus" maxlength="255" placeholder="Email" type="email" size="255" value="" name="user[email]" id="user_email"></div><div class="form-group password optional user_password"><input class="password optional form-control" maxlength="128" placeholder="Password" size="128" type="password" name="user[password]" id="user_password"></div><div class="form-group boolean optional user_remember_me"><input value="0" type="hidden" name="user[remember_me]"><label class="checkbox"><input class="boolean optional" type="checkbox" value="1" checked="checked" name="user[remember_me]" id="user_remember_me"> Keep me signed in on this device</label></div><input class="btn-block btn btn-primary" type="submit" value="Log into my Hackster.io account"><a class="forgot-pass" href="https://create.arduino.cc/projecthub/users/password/new">Forgot your password?</a></form><hr><div class="social-icons text-center"><p class="text-muted"><small>Or connect with your social account:</small></p><a class="zocial icon email" href="https://www.hackster.io/users/auth/arduino?path_prefix=projecthub&amp;redirect_host=create.arduino.cc&amp;redirect_to=%2Fprojecthub%2FAkshit1729%2Fmeasuring-distance-using-ultrasonic-sensor-0eaab2">Login with Arduino</a></div><hr><p><small>New here? <a href="https://create.arduino.cc/projecthub/users/sign_up">Create an account</a></small></p></div></div></div><div class="hide-on-desktop" id="mobile-nav-overlay"><div class="fa fa-times" id="mobile-nav-overlay-close"></div></div><div class="hide-on-desktop" id="mobile-navigation"><form action="https://create.arduino.cc/projecthub/search" class="navbar-form" method="get"><div class="form-group"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input type="text" name="q" id="q" class="form-control" placeholder="Search"></div></div></form><a class="mo-nav-link" href="https://create.arduino.cc/projecthub/projects/new"><i class="fa fa-plus"></i><span>Add project</span></a><a class="mo-nav-link" href="https://create.arduino.cc/projecthub/users/sign_up?source=nav">Sign up / Login</a></div><script type="text/javascript">
+      $(function(){
+        $.ajax({
+          url: 'https://arduino-api.hackster.io/private/stats',
+          data: {
+            referrer: (document.referrer || document.origin),
+      
+          id: '23990',
+          type: 'BaseArticle',
+      
+          a: 'show',
+          c: 'projects'
+        },
+        xhrFields: {
+          withCredentials: true
+        },
+        method: 'POST'
+      });
+    });
+    </script><script>$(function(){
+  var s = "<span class='stat-figure'>17,384</span> views";
+  $('.impression-stats').html(s);
+  s = "<span class='stat-figure'>1</span> comment";
+  $('.comment-stats').html(s);
+  s = "<span class='stat-figure'>5</span> respects";
+  $('.respect-stats').html(s);
+});</script><div data-react-class="FeedbackForm" data-react-props="{&quot;project&quot;:{&quot;id&quot;:23990},&quot;openEvent&quot;:&quot;open:feedbackForm&quot;,&quot;siteName&quot;:&quot;Arduino Project Hub&quot;}"><span data-reactroot=""><span></span></span></div><script>Utils.clearApiTokens();
+var arduinoAuthenticated = Cookies.get("arduino_authenticated");
+if (arduinoAuthenticated == "true") {
+  window.location.href = "https://www.hackster.io/users/auth/arduino?current_site=arduino&setup=true&redirect_to=%2Fprojecthub%2FAkshit1729%2Fmeasuring-distance-using-ultrasonic-sensor-0eaab2";
+}</script><script src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/application-9913907458ef7ca1bd9329fbe7e24fcb2367d67db54cfd7d68ffc0d209aa25d4.js.download"></script><script src="./Measuring Distance using Ultrasonic sensor - Arduino Project Hub_files/loader.js.download" type="text/javascript"></script>
+<script>
+    ArduinoHeaderAndFooter({parts: ['create-nav'], auth: 'noauth'}).then(function () {
+        
+        var authDiv = $('#user-signin-signout');
+        var text = $(authDiv).text();
+        $(authDiv).find('button').replaceWith('<div class="button mobile-auth-button"><p>'+text+'</p></div>');
+        $('.grid-nav').append(authDiv);
+
+        if ($('body').attr('data-user-signed-in')) {
+        	var uid = $('body').attr('data-user-name');
+
+        	$('#add_project span.text').text('new project');
+        	$('#add_project').attr('id', 'new_project');
+        	$('#my_dashboard').attr('href', '/projecthub/' + uid);
+        	$('#my_dashboard').removeClass('logged-out');
+        }
+
+        $( window ).scroll(function() {
+    
+	    	if ($(document).scrollTop() > 5) {
+		      $('.arduino-bbq').addClass('collapsed');
+		      $('body').addClass('collapsed-nav');
+		    } else {
+		      $('.arduino-bbq').removeClass('collapsed');
+		      $('body').removeClass('collapsed-nav');
+		    }
+
+		});
+
+        $('.grid-nav #projecthub').on('click', function(event){ event.preventDefault(); $('#ino-create-nav .menu-toggle').click();});  
+
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+            $('body').addClass('ios');
+        }
+
+        var url = window.location.href;
+        var queryString = url.split('search?q=')[1];
+        if (queryString) {
+            var searchBarValue = queryString.split('+').join(' ');
+            $('input#q').val(searchBarValue);
+        }
+    });
+</script><form id="sign-out-form" class="hidden" method="post" action="https://create.arduino.cc/projecthub/users/sign_out"><input type="hidden" name="_method" value="delete"><input type="submit" value="Sign out"><input type="hidden" name="authenticity_token" value="b77hykqsD+1K4vwI6kPCJH9t6ty5J2qd4tJuroSTfSzG67CGyiikiS/frV0jciLpk+TmqQZKT18/qLOJMDOaDQ=="></form></body></html>

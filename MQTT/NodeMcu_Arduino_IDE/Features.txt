@@ -1,0 +1,11 @@
+Features
+Open-source,Interactive,Programmable,Low cost,Simple,Smart,WI-FI enabled
+Deep sleep power <10uA, Power down leakage current < 5uA
+Wake up and transmit packets in < 2ms
+Standby power consumption of < 1.0mW
+Compatible with Arduino IDE
+Easy to access wireless router
+Based on Lua 5.1.4 (without debug, os module.)
+Event-Drive programming preferred.
+Build-in json, file, timer, pwm, i2c, spi, 1-wire, net, mqtt, coap, gpio, wifi, adc, uart and system api.
+GPIO pin re-mapped, use the index to access gpio, i2c, pwm.

@@ -1,0 +1,32 @@
+#include <EEPROM.h>
+
+int addr = 0;
+
+void setup() {
+  EEPROM.begin(512);//512 bajtova 1 char je 1 bajt (8 bitova)
+}
+
+EEPROM.write(addr, val);
+EEPROM.commit(); //mora posle svake promene
+
+
+
+byte value;
+value = EEPROM.read(address);
+Serial.print(value, DEC);
+
+
+string od 5 karaktera
+vremeTajmera1 = String((char)payload[0])+String((char)payload[1])+String((char)payload[2])+String((char)payload[3])+String((char)payload[4]);
+    //prva pet karaktera u eeprom = 5 bajtova 0-4
+int i = 0;
+
+for(i=0;i<5;i++){
+      EEPROM.write(i, (char)payload[i]);
+      EEPROM.commit(); 
+}
+
+
+
+citanje na setup
+vremeTajmera1 = String((char)EEPROM.read(0))+String((char)EEPROM.read(1))+String((char)EEPROM.read(2))+String((char)EEPROM.read(3))+String((char)EEPROM.read(4));

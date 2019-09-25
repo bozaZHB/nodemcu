@@ -1,0 +1,75 @@
+#include <EEPROM.h>
+
+
+void iskljuciSve(){
+  //prskalice
+  Serial.write('j');
+  //pumpa
+  Serial.print('p');
+  //radio
+  Serial.print('s');
+  //neodredjeno
+  Serial.write('f');
+}
+
+//eeprom
+  EEPROM.begin(512);
+
+
+//eeprom unos podataka
+  vremeTajmera1 = String((char)EEPROM.read(0))+String((char)EEPROM.read(1))+String((char)EEPROM.read(2))+String((char)EEPROM.read(3))+String((char)EEPROM.read(4));
+  vremeTajmera2 = String((char)EEPROM.read(5))+String((char)EEPROM.read(6))+String((char)EEPROM.read(7))+String((char)EEPROM.read(8))+String((char)EEPROM.read(9));
+  
+  char value;
+  value = EEPROM.read(10);
+  if(value=='1') {
+      Serial.write('1');//10
+      trajanje = 10;
+    }
+    else if(value=='2') {
+      Serial.write('2');//15
+      trajanje = 15;
+    }
+    else if(value=='3'){
+      Serial.write('3');//20 minuta
+      trajanje = 20;
+    }
+    
+  iskljuciSve();
+
+
+  else if (str=="bozaSub/kuca/node1/vreme1"){
+    vremeTajmera1 = String((char)payload[0])+String((char)payload[1])+String((char)payload[2])+String((char)payload[3])+String((char)payload[4]);
+    //prva pet karaktera u eeprom = 5 bajtova 0-4
+    int i = 0;
+    for(i=0;i<5;i++){
+      EEPROM.write(i, (char)payload[i]);
+      EEPROM.commit(); 
+    }
+  }
+  else if (str=="bozaSub/kuca/node1/vreme2"){
+    vremeTajmera2 = String((char)payload[0])+String((char)payload[1])+String((char)payload[2])+String((char)payload[3])+String((char)payload[4]);
+    //od 5-9 bajta
+    int i;
+    for(i=5;i<10;i++){
+      EEPROM.write(i, (char)payload[i-5]);
+      EEPROM.commit(); 
+    }
+  }
+  else if (str=="bozaSub/kuca/node1/trajanje"){
+    if(p=='1') {
+      Serial.write('1');//10
+      trajanje = 10;
+    }
+    else if(p=='2') {
+      Serial.write('2');//15
+      trajanje = 15;
+    }
+    else if(p=='3'){
+      Serial.write('3');//20 minuta
+      trajanje = 20;
+    }
+    
+    EEPROM.write(10, p);
+    EEPROM.commit(); 
+  }

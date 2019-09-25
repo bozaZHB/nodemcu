@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com</title>
+<link type="text/css" rel="stylesheet" href="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/Common.css">
+<link type="text/css" rel="stylesheet" href="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/AmSingle.css">
+<script type="text/javascript" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/AmCategory.js.download"></script>
+<script type="text/javascript" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/Lang.js.download"></script>
+<script type="text/javascript" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/Search.js.download"></script>
+<script type="text/javascript" src="http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt/"></script>
+<link rel="alternate" type="application/rss+xml" title="osoyoo.com latest post RSS" href="http://osoyoo.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="osoyoo.com latest comment RSS" href="http://osoyoo.com/comments/feed/">
+<link rel="pingback" href="http://osoyoo.com/xmlrpc.php">
+<style></style></head>
+
+<body>
+<div id="PageHeadBg">
+
+<div id="PageHead">
+     <div id="LineTop">
+          <a href="http://osoyoo.com/">
+		  <img class="Logo" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/Logo.png">
+		  </a>
+		  
+     <div id="NavMain">
+          <a href="http://osoyoo.com/" class="Nav">Home</a>
+          <a class="Nav" id="AmAllCategory" onclick="AmAllCategoryInit(0,0);" style="background: rgb(255, 255, 255); color: rgb(60, 60, 60);">All Category</a>
+         <a href="http://osoyoo.com/about-us/" class="Nav">
+About us
+</a>
+<a href="http://osoyoo.com/arduino-forum/" class="Nav">
+User Forum
+</a>
+<a href="http://osoyoo.com/?p=366" class="Nav">
+Where To Buy
+</a>
+     </div>
+
+     <form class="Search" method="get" target="_self" action="http://osoyoo.com/">		  
+          <input class="InputText" type="text" id="AmSearchText" name="s" value="">
+		  <input class="InputSubmit" type="Submit" value="">
+     </form>
+	 <div class="Share">
+	      <a href="http://twitter.com/osoyooproduct" title="twitter">
+		       <img src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/twitter.png">
+		  </a>
+	      <a href="http://www.facebook.com/OsoyooProducts" title="facebook">
+		       <img src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/facebook.png">
+		  </a>
+	      <a href="http://osoyoo.com/feed/" title="feed">
+		       <img src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/rss.png">
+		  </a>		  
+	 </div>		  
+		  	  
+<span id="AmLangIco" onclick="AmLanguageChange(&#39;AmLang&#39;);"><img src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/us.png" class="LangIco"><a hef="#http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt">English</a></span><div id="AmLang">
+	 <span class="AmLangList">
+	 <img src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/us.png" class="LangIco">
+     <a class="AmLangSet" href="http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt">English</a>
+	 </span>
+	 <span class="AmLangList">
+	 <img src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/cn.png" class="LangIco">
+     <a class="AmLangSet" href="http://osoyoo.com/zh/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt">中文</a>
+	 </span>
+	 <span class="AmLangList">
+	 <img src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/jp.png" class="LangIco">
+     <a class="AmLangSet" href="http://osoyoo.com/ja/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt">日本語</a>
+	 </span>
+</div>
+
+     </div>
+     <div id="AmAllCategoryBg" style="display: none;">
+          <div id="AmAllCategoryBox">
+          <div name="AmLayer" id="AmLayer_0" class="AmLayer">
+               <ul name="AmSub_0" id="AmSub_0_0" class="CategoryList">
+                    <li id="Cat_22"><a href="http://osoyoo.com/category/basic-tutorial/" onmouseover="AmAllCategory(1,22);">Arduino Basic Tutorial</a></li>
+                    <li id="Cat_3"><a href="http://osoyoo.com/category/arduinoraspi-kit/" onmouseover="AmAllCategory(1,3);">Arduino Kits</a></li>
+                    <li id="Cat_4"><a href="http://osoyoo.com/category/diy-parts/" onmouseover="AmAllCategory(1,4);">Arduino Parts &amp; Projects</a></li>
+                    <li id="Cat_6"><a href="http://osoyoo.com/category/raspberry-pi-diy-project/" onmouseover="AmAllCategory(1,6);">Raspberry Pi Project</a></li>
+                    <li id="Cat_20"><a href="http://osoyoo.com/category/sensors/" onmouseover="AmAllCategory(1,20);">Sensors &amp; Accessories</a></li>
+                    <li id="Cat_5"><a href="http://osoyoo.com/category/tutorial-ebook/" onmouseover="AmAllCategory(1,5);">Tutorial &amp; eBook</a></li>
+                    <li id="Cat_1"><a href="http://osoyoo.com/category/uncategorized/" onmouseover="AmAllCategory(1,1);">Uncategorized</a></li>
+                    <li id="Cat_14"><a href="http://osoyoo.com/category/iot/" onmouseover="AmAllCategory(1,14);">IOT</a></li>
+                    <li id="Cat_405"><a href="http://osoyoo.com/category/tutorial-examples/" onmouseover="AmAllCategory(1,405);">Tutorial &amp; Examples</a></li>
+                    <li id="Cat_7"><a href="http://osoyoo.com/category/%e6%b5%8b%e8%af%95/" onmouseover="AmAllCategory(1,7);">测试</a></li>
+               </ul>
+          </div>
+          <div name="AmLayer" id="AmLayer_1" class="AmLayer">
+               <ul name="AmSub_1" id="AmSub_1_3" class="CategoryList">
+                    <li id="Cat_652"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-161-sensor-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;652&#39;);">Arduino 16+1 Sensor kit</a></li>
+                    <li id="Cat_467"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-iot/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;467&#39;);">Arduino IOT Kit</a></li>
+                    <li id="Cat_518"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-tank-car-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;518&#39;);">Arduino Tank Car Kit</a></li>
+                    <li id="Cat_499"><a href="http://osoyoo.com/category/arduinoraspi-kit/2wd-robot-car-starter-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;499&#39;);">2WD Robot Car Starter Kit</a></li>
+                    <li id="Cat_10"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-3d-printer-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;10&#39;);">Arduino 3D Printer Kit</a></li>
+                    <li id="Cat_491"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-advanced-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;491&#39;);">Arduino Advanced Kit</a></li>
+                    <li id="Cat_490"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-basic-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;490&#39;);">Arduino Basic Kit</a></li>
+                    <li id="Cat_543"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-lilypad-sewing-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;543&#39;);">Arduino Lilypad Sewing Kit</a></li>
+                    <li id="Cat_516"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-rfid-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;516&#39;);">Arduino RFID Kit</a></li>
+                    <li id="Cat_492"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-ultimate-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;492&#39;);">Arduino Ultimate Kit</a></li>
+                    <li id="Cat_510"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduino-v3-starter-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;510&#39;);">Arduino V3 Starter Kit</a></li>
+                    <li id="Cat_484"><a href="http://osoyoo.com/category/arduinoraspi-kit/arduinonodemcu-garden-watering-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;484&#39;);">Arduino/NodeMCU Garden Watering Kit</a></li>
+                    <li id="Cat_465"><a href="http://osoyoo.com/category/arduinoraspi-kit/smart-car-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;465&#39;);">Smart Car Kit</a></li>
+               </ul>
+               <ul name="AmSub_1" id="AmSub_1_6" class="CategoryList">
+                    <li id="Cat_466"><a href="http://osoyoo.com/category/raspberry-pi-diy-project/raspberry-pi-starter-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;466&#39;);">Raspi Starter Kit V2</a></li>
+                    <li id="Cat_506"><a href="http://osoyoo.com/category/raspberry-pi-diy-project/raspberry-pi-screen/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;506&#39;);">Raspberry Pi screen</a></li>
+                    <li id="Cat_489"><a href="http://osoyoo.com/category/raspberry-pi-diy-project/raspberry-pi-zero-basic-kit/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;489&#39;);">Raspberry pi zero basic kit</a></li>
+                    <li id="Cat_513"><a href="http://osoyoo.com/category/raspberry-pi-diy-project/raspi-starter-kit-v1/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;513&#39;);">Raspi Starter Kit V1</a></li>
+               </ul>
+               <ul name="AmSub_1" id="AmSub_1_20" class="CategoryList">
+                    <li id="Cat_26"><a href="http://osoyoo.com/category/sensors/breadboard/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;26&#39;);">Breadboard</a></li>
+                    <li id="Cat_27"><a href="http://osoyoo.com/category/sensors/buzzer/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;27&#39;);">Buzzer</a></li>
+                    <li id="Cat_28"><a href="http://osoyoo.com/category/sensors/led/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;28&#39;);">LED</a></li>
+                    <li id="Cat_23"><a href="http://osoyoo.com/category/sensors/resistor/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;23&#39;);">Resistor</a></li>
+                    <li id="Cat_146"><a href="http://osoyoo.com/category/sensors/sensors-sensors/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;146&#39;);">Sensors</a></li>
+                    <li id="Cat_24"><a href="http://osoyoo.com/category/sensors/usb-cable/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;24&#39;);">USB cable</a></li>
+                    <li id="Cat_25"><a href="http://osoyoo.com/category/sensors/wires/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;25&#39;);">Wires</a></li>
+               </ul>
+               <ul name="AmSub_1" id="AmSub_1_14" class="CategoryList">
+                    <li id="Cat_483"><a href="http://osoyoo.com/category/iot/nodemcu-iot-kit-iot/" onmouseover="AmAllCategory(&#39;2&#39;,&#39;483&#39;);">NodeMCU IoT Kit</a></li>
+               </ul>
+          </div>
+          <div name="AmLayer" id="AmLayer_2" class="AmLayer">
+               <ul name="AmSub_2" id="AmSub_2_" class="CategoryList">
+               </ul>
+          </div>
+          </div>	
+     </div>
+</div>
+
+
+
+
+</div>
+
+
+<span id="UrlHere">
+<div itemscope="" itemtype="http://schema.org/WebPage" id="crumbs">Location: <a itemprop="breadcrumb" href="http://osoyoo.com/">Home</a> » <a itemprop="breadcrumb" href="http://osoyoo.com/category/iot/">IOT</a> » <a itemprop="breadcrumb" href="http://osoyoo.com/category/iot/nodemcu-iot-kit-iot/">NodeMCU IoT Kit</a> » <span class="current">NodeMCU Lesson 11— Potentiometer &amp; MQTT</span></div></span>
+
+<div id="ContentBody">
+
+<h1>NodeMCU Lesson 11— Potentiometer &amp; MQTT</h1><div class="PostMeta">
+<span class="Time">Post Time: 2017-05-16 01:05:50</span>
+Category: <a class="category" href="http://osoyoo.com/category/iot/nodemcu-iot-kit-iot/">NodeMCU IoT Kit</a>
+</div>
+<div class="PostContent">
+<p><iframe width="480" height="270" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/fscFQVryskI.html" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe></p>
+<p><strong>Authorized Online Retailers:</strong></p>
+<table>
+<tbody>
+<tr>
+<td><a href="https://www.amazon.com/gp/product/B073Z84243/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B073Z84243&amp;linkCode=as2&amp;tag=osoyoo-20&amp;linkId=4d61a98c8793f53a9e9a5c4fac2367e7"><img class="alignnone size-full wp-image-370" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/AMAZON.jpg" alt="AMAZON" width="128" height="62"></a></td>
+</tr>
+<tr>
+<td><a><img class="alignnone size-full wp-image-997" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/AMAZON-jp.jpg" alt="AMAZON-jp" width="254" height="62"></a></td>
+</tr>
+<tr>
+<td><a href="https://www.amazon.co.uk/gp/product/B01N1XBXTZ/ref=as_li_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=B01N1XBXTZ&amp;linkCode=as2&amp;tag=osoyoo-21&amp;linkId=f277db19397a414bd971250c77de2d54"><img class="alignnone size-full wp-image-370" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/amzuk-300x87.png" alt="amzuk" width="300" height="87"></a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong><a href="http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt/#1">Introduction</a></strong></li>
+<li><strong><a href="http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt/#2">Preparation</a></strong></li>
+<li><strong><a href="http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt/#3">Connection</a></strong></li>
+<li><strong><a href="http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt/#4">Upload Sketch</a></strong></li>
+<li><strong><a href="http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt/#5">MQTT Client&nbsp;Settings</a></strong></li>
+<li><strong><a href="http://osoyoo.com/2017/05/16/nodemcu-lesson-11-potentiometer-mqtt/#6">Running Result</a></strong></li>
+</ul>
+<h3 id="1">Introduction</h3>
+<p>In this lesson, we will show how to check the&nbsp;potentiometer&nbsp;resistance value by&nbsp;NodeMCU, then&nbsp;send the resistance value to a MQTT broker via MQTT protocol,the MQTT client will subscribe to correspoding topic and get these values.</p>
+<p><a href="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/Potentiometer.jpg"><img class="alignnone wp-image-5634" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/Potentiometer.jpg" alt="" width="443" height="332"></a></p>
+<h3 id="2">Preparation</h3>
+<p><strong>Hardware:</strong></p>
+<ul>
+<li><a href="http://osoyoo.com/2017/05/03/nodemcu/" target="_blank" rel="noopener noreferrer">NodeMCU board</a> &nbsp;x 1</li>
+<li><a href="http://osoyoo.com/2017/05/07/rotary-potentiometer-10k-ohm-linear/" target="_blank" rel="noopener noreferrer">Potentiometer-10k</a> x 1</li>
+<li><a href="http://osoyoo.com/2017/05/05/breadboard-full-size/" target="_blank" rel="noopener noreferrer">Breadboard</a> x 1</li>
+<li><a href="http://osoyoo.com/2017/05/22/jumper-wires-pack-for-nodemcu-kit/" target="_blank" rel="noopener noreferrer">Jumper wires</a></li>
+<li>Computer x 1</li>
+</ul>
+<p><strong>Software:</strong></p>
+<ul>
+<li><a href="http://osoyoo.com/2017/05/08/nodemcu-lesson-1-download-and-install-arduino-ide/" target="_blank" rel="noopener noreferrer">Arduino IDE(version 1.6.4+)</a></li>
+<li><a href="http://osoyoo.com/2017/05/09/nodemcu-lesson-3-hello-worldconfig-the-ide-and-start-your-first-project/" target="_blank" rel="noopener noreferrer">ESP8266 Board Package and the Serial Port Driver</a></li>
+<li><a href="http://osoyoo.com/2017/05/10/nodemcu-lesson-8-mqtt-basic-example/#4" target="_blank" rel="noopener noreferrer">MQTT Client(MQTTBox here)</a></li>
+<li>Arduino library: <a href="http://osoyoo.com/2017/05/10/nodemcu-lesson-8-mqtt-basic-example/#3" target="_blank" rel="noopener noreferrer">PubSubClient</a></li>
+</ul>
+<h3 id="3">Connection</h3>
+<p>Overhere,we use A0&nbsp;as the analog input&nbsp;pin.</p>
+<p><img class="" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/yttjyy.png" width="495" height="551"></p>
+<h3 id="4">Upload Sketch</h3>
+<p>Connect the NodeMCU to computer via USB cable,open <a href="http://www.osoyoo.com/driver/Potentiometer_MQTT.ino" target="_blank" rel="noopener noreferrer">this&nbsp;sketch</a> by using Arduino IDE(Version1.6.4+):</p>
+<p><a href="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/2017-5-16-16-33-24.png"><img class="alignnone size-full wp-image-5638" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/2017-5-16-16-33-24.png" alt="" width="622" height="595"></a></p>
+<p><strong>Edit the code to fit your own WiFi and MQTT settings as following operations:</strong></p>
+<p><strong>1)Hotspot Configration:</strong></p>
+<blockquote>
+<p><span style="color: #808000;"><em>const char* ssid = "your_hotspot_ssid";</em></span></p>
+<p><span style="color: #808000;"><em>const char* password = "your_hotspot_password";</em></span></p>
+</blockquote>
+<p>Find above code line,put your own ssid and password on there.</p>
+<p><strong>2)MQTT &nbsp;Server &nbsp;Address&nbsp;Setting</strong></p>
+<blockquote>
+<p><span style="color: #808000;"><em>const char* mqtt_server = "broker.mqtt-dashboard.com";</em></span></p>
+</blockquote>
+<p>You can use your own MQTT broker URL or IP address to set above mqtt_server value. You can also use some famous free MQTT server to test the project such as&nbsp;<em> "broker.mqtt-dashboard.com",&nbsp;&nbsp;"iot.eclipse.org" etc.</em></p>
+<p><strong>3)MQTT Client Settings</strong></p>
+<p>If your MQTT broker require&nbsp;clientID,username and password authentication,you need to change</p>
+<blockquote>
+<p><span style="color: #808000;"><em>if (client.connect(clientId.c_str()))</em></span></p>
+</blockquote>
+<p>to</p>
+<blockquote>
+<p><span style="color: #808000;"><em>if (client.connect(clientId,userName,passWord)) //put your clientId/userName/passWord here</em></span></p>
+</blockquote>
+<p>If not,just keep them as default.</p>
+<p>After do that,choose the coresponding <strong>board type</strong> and <strong>port type</strong> as below,then upload the sketch to the NodeMCU.</p>
+<ul>
+<li>Board:"NodeMCU 0.9(ESP-12 Module)"</li>
+<li>CPU Frequency:"80MHz"</li>
+<li>Flash Size:"4M (3M SPIFFS)"</li>
+<li>Upload Speed:"115200"</li>
+<li>Port: Choose your own Serial Port for your NodeMCU</li>
+</ul>
+<p><a href="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/2017-5-16-16-33-59.png"><img class="alignnone size-full wp-image-5639" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/2017-5-16-16-33-59.png" alt="" width="620" height="594"></a></p>
+<h3 id="5">MQTT Client&nbsp;Settings</h3>
+<p>About how to config the MQTT client,check <a href="http://osoyoo.com/2017/05/10/nodemcu-lesson-8-mqtt-basic-example/#6" target="_blank" rel="noopener noreferrer">this link.</a></p>
+<p>Topics Settings:</p>
+<ul>
+<li><strong>Topic to subscribe:&nbsp;OsoyooData</strong></li>
+</ul>
+<h3 id="6">Running Result</h3>
+<p>Onece the upload done,if wifi hotspot name and password setting is ok and MQTT broker is connected, open the Serial Monitor,you will see following result:</p>
+<p>The NodeMCU serial port&nbsp;will show the IP address and the connection satatus,then print&nbsp;the resistance value.As you can see from the sketch,t<span id="w_115" class="">wist </span><span id="w_116">the </span><span class="high-light-bg">knob of potentiometer,&nbsp;</span>When the resistance value is more than 50, the serial output will be：</p>
+<p><em>"0: The resistance value is: ** "</em></p>
+<p><a href="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/QQ截图20170516162632-1.png"><img class="alignnone wp-image-5642 size-full" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/QQ截图20170516162632-1.png" alt="" width="581" height="364"></a></p>
+<p>When the resistance value is less&nbsp;than 50, the serial output will be：</p>
+<p><em>"1: The resistance value is: &nbsp;**"</em></p>
+<p><a href="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/QQ截图20170516165028-1.png"><img class="alignnone size-full wp-image-6485" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/QQ截图20170516165028-1.png" alt="" width="584" height="367"></a></p>
+<p>Open the MQTTBox and choose the corresponding subsucribe topic,click the Subscribe button,&nbsp;you will see the subscription information as&nbsp;below:</p>
+<p><a href="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/QQ截图20170516165142-1.png"><img class="alignnone size-full wp-image-6486" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/QQ截图20170516165142-1.png" alt="" width="429" height="609"></a></p>
+<h2><a href="http://osoyoo.com/2017/05/16/nodemcu-lesson-10-buzzer-mqtt/"><img class="alignnone wp-image-6442 size-full" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/上一页-1.png" alt="" width="156" height="41"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="http://osoyoo.com/2017/05/07/osoyoo-nodemcu-iot-programming-learning-starter-kit/#3"><img class="alignnone wp-image-6443 size-full" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/回到总教程页面-1.png" alt="" width="236" height="39"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="http://osoyoo.com/2017/05/16/nodemcu-lesson-12-tilt-sensor-mqtt/"><img class="alignnone size-full wp-image-6445" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/下一页.png" alt="" width="156" height="41"></a></h2></div>
+
+<div id="AmCustomFields">
+     <p class="Line">
+     <span class="Title_post_array">
+          Related Articles
+     </span>
+     <span class="arr_post">
+     <img src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/VNC.jpg">
+     <a class="Value_post_array" href="http://osoyoo.com/raspberry-pi-zerow-%e5%b8%b8%e7%94%a8%e5%a5%97%e4%bb%b6%e7%ac%ac5%e8%af%be%ef%bc%9aremote-control-with-vnc" title="Related Articles: Raspberry pi zero/w Basic Kit lesson 5：Remote Control with VNC">
+          Raspberry pi zero/w Basic Kit lesson 5：Remote Control with VNC
+     </a>
+     </span>
+     <span class="arr_post">
+     <img src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/FeaturePosts.NoImage.gif">
+     <a class="Value_post_array" href="http://osoyoo.com/%e6%a0%91%e8%8e%93%e6%b4%be3-5%e5%af%b8%e8%b6%85%e6%b8%85%e5%b1%8f%e9%95%9c%e5%83%8f%e5%ae%89%e8%a3%85" title="Related Articles: 树莓派3.5寸超清屏镜像安装">
+          树莓派3.5寸超清屏镜像安装
+     </a>
+     </span>
+     </p>
+</div>
+</div>
+
+
+
+<div id="comments">
+
+			<!-- If comments are closed. -->
+		<p class="nocomments">Comments are closed.</p>
+	
+<div class="clear"></div>
+
+</div>
+
+
+<div id="HotSearch"><span class="BoxTitle">Popular Searches</span><a href="http://osoyoo.com/?s=MySearch">MySearch</a><a href="http://osoyoo.com/?s="></a><a href="http://osoyoo.com/?s=firmware%20mfrc522">firmware mfrc522</a><a href="http://osoyoo.com/?s=MKS%20Gen">MKS Gen</a><a href="http://osoyoo.com/?s=3.2%20shield">3.2 shield</a><a href="http://osoyoo.com/?s=a">a</a><a href="http://osoyoo.com/?s=%E3%83%86%E3%82%B9%E3%82%BF%E3%83%BC">テスター</a><a href="http://osoyoo.com/?s=MKS%20Gen%20%20V1.0">MKS Gen  V1.0</a><a href="http://osoyoo.com/?s=MKS%20Gen%20L%20V1.0">MKS Gen L V1.0</a><a href="http://osoyoo.com/?s=MySearch.1">MySearch.1</a></div>
+
+<div id="PageFooterBg">
+     <div id="PageFooterBox">
+          <img class="Logo" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/Logo.gif">
+		  <div class="About">
+The HC-06 is a class 2 slave Bluetooth module designed for transparent wireless serial communication. Once it is paired to a master Bluetooth device such as PC, smart phones and tablet, its operation becomes transparent to the user.
+<br>
+Address:
+<br>
+E-mail:
+<br>
+Tel:	  
+		  </div>
+		  <div class="FooterNav">
+		  </div>
+          <p class="CopyRight">© 2009-2017 OsoYoo.com 版权所有 ICP证：浙B2-20080101</p>
+     </div>
+</div>
+
+<script async="" type="text/javascript" src="./NodeMCU Lesson 11— Potentiometer &amp; MQTT « osoyoo.com_files/cleantalk_nocache.js.download"></script>
+
+</body></html>

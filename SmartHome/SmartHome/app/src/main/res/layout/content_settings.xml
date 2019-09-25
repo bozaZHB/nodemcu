@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_marginRight="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/podesavanjeFontane"
+        android:textSize="@dimen/velicina_slova_dvoriste_heder"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/txtTrenutnoStanjeUkljuceno"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp" />
+
+        <Button
+            android:id="@+id/btnPromeniUkljuceno"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/promeni" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="right">
+        <TextView
+            android:id="@+id/txtTrenutnoStanjeVreme1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"/>
+        <Button
+            android:id="@+id/btnPromeniVreme1"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/promeni"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:id="@+id/linearLayoutVreme1"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp">
+
+        <EditText
+            android:id="@+id/editVreme1"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="5"
+            android:gravity="center"
+            android:inputType="textPersonName"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:id="@+id/btnVreme1Odustani"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:text="@string/odustani"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="right">
+        <TextView
+            android:id="@+id/txtTrenutnoStanjeVreme2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"/>
+        <Button
+            android:id="@+id/btnPromeniVreme2"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/promeni"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:id="@+id/linearLayoutVreme2"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp">
+
+        <EditText
+            android:id="@+id/editVreme2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="5"
+            android:gravity="center"
+            android:inputType="textPersonName"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:id="@+id/btnVreme2Odustani"
+            android:layout_height="35dp"
+            android:text="@string/odustani"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/txtTrenutnoStanjeTrajanje"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp" />
+        <Button
+            android:id="@+id/btnPromeniTrajanje"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/promeni"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:id="@+id/linearLayoutTrajanje"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinerTrajanje"
+            android:entries="@array/trajanje"></Spinner>
+
+        <Button
+            android:layout_width="100dp"
+            android:id="@+id/btnTrajanjeOdustani"
+            android:layout_height="35dp"
+            android:text="@string/odustani"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:id="@+id/btnPotvrdiTimer"
+        android:text="POTVRDI"
+        android:layout_gravity="right"
+        android:paddingRight="0dp"
+        android:layout_marginRight="0dp"
+        android:onClick="potvrdi_tajmer_dugme"
+        android:layout_marginTop="5dp"/>
+</LinearLayout>

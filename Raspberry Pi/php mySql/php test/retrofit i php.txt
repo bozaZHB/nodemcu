@@ -1,0 +1,237 @@
+
+Create -> insert -> POST
+-1)retrofit
+
+    private void userSignUp() {
+        String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+        String name = editTextName.getText().toString().trim();
+        String school = editTextSchool.getText().toString().trim();
+
+
+        Call<DefaultResponse> call = RetrofitClient
+                .getInstance()
+                .getApi()
+                .getLogin(email, password, name, school);
+
+
+        call.enqueue(new Callback<DefaultResponse>() {
+            @Override
+            public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
+                Toast.makeText(MainActivity.this, "uspesno", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFailure(Call<DefaultResponse> call, Throwable t) {
+
+                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+
+public interface Api {
+
+    @FormUrlEncoded
+    @POST("http://192.168.0.100/proba/insert.php")
+    Call<DefaultResponse> getLogin(
+            @Field("email") String username,
+            @Field("password") String password,
+            @Field("name") String name,
+            @Field("school") String school
+    );
+
+
+-2)PHP
+
+<?php
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect("localhost", "phpmyadmin", "boza272zabo", "phpmyadmin");
+ 
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
+$email = mysqli_real_escape_string($link, $_REQUEST['email']);
+$password = mysqli_real_escape_string($link, $_REQUEST['password']);
+$name = mysqli_real_escape_string($link, $_REQUEST['name']);
+$school = mysqli_real_escape_string($link, $_REQUEST['school']);
+
+$sql = "INSERT INTO users (email, password, name, school) VALUES ('$email', '$password', '$name', '$school')";
+if(mysqli_query($link, $sql)){
+			header('Content-type: application/json');
+            $message = array(); 
+            $message['error'] = false; 
+            $message['message'] = 'User created successfully';
+            echo json_encode($message);
+} else{
+			header('Content-type: application/json');
+            $message = array(); 
+            $message['error'] = true; 
+            $message['message'] = 'Error user created';
+            echo json_encode($message);
+}
+ 
+mysqli_close($link);
+?>
+
+----------------------------------------------------------------------------------
+-1)retrofit
+    private void userLogin() {
+
+        String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+
+        if (email.isEmpty()) {
+            editTextEmail.setError("Email is required");
+            editTextEmail.requestFocus();
+            return;
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            editTextEmail.setError("Enter a valid email");
+            editTextEmail.requestFocus();
+            return;
+        }
+
+        if (password.isEmpty()) {
+            editTextPassword.setError("Password required");
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        if (password.length() < 6) {
+            editTextPassword.setError("Password should be atleast 6 character long");
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        Call<LoginResponse> call = RetrofitClient
+                .getInstance()
+                .getApi()
+                .userloginRead(email, password);
+
+        call.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                LoginResponse loginResponse = response.body();
+
+                if (!loginResponse.isError()) {
+
+                    SharedPrefManager.getInstance(LoginActivity.this)
+                            .saveUser(loginResponse.getUser());
+
+                    Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+
+
+                } else {
+                    Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+
+public interface Api {
+
+    @FormUrlEncoded
+    @POST("http://192.168.0.100/proba/read.php")
+    Call<LoginResponse> userloginRead(
+            @Field("email") String email,
+            @Field("password") String password
+    );
+
+-2)PHP
+<?php
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect("localhost", "phpmyadmin", "boza272zabo", "phpmyadmin");
+ 
+
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
+$email = mysqli_real_escape_string($link, $_REQUEST['email']);
+$password = mysqli_real_escape_string($link, $_REQUEST['password']);
+
+$sql = "SELECT * FROM `users` WHERE email = '$email' and password = '$password'";
+
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+		
+		$row = mysqli_fetch_array($result);
+		$user = array(); 
+		$user['id'] = $row['id']; 
+		$user['email']=$row['email']; 
+		$user['name'] = $row['name']; 
+		$user['school'] = $row['school']; 
+   
+		$response_data = array();
+		$response_data['error']=false; 
+		$response_data['message'] = 'Login Successful';
+		$response_data['user']=$user; 
+		header('Content-type: application/json');
+		echo json_encode($response_data);
+		
+        mysqli_free_result($result);
+		
+    } else {
+		
+        $response_data = array();
+		$response_data['error']=true; 
+		$response_data['message'] = 'User not exist';
+		header('Content-type: application/json');
+		echo json_encode($response_data);
+		
+    }
+} else{
+	
+	$response_data = array();
+	$response_data['error']=true; 
+	$response_data['message'] = 'ERROR: Could not able to execute $sql. ' . mysqli_error($link);
+	header('Content-type: application/json');
+	echo json_encode($response_data);
+}
+
+ 
+mysqli_close($link);
+?>
+
+
+------------------------
+
+vise user-a
+
+    @GET("http://192.168.0.100/proba/all.php")
+    Call<UsersResponse> getUsers();
+
+
+    Call<UsersResponse> call = RetrofitClient.getInstance().getApi().getUsers();
+
+        call.enqueue(new Callback<UsersResponse>() {
+            @Override
+            public void onResponse(Call<UsersResponse> call, Response<UsersResponse> response) {
+
+                userList = response.body().getUsers();
+                adapter = new UsersAdapter(getActivity(), userList);
+                recyclerView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onFailure(Call<UsersResponse> call, Throwable t) {
+
+            }
+
+=================================================================================================
+UPDATE
+        });
